@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="cyanland-version" content="2026.10.26.v1">
+<meta name="cyanland-version" content="2026.10.26.v2">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
 <meta name="theme-color" content="#eeeee7">
 <meta name="description" content="Cyanland · 一方海岸，随时间生长。五座中国沿海城市的交互式海岸沙盘。">
@@ -16,6 +16,24 @@
 @media(max-width:359px){body{padding-left:17px;padding-right:17px;grid-template-rows:62px minmax(0,1fr) 109px}.brand-name{font-size:24px}.wordmark{gap:7px}.about-link{font-size:9px;gap:5px}.workspace{margin-left:-17px;margin-right:-17px}.story{padding:20px 17px 0}.story h1{font-size:30px;margin:8px 0}.story-poem{font-size:10px;padding-right:0}.calendar{font-size:8px}.calendar .lunar,.calendar .clock{font-size:7px}.footer{grid-template-columns:minmax(0,1fr) 100px}.arc-widget svg{width:100px}.arc-meta{width:96px}.mobile-actions{gap:13px}.mobile-actionbar button{font-size:9px}.mobile-city span{display:none}.drawer-body{padding-left:17px;padding-right:17px}.drawer-header{padding-left:17px;padding-right:17px}.city-card small{font-size:6.5px}body[data-panel=true] .story{padding-left:17px;padding-right:17px}.stage-meta{left:19px}.stage-corner{left:19px}}
 @media(max-height:690px) and (max-width:700px) and (orientation:portrait){body{grid-template-rows:60px minmax(0,1fr) 102px}.story{padding-top:18px}.story h1{font-size:28px;margin:7px 0 6px}.story-poem{font-size:10px;line-height:1.7}.stage-meta{top:12px}.footer{padding-top:5px;grid-template-rows:auto 32px}.drawer{max-height:43%}.stage-tools{bottom:6px}body[data-panel=true] .story{padding-top:8px;min-height:31px}body[data-panel=true] .story h1{font-size:16px}.drawer-header{padding-top:13px;padding-bottom:9px}}
 @media(max-height:500px) and (min-width:520px){body{padding:0 19px;grid-template-rows:54px minmax(0,1fr) 57px}.topbar{gap:12px}.brand-name{font-size:24px}.brand-symbol{width:23px;height:23px}.brand-caption{display:none}.city-nav{display:flex;gap:2px}.city-nav button{padding:7px 9px;font-size:10px}.about-link{font-size:10px;gap:7px}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 0;margin:0}.story{display:none}.stage{grid-column:1;min-height:100px}.stage-meta{left:12px;top:12px}.stage-number{top:12px;right:13px}.stage-corner{left:12px;bottom:12px}.stage-tools{right:8px;bottom:6px}.footer{display:grid;grid-template-columns:230px minmax(0,1fr) 116px;grid-template-rows:1fr;gap:15px;padding-top:0}.calendar{display:flex;flex-wrap:wrap;gap:0 9px;font-size:8px;line-height:1.8}.calendar .lunar{font-size:7px}.calendar .clock{font-size:7px}.footer-middle{display:none;gap:0}.metrics{display:none}.gesture-hint{font-size:7px;gap:10px}.arc-widget{grid-column:3;grid-row:1;align-self:center}.arc-widget svg{width:108px;height:39px}.arc-meta{width:106px;font-size:6px;margin-top:-4px}.arc-caption{display:none}.mobile-actionbar{display:flex;position:static;grid-column:2;grid-row:1;align-self:center;gap:0;border:0;margin:0;background:transparent;padding:0;border-radius:0;justify-content:center}.mobile-actions{gap:18px}.mobile-actionbar button{font-size:9px;padding:10px 0}.mobile-actionbar button svg{width:12px;height:12px}.mobile-city{display:none!important}.drawer{display:block;width:300px;max-height:none;height:100%;border-left:1px solid var(--line);border-top:0;border-radius:0;box-shadow:none;grid-column:2;grid-row:1;visibility:hidden}.drawer-header{padding:14px 16px 11px}.drawer-body{padding:15px 16px}.drawer-grip{display:none}.city-cards{grid-template-columns:repeat(2,1fr)}.city-card:last-child{grid-column:span 2}body[data-panel=true] .workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px}body[data-panel=true] .drawer{display:block;width:300px;visibility:visible}body[data-panel=true] .story{display:none}body[data-panel=true] .footer{grid-template-rows:1fr;padding-top:0}body[data-explore=true] .workspace{display:grid;grid-template-columns:minmax(0,1fr) 0}.toast{bottom:70px}dialog{width:min(520px,calc(100vw - 34px));max-height:calc(var(--app-height) - 24px)}}
+
+/* Cyanland 02 — a little more sunlight, a quieter shore. */
+:root{--annotation-opacity:.45}
+#sunAtmosphere{position:absolute;inset:0;pointer-events:none!important;z-index:1;opacity:var(--sun-alpha,0);transition:opacity 1s;overflow:hidden;--sun-x:69%;--sun-y:14%;--sun-angle:-18deg}
+#sunAtmosphere .sun-halo{position:absolute;inset:0;background:radial-gradient(ellipse 29% 36% at var(--sun-x) var(--sun-y),#ffe7ad24 0%,#f7dfad10 39%,transparent 75%);mix-blend-mode:screen}
+#sunDisc{position:absolute;left:var(--sun-x);top:var(--sun-y);width:17px;height:17px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,#fff8ddde 0%,#f4dda59c 50%,#e4c98c00 76%);box-shadow:0 0 17px 9px #f5d99316,0 0 52px 19px #f9dd9b0c}
+#sunAtmosphere .sun-rays{position:absolute;left:var(--sun-x);top:var(--sun-y);width:80%;height:130%;transform:translateX(-50%) rotate(var(--sun-angle));transform-origin:50% 0;background:conic-gradient(from 166deg at 50% 0%,transparent 0deg,#fff5d209 6deg,transparent 13deg,#fff6d70c 19deg,transparent 26deg,#fff4c808 35deg,transparent 45deg);mask-image:linear-gradient(#0009,transparent 78%);mix-blend-mode:screen}
+.annotation{opacity:var(--annotation-opacity);background:#f5f5e88c;border-color:#e7eddd60;box-shadow:0 2px 12px #213b2f06;transition:opacity .18s,background .18s;backdrop-filter:blur(3px)}.scene-label:hover,.scene-label:focus-visible{opacity:.95;background:#f5f5e8d9}.annotation::after{background:#769b7a7a}
+.interaction-tool{display:flex;justify-content:center;gap:5px;width:auto!important;min-width:58px!important;padding:0 10px;border-radius:18px!important}.interaction-tool span{font-size:9px;letter-spacing:.6px}.interaction-tool[aria-pressed=true]{background:#365e51e8;color:#f5f5e8}.interaction-tool[aria-pressed=true]:hover{background:#365e51}
+.local-note{background:#e4eadd80;padding:13px 15px;border-left:2px solid #b5c4a4;border-radius:0 7px 7px 0!important;font-size:11px!important;line-height:1.95!important}.local-note::before{content:"海岸风物 / ";font-size:9px;letter-spacing:1px;color:#7b8a72}
+.field-head label{font-size:10px}.drawer input[type=range]{height:23px;margin:0;display:block}.drawer input[type=range]:focus-visible{outline-offset:2px}.drawer .toggle-row{min-height:32px;position:relative}.drawer .toggle-row input{left:0;top:50%;margin:0;transform:translateY(-50%)}.drawer input[type=date],.drawer select{min-height:36px}.stage-tools{gap:5px}.stage-tools .icon-btn{border:1px solid #e3e7dc60}
+@media(max-width:700px){.story{padding-top:19px}.story h1{font-size:31px;margin-top:8px;margin-bottom:9px;letter-spacing:-.7px}.story-poem{font-size:10px;line-height:1.8;padding-right:12px}.stage-meta{left:22px;top:12px}.stage-number{top:12px}.stage-tools{bottom:9px;right:16px}.stage-corner{bottom:17px;left:22px;max-width:calc(100% - 177px);font-size:6px;gap:5px}.stage-corner .fps{font-size:6px;flex-shrink:0}.stage-corner>span:first-of-type{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.stage-corner i{display:none}.stage-tools .icon-btn{width:32px;height:32px}.interaction-tool{min-width:57px!important;padding:0 8px}.interaction-tool span{font-size:8px}.drawer{max-height:46%;min-height:0}.drawer-header{padding-top:15px;padding-bottom:11px}.drawer-body{padding-top:17px}.segmented button{min-height:37px}.weather-btn{min-height:49px}.field{margin-top:17px}.field-head{margin-bottom:8px}.field-note{font-size:9px;line-height:1.8}.control-section{margin-bottom:21px;padding-bottom:21px}.city-card{min-height:54px}.utility-btn{min-height:40px}.footer .clock{white-space:normal}.mobile-actionbar button{min-height:36px}.annotation{font-size:8px;padding:4px 7px}body[data-panel=true] .story{padding-top:8px;min-height:30px}.stage canvas{position:relative;z-index:0}}
+@media(max-width:359px){.story{padding-top:14px}.story h1{font-size:26px;line-height:1.36;margin:7px 0}.story-poem{font-size:9px;line-height:1.7}.stage-tools{right:12px;gap:3px}.stage-tools .icon-btn{width:30px;height:30px}.interaction-tool{min-width:50px!important;padding:0 6px;gap:3px}.stage-corner{left:17px;max-width:calc(100% - 165px);font-size:5.5px}.drawer{max-height:46%}.drawer .field-note{font-size:8px}.drawer-body{padding-bottom:21px}.drawer-header{padding-top:14px}.stage-meta{left:17px}.stage-number{right:18px}}
+@media(max-height:690px) and (max-width:700px) and (orientation:portrait){.story{padding-top:12px}.story h1{font-size:25px;margin-top:6px;margin-bottom:6px}.story-poem{font-size:9px;line-height:1.65}.drawer{max-height:46%}.stage-corner{bottom:14px}.stage-tools{bottom:5px}body[data-panel=true] .story{padding-top:6px;min-height:26px}body[data-panel=true] .story h1{font-size:15px}.drawer-header{padding-top:13px;padding-bottom:9px}}
+@media(max-height:450px) and (max-width:519px){body{grid-template-rows:49px minmax(0,1fr) 72px;padding-left:15px;padding-right:15px}.brand-name{font-size:22px}.brand-symbol{width:21px;height:21px}.about-link{font-size:9px}.workspace{margin-left:-15px;margin-right:-15px}.story{display:none}.stage{min-height:105px}.footer{grid-template-rows:1fr 30px;grid-template-columns:minmax(0,1fr) 93px;padding-top:3px}.calendar{font-size:7px;line-height:1.65}.calendar .lunar{display:none}.calendar .clock{font-size:6.5px}.arc-widget svg{height:34px;width:87px}.arc-meta{width:84px;font-size:5.5px}.arc-caption{display:none}.mobile-actionbar{height:30px}.mobile-actions{gap:19px}.mobile-actionbar button{font-size:8px;min-height:29px}.mobile-actionbar button svg{width:11px;height:11px}.mobile-city{display:none!important}.drawer{max-height:min(58%,calc(100% - 105px))}.drawer-header{padding:10px 15px 7px}.drawer-header h2{font-size:10px}.drawer-header span{display:none}.drawer-body{padding:13px 15px 20px}.stage-meta{top:9px}.stage-number{top:9px}.stage-tools{bottom:3px}.stage-corner{bottom:12px}.toast{bottom:82px}body[data-panel=true] .story{display:none}body[data-panel=true] .footer{grid-template-rows:1fr 30px}}
+@media(max-height:500px) and (min-width:520px){.story{display:none}.stage-meta{left:12px;top:12px}.stage-corner{left:12px;bottom:12px;max-width:calc(100% - 170px)}.stage-tools{right:8px;bottom:5px}.drawer{max-height:none}.drawer-header{padding:13px 16px 10px}.drawer-body{padding:16px}.mobile-actionbar button{min-height:34px}.footer{grid-template-columns:220px minmax(0,1fr) 108px;gap:9px}.about-link{font-size:9px}.city-nav button{padding:7px 8px;font-size:9px}.interaction-tool{min-width:51px!important;padding:0 7px}.stage-corner{font-size:6px}.stage-corner .fps{font-size:6px}}
+@media(max-height:350px) and (min-width:520px){body{grid-template-rows:45px minmax(0,1fr) 45px;padding-left:13px;padding-right:13px}.topbar{gap:8px}.brand-name{font-size:22px}.brand-symbol{width:20px;height:20px}.about-link{font-size:8px;gap:3px}.about-link svg{width:12px;height:12px}.city-nav button{padding:6px 7px;font-size:8px}.city-nav{gap:0}.footer{grid-template-columns:183px minmax(0,1fr) 88px;gap:5px}.calendar{font-size:7px;gap:0 6px;line-height:1.6}.calendar .lunar,.calendar .clock{font-size:6px}.arc-widget svg{width:85px;height:29px}.arc-meta{width:84px;font-size:5px}.mobile-actions{gap:12px}.mobile-actionbar button{font-size:8px;min-height:30px}.drawer{width:270px}body[data-panel=true] .workspace{grid-template-columns:minmax(0,1fr) 270px}body[data-panel=true] .drawer{width:270px}.drawer-header{padding:10px 14px 8px}.drawer-header h2{font-size:11px}.drawer-header span{font-size:6px}.drawer-body{padding:13px 14px}.stage-meta{top:8px;font-size:6px}.stage-number{top:8px}.stage-corner{bottom:10px;font-size:5px;max-width:calc(100% - 155px)}.stage-corner .fps{display:none}.stage-tools{right:5px;bottom:3px;gap:3px}.stage-tools .icon-btn{width:28px;height:28px}.interaction-tool{min-width:48px!important;padding:0 6px}.interaction-tool span{font-size:7px}}
+
 </style>
 </head>
 <body data-panel="false" data-explore="false">
@@ -36,23 +54,23 @@
     <hr class="story-rule"><p class="city-summary" id="coastSummary">在海与陆的边缘，观察光、潮汐与一座海岸的呼吸。</p>
     <div class="story-bottom"><div class="scene-identity"><strong id="cityName">青岛</strong><span id="cityEnglish">QINGDAO</span></div><div class="coordinates" id="coordinates">36.07° N · 120.38° E</div><div class="actions"><button class="action primary" id="adjustOpen" aria-controls="sceneDrawer" aria-expanded="false"><svg aria-hidden="true"><use href="#i-sliders"/></svg>调整场景</button><button class="action" id="exploreOpen"><svg aria-hidden="true"><use href="#i-compass"/></svg>自由探索</button></div></div>
   </section>
-  <section id="stage" class="stage" aria-label="交互式海岸沙盘，拖动旋转，双指或滚轮缩放，长按拖动平移" tabindex="0">
-    <canvas id="scene" aria-label="Cyanland 三维海岸沙盘"></canvas><div id="annotations" class="annotation-layer"></div>
+  <section id="stage" class="stage" aria-label="交互式海岸沙盘，拖动旋转，滑动海水拨浪，双指或滚轮缩放，长按拖动平移" tabindex="0">
+    <canvas id="scene" aria-label="Cyanland 三维海岸沙盘"></canvas><div id="sunAtmosphere" aria-hidden="true"><div class="sun-halo"></div><div class="sun-rays"></div><i id="sunDisc"></i></div><div id="annotations" class="annotation-layer"></div>
     <div class="stage-meta"><i class="live-dot"></i><span id="sceneMode">REAL-TIME COAST / 此刻海岸</span></div><span class="stage-number" id="sceneNumber">02 / 05</span>
     <div class="stage-corner"><i></i><span id="rendererLabel">WEBGPU · PROCEDURAL WORLD</span><span class="fps" id="fpsLabel">— FPS</span></div>
-    <div class="stage-tools"><button class="icon-btn" id="squishScene" aria-label="轻触果冻，让海岸弹一弹" title="让海岸弹一弹"><svg aria-hidden="true"><use href="#i-spark"/></svg></button><button class="icon-btn" id="resetScene" aria-label="重置沙盘视角" title="重置视角"><svg aria-hidden="true"><use href="#i-reset"/></svg></button><button class="icon-btn" id="fullscreenScene" aria-label="全屏探索" title="全屏探索"><svg aria-hidden="true"><use href="#i-expand"/></svg></button></div>
+    <div class="stage-tools"><button class="icon-btn interaction-tool" id="waterInteract" aria-label="切换拨浪模式" aria-pressed="false" title="拨浪 · 滑动海水画出涟漪"><svg aria-hidden="true"><use href="#i-wave"/></svg><span>拨浪</span></button><button class="icon-btn" id="squishScene" aria-label="轻触果冻，让海岸弹一弹" title="让海岸弹一弹"><svg aria-hidden="true"><use href="#i-spark"/></svg></button><button class="icon-btn" id="resetScene" aria-label="重置沙盘视角" title="重置视角"><svg aria-hidden="true"><use href="#i-reset"/></svg></button><button class="icon-btn" id="fullscreenScene" aria-label="全屏探索" title="全屏探索"><svg aria-hidden="true"><use href="#i-expand"/></svg></button></div>
     <div class="loading" id="sceneLoading"><span class="loading-ring"></span><p>正在凝成一方海岸</p><small>PROCEDURALLY GROWN · CYANLAND</small></div>
     <div class="stage-error" id="sceneError" hidden><p id="sceneErrorText">正在连接图形设备</p><small id="sceneErrorDetail">请使用支持 WebGPU 的浏览器，并开启硬件加速。</small><button class="action" id="sceneRetry" style="margin-top:20px">重新连接</button></div>
   </section>
   <aside class="drawer" id="sceneDrawer" inert aria-labelledby="drawerTitle"><header class="drawer-header"><i class="drawer-grip"></i><div><h2 id="drawerTitle">调整这一刻</h2><span>SCENE NOTES & CONTROLS</span></div><button class="icon-btn" id="adjustClose" aria-label="收起场景设置"><svg aria-hidden="true"><use href="#i-close"/></svg></button></header><div class="drawer-body">
     <section class="control-section"><p class="section-label">01 — 选择一方海岸</p><div class="city-cards" id="cityCards"></div></section>
     <section class="control-section"><p class="section-label">02 — 让时间流过</p><div class="segmented"><button id="modeLive" aria-pressed="true"><svg aria-hidden="true"><use href="#i-clock"/></svg>跟随此刻</button><button id="modeDemo" aria-pressed="false"><svg aria-hidden="true"><use href="#i-sun"/></svg>漫游时间</button></div><div class="field"><div class="field-head"><label for="sceneDate">公历日期</label><span id="seasonLabel">秋季</span></div><input id="sceneDate" type="date" min="1900-01-01" max="2100-12-31"></div><div class="field"><div class="field-head"><label for="sceneHour">一天中的时刻</label><output id="hourOutput" for="sceneHour">12:00</output></div><input id="sceneHour" type="range" min="0" max="23.9833" step="0.016667" value="12"><div class="range-scale"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div></div><div class="play-row"><button class="play-button" id="timePlay" aria-label="播放时间" aria-pressed="false"><svg aria-hidden="true"><use href="#i-play"/></svg></button><label for="timeSpeed" class="sr-only" hidden>时间播放速度</label><select id="timeSpeed" class="speed-select" aria-label="时间播放速度"><option value="1">1× · 自然流逝</option><option value="60">60× · 每秒一分钟</option><option value="360" selected>360× · 10 秒一小时</option><option value="1440">1440× · 1 分钟一昼夜</option></select></div><p class="drawer-live-note" id="timeModeNote">按中国标准时间同步；光照随日期与纬度变化。</p></section>
-    <section class="control-section"><p class="section-label">03 — 天光与海的表情</p><div class="weather-grid" aria-label="选择模拟天气"><button class="weather-btn" data-weather="clear" aria-pressed="true"><svg aria-hidden="true"><use href="#i-sun"/></svg>晴朗</button><button class="weather-btn" data-weather="cloudy" aria-pressed="false"><svg aria-hidden="true"><use href="#i-cloud"/></svg>多云</button><button class="weather-btn" data-weather="rain" aria-pressed="false"><svg aria-hidden="true"><use href="#i-rain"/></svg>细雨</button><button class="weather-btn" data-weather="fog" aria-pressed="false"><svg aria-hidden="true"><use href="#i-fog"/></svg>薄雾</button></div><p class="field-note">天气为可调情境，不读取实时气象。</p><div class="field"><div class="field-head"><label for="waveAmount">海浪起伏</label><output id="waveOutput" for="waveAmount">55%</output></div><input id="waveAmount" type="range" min="0" max="1" step="0.01" value="0.55"></div><div class="field"><div class="field-head"><label for="jellyAmount">果冻弹性</label><output id="jellyOutput" for="jellyAmount">65%</output></div><input id="jellyAmount" type="range" min="0" max="1" step="0.01" value="0.65"></div><label class="toggle-row" for="cutawayToggle"><span>剖面海水 · 看见海床</span><input id="cutawayToggle" type="checkbox" checked><span class="switch-track" aria-hidden="true"></span></label><label class="toggle-row" for="annotationToggle"><span>海岸注释 · 地形与生态</span><input id="annotationToggle" type="checkbox" checked><span class="switch-track" aria-hidden="true"></span></label></section>
+    <section class="control-section"><p class="section-label">03 — 天光与海的表情</p><div class="weather-grid" aria-label="选择模拟天气"><button class="weather-btn" data-weather="clear" aria-pressed="true"><svg aria-hidden="true"><use href="#i-sun"/></svg>晴朗</button><button class="weather-btn" data-weather="cloudy" aria-pressed="false"><svg aria-hidden="true"><use href="#i-cloud"/></svg>多云</button><button class="weather-btn" data-weather="rain" aria-pressed="false"><svg aria-hidden="true"><use href="#i-rain"/></svg>细雨</button><button class="weather-btn" data-weather="fog" aria-pressed="false"><svg aria-hidden="true"><use href="#i-fog"/></svg>薄雾</button></div><p class="field-note">天气为可调情境；阳光随日期与时刻缓缓移动。</p><div class="field"><div class="field-head"><label for="sunStrength">阳光强度</label><output id="sunStrengthOutput" for="sunStrength">110%</output></div><input id="sunStrength" type="range" min="0.35" max="1.6" step="0.01" value="1.1"><div class="range-scale"><span>柔光</span><span>晴光</span></div></div><div class="field"><div class="field-head"><label for="waveAmount">海浪起伏</label><output id="waveOutput" for="waveAmount">55%</output></div><input id="waveAmount" type="range" min="0" max="1" step="0.01" value="0.55"></div><div class="field"><div class="field-head"><label for="jellyAmount">果冻弹性</label><output id="jellyOutput" for="jellyAmount">65%</output></div><input id="jellyAmount" type="range" min="0" max="1" step="0.01" value="0.65"></div><div class="field"><div class="field-head"><label for="waterOpacity">海水透明度</label><output id="waterOpacityOutput" for="waterOpacity">52%</output></div><input id="waterOpacity" type="range" min="0.2" max="1" step="0.01" value="0.48"><div class="range-scale"><span>透亮</span><span>浓郁</span></div></div><div class="field"><div class="field-head"><label>与海相处</label></div><div class="segmented" aria-label="场景交互方式"><button id="interactionOrbit" aria-pressed="true"><svg aria-hidden="true"><use href="#i-compass"/></svg>环绕</button><button id="interactionWater" aria-pressed="false"><svg aria-hidden="true"><use href="#i-wave"/></svg>拨浪</button></div><p class="field-note">滑过海面拨动涟漪；双指缩放，长按拖动平移。</p></div><label class="toggle-row" for="cutawayToggle"><span>剖面海水 · 看见海床</span><input id="cutawayToggle" type="checkbox" checked><span class="switch-track" aria-hidden="true"></span></label><label class="toggle-row" for="annotationToggle"><span>海岸注释 · 轻点单条收起</span><input id="annotationToggle" type="checkbox"><span class="switch-track" aria-hidden="true"></span></label><div class="field"><div class="field-head"><label for="annotationOpacity">注释可见度</label><output id="annotationOpacityOutput" for="annotationOpacity">45%</output></div><input id="annotationOpacity" type="range" min="0" max="1" step="0.01" value="0.45"><p class="field-note">默认隐藏，打开后以轻薄文字标记风物；点一下便消失。</p></div></section>
     <section class="control-section"><p class="section-label">04 — 留住你的风景</p><div class="utility-row"><button class="utility-btn" id="drawerReset"><svg aria-hidden="true"><use href="#i-reset"/></svg>重置视角</button><button class="utility-btn" id="saveImage"><svg aria-hidden="true"><use href="#i-camera"/></svg>保存画面</button><button class="utility-btn" id="drawerSquish"><svg aria-hidden="true"><use href="#i-spark"/></svg>弹一弹</button><button class="utility-btn" id="drawerAbout"><svg aria-hidden="true"><use href="#i-compass"/></svg>海岸档案</button></div><p class="drawer-note">每座海岸独立程序生成。潮汐为周期演示，不作为赶海、航行或防灾依据。</p></section>
   </div></aside>
 </main>
-<footer class="footer"><div class="calendar"><div id="gregorianDate">2026年10月26日 星期一</div><div class="lunar" id="lunarDate">正在读取农历</div><div class="clock"><time id="localTime">12:00:00</time> <span>GMT+08:00 · 中国标准时间</span></div></div><div class="footer-middle"><div class="metrics"><div class="metric"><span>天光 · 太阳高度</span><strong id="sunMetric">—<small>°</small></strong></div><div class="metric"><span>潮汐 · 周期模拟</span><strong id="tideMetric">—</strong></div><div class="metric"><span>季节 · 海岸情境</span><strong id="weatherMetric">秋 · 晴朗</strong></div></div><div class="gesture-hint"><span><svg aria-hidden="true"><use href="#i-hand"/></svg>拖动环绕 · 双指缩放</span><span>长按移位 · 滚轮拉近</span></div></div><div class="arc-widget" aria-label="太阳位置与潮汐进度"><svg viewBox="0 0 172 75" role="img" aria-labelledby="arcTitle"><title id="arcTitle">太阳与潮汐的周期</title><defs><linearGradient id="sunGradient" x1="0" x2="1"><stop stop-color="#c7cdbd"/><stop offset=".5" stop-color="#d0ac67"/><stop offset="1" stop-color="#c7cdbd"/></linearGradient><radialGradient id="sunGlow"><stop stop-color="#f6d993" stop-opacity=".8"/><stop offset="1" stop-color="#f6d993" stop-opacity="0"/></radialGradient></defs><path class="arc-night" d="M14 65 Q86 12 158 65"/><path class="arc-day" d="M14 65 A78 59 0 0 1 158 65"/><path class="arc-tide" d="M14 69 Q32 57 50 65 T86 65 T122 65 T158 69"/><circle id="sunGlowPoint" cx="86" cy="28" r="14" stroke="none" fill="url(#sunGlow)"/><circle id="sunPoint" cx="86" cy="28" r="3.5" stroke="#c7a258" stroke-width=".75" fill="#e6c476"/><circle id="tidePoint" cx="86" cy="65" r="2.2" fill="#588e85" stroke="none"/></svg><span class="arc-caption" id="arcCaption">LIGHT & TIDE</span><div class="arc-meta"><span id="sunriseLabel">06:00</span><span id="sunsetLabel">18:00</span></div></div><div class="mobile-actionbar"><div class="mobile-actions"><button id="mobileAdjust" aria-controls="sceneDrawer" aria-expanded="false"><svg aria-hidden="true"><use href="#i-sliders"/></svg>调整场景</button><button class="mobile-explore" id="mobileExplore"><svg aria-hidden="true"><use href="#i-compass"/></svg><span>自由探索</span></button></div><button class="mobile-city" id="mobileCity"><span>COAST</span><b id="mobileCityName">青岛</b><svg aria-hidden="true"><use href="#i-chevron"/></svg></button></div></footer>
-<dialog id="aboutDialog" aria-labelledby="aboutTitle"><header class="dialog-head"><div><div class="dialog-kicker" id="aboutEyebrow">A COASTAL FIELD NOTE / 02</div><h2 id="aboutTitle">青岛 · 礁岸手记</h2></div><button class="icon-btn" id="aboutClose" aria-label="关闭海岸档案"><svg aria-hidden="true"><use href="#i-close"/></svg></button></header><div class="dialog-content"><p id="aboutDescription"></p><div class="feature-tags" id="aboutFeatures"></div><div class="about-grid"><div><span>海岸位置</span><strong id="aboutLocation">—</strong></div><div><span>当季天光</span><strong id="aboutSeason">秋季</strong></div><div><span>日出 / 日落</span><strong id="aboutSun">—</strong></div><div><span>潮汐阶段</span><strong id="aboutTide">—</strong></div></div><p id="aboutEcology">观察水下随波摆动的海草、珊瑚与沙纹，让一座海岸慢慢进入视线。</p><p class="disclaimer">Cyanland 是程序化生成的概念海岸沙盘，提炼城市地貌与生态特征，不是实测地形复刻。日照根据日期与城市经纬度估算；潮汐为周期模型，天气为手动情境。画面与数据不用于气象、潮汐或航行预报。目标为流畅的实时体验，帧率取决于设备与浏览器。</p></div></dialog>
+<footer class="footer"><div class="calendar"><div id="gregorianDate">2026年10月26日 星期一</div><div class="lunar" id="lunarDate">正在读取农历</div><div class="clock"><time id="localTime">12:00:00</time> <span>GMT+08:00 · 中国标准时间</span></div></div><div class="footer-middle"><div class="metrics"><div class="metric"><span>天光 · 太阳高度</span><strong id="sunMetric">—<small>°</small></strong></div><div class="metric"><span>潮汐 · 周期模拟</span><strong id="tideMetric">—</strong></div><div class="metric"><span>季节 · 海岸情境</span><strong id="weatherMetric">秋 · 晴朗</strong></div></div><div class="gesture-hint"><span><svg aria-hidden="true"><use href="#i-hand"/></svg>拖拽环绕 · 滑水拨浪</span><span>双指缩放 · 长按平移</span></div></div><div class="arc-widget" aria-label="太阳位置与潮汐进度"><svg viewBox="0 0 172 75" role="img" aria-labelledby="arcTitle"><title id="arcTitle">太阳与潮汐的周期</title><defs><linearGradient id="sunGradient" x1="0" x2="1"><stop stop-color="#c7cdbd"/><stop offset=".5" stop-color="#d0ac67"/><stop offset="1" stop-color="#c7cdbd"/></linearGradient><radialGradient id="sunGlow"><stop stop-color="#f6d993" stop-opacity=".8"/><stop offset="1" stop-color="#f6d993" stop-opacity="0"/></radialGradient></defs><path class="arc-night" d="M14 65 Q86 12 158 65"/><path class="arc-day" d="M14 65 A78 59 0 0 1 158 65"/><path class="arc-tide" d="M14 69 Q32 57 50 65 T86 65 T122 65 T158 69"/><circle id="sunGlowPoint" cx="86" cy="28" r="14" stroke="none" fill="url(#sunGlow)"/><circle id="sunPoint" cx="86" cy="28" r="3.5" stroke="#c7a258" stroke-width=".75" fill="#e6c476"/><circle id="tidePoint" cx="86" cy="65" r="2.2" fill="#588e85" stroke="none"/></svg><span class="arc-caption" id="arcCaption">LIGHT & TIDE</span><div class="arc-meta"><span id="sunriseLabel">06:00</span><span id="sunsetLabel">18:00</span></div></div><div class="mobile-actionbar"><div class="mobile-actions"><button id="mobileAdjust" aria-controls="sceneDrawer" aria-expanded="false"><svg aria-hidden="true"><use href="#i-sliders"/></svg>调整场景</button><button class="mobile-explore" id="mobileExplore"><svg aria-hidden="true"><use href="#i-compass"/></svg><span>自由探索</span></button></div><button class="mobile-city" id="mobileCity"><span>COAST</span><b id="mobileCityName">青岛</b><svg aria-hidden="true"><use href="#i-chevron"/></svg></button></div></footer>
+<dialog id="aboutDialog" aria-labelledby="aboutTitle"><header class="dialog-head"><div><div class="dialog-kicker" id="aboutEyebrow">A COASTAL FIELD NOTE / 02</div><h2 id="aboutTitle">青岛 · 礁岸手记</h2></div><button class="icon-btn" id="aboutClose" aria-label="关闭海岸档案"><svg aria-hidden="true"><use href="#i-close"/></svg></button></header><div class="dialog-content"><p id="aboutDescription"></p><div class="feature-tags" id="aboutFeatures"></div><div class="about-grid"><div><span>海岸位置</span><strong id="aboutLocation">—</strong></div><div><span>当季天光</span><strong id="aboutSeason">秋季</strong></div><div><span>日出 / 日落</span><strong id="aboutSun">—</strong></div><div><span>潮汐阶段</span><strong id="aboutTide">—</strong></div></div><p id="aboutEcology">观察水下随波摆动的海草、珊瑚与沙纹，让一座海岸慢慢进入视线。</p><p class="local-note" id="aboutLocalNote" hidden></p><p class="disclaimer">Cyanland 是程序化生成的概念海岸沙盘，提炼城市地貌与生态特征，不是实测地形复刻。日照根据日期与城市经纬度估算；潮汐为周期模型，天气为手动情境。画面与数据不用于气象、潮汐或航行预报。目标为流畅的实时体验，帧率取决于设备与浏览器。</p></div></dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script id="app-code">// Cyanland — procedural geometry, no external assets or libraries.
 const C$=id=>document.getElementById(id);
@@ -393,6 +411,15 @@ const CITY_DEFS = [
   {id:'sanya',name:'三亚',en:'SANYA',lat:18.252,lon:109.512,subtitle:'热带珊瑚湾 · 南海',poem:['椰影入海，','珊瑚藏光。'],description:'热带山丘披着深绿，椰影在白沙上轻轻摆动。清澈浅海保留珊瑚与鱼群的颜色，让一整片流动的蓝，像果冻般被阳光托起。',features:['热带双岛','椰林白沙','彩色珊瑚礁','透明浅海鱼群'],seed:2221,sea:[0.025,0.73,0.70],tideAmplitude:0.21,habitat:'珊瑚 · 椰林',climate:'热带海洋',terrainLabel:'热带高岛与珊瑚浅礁'}
 ];
 const CYANLAND_BUILDERS = new Map();
+// Small coastal keepsakes are part of the artistic specimen, not a species survey.
+const CYANLAND_LOCAL_DETAILS = {
+  qingdao:{note:'礁缝边留着螺壳、卷起的渔网与木浮标；微型潮池随海水涨落，浅海中有游鱼和海草。',features:['螺壳与渔具','微型潮池']},
+  dalian:{note:'冷色岩岸上有贝壳与海带，浅海的海参形小生物藏在石间，山径沿崖转弯。',features:['贝壳与海带','海参形海底小生物']},
+  xiamen:{note:'一叶木渔船停在湾边，绳圈与网具留在干沙上；贝壳和细小蟹足点缀潮线。',features:['木渔船与绳圈','湾边小沙蟹']},
+  beihai:{note:'白沙上散着成对珠母色贝壳，小贝壳与遮阳伞只占一角，留下开阔的浅滩。',features:['珠母色贝壳','白沙遮阳伞']},
+  sanya:{note:'椰树下留着几枚椰子与一顶小阳伞，珊瑚边的小鱼在清浅海水里结伴游动。',features:['椰子与沙滩小伞','珊瑚边游鱼']}
+};
+for(const city of CITY_DEFS){const local=CYANLAND_LOCAL_DETAILS[city.id];city.localNote=local.note;city.features.push(...local.features);}
 function registerCity(def,builder){
   if(!def || !def.id || typeof builder !== 'function') throw new TypeError('A city needs an id and a procedural builder.');
   const old=CITY_DEFS.findIndex(c=>c.id===def.id);
@@ -403,7 +430,7 @@ function buildCity(id){
   const def=CITY_DEFS.find(c=>c.id===id)||CITY_DEFS[0];
   if(CYANLAND_BUILDERS.has(def.id)) return CYANLAND_BUILDERS.get(def.id)(def,Geo);
   Geo.data=[];
-  const floor=-3.8,N=100,step=12/N;
+  const floor=-3.8,N=112,step=12/N;
   let rngState=def.seed>>>0;
   const random=()=>{rngState=(1664525*rngState+1013904223)>>>0;return rngState/4294967296;};
   const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
@@ -449,7 +476,17 @@ function buildCity(id){
     const reef=-1.9+1.25*gauss(x,z,2.2,2.05,2.4,1.25);
     return clamp(Math.max(p,q,reef)+n*.04,-2.2,3.65);
   };
-  const height=(x,z)=>{const raw=rawHeight(x,z),h=raw+(raw<-.02?.015*Math.sin(x*11.4+Math.sin(z*1.7)*.8)*Math.exp(-Math.abs(raw+.7)):.0);return h<0?h*1.35:h;};
+  const tidePools=[];
+  if(def.id==='qingdao'||def.id==='dalian')for(let j=0;j<1200&&tidePools.length<4;j++){
+    const x=-5.1+hash(j,31)*10.2,z=-4.8+hash(j,72)*9.4,h=rawHeight(x,z),slope=Math.hypot(rawHeight(x+.1,z)-rawHeight(x-.1,z),rawHeight(x,z+.1)-rawHeight(x,z-.1))/.2;
+    if(h>.015&&h<.16&&slope<.68&&tidePools.every(p=>Math.hypot(x-p[0],z-p[1])>1.25))tidePools.push([x,z,.25+hash(j,14)*.12]);
+  }
+  const height=(x,z)=>{
+    let raw=rawHeight(x,z);
+    for(const p of tidePools)raw-=.22*gauss(x,z,p[0],p[1],p[2],p[2]*.78);
+    const ripple=.014*Math.sin(x*13.1+Math.sin(z*2.2)*.62)*Math.exp(-Math.abs(raw+.4)*1.8),grain=(noise(x*17,z*17)-.5)*.009;
+    const h=raw+(raw<.3? ripple+grain:0);return h<0?h*1.35:h;
+  };
   function push(p,n,c,kind=0,a0=0,a1=0){Geo.data.push(p[0],p[1],p[2],n[0],n[1],n[2],c[0],c[1],c[2],kind,a0,a1);}
   function normal(a,b,c){const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]],v=[c[0]-a[0],c[1]-a[1],c[2]-a[2]],n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]],l=Math.hypot(...n)||1;return n.map(x=>x/l);}
   function tri(a,b,c,col,kind=0,phase=0,amp=0){const n=normal(a,b,c),cc=color(col);push(a,n,cc,kind,phase,amp);push(b,n,cc,kind,phase,amp);push(c,n,cc,kind,phase,amp);}
@@ -482,7 +519,8 @@ function buildCity(id){
     sanya:{sand:'#f0e5bf',deep:'#b2d3bd',grass:'#4d7943',rock:'#a8b7a0',soil:'#768d5f'}
   },palette=palettes[def.id]||palettes.sanya;
   const grid=[],norms=[],cols=[];
-  let land=0,maxElevation=-Infinity,minElevation=Infinity,plantCount=0,rockCount=0,coralCount=0,fishCount=0;
+  let land=0,maxElevation=-Infinity,minElevation=Infinity,plantCount=0,rockCount=0,coralCount=0,fishCount=0,shellCount=0,smallDetailCount=0;
+  const fishMotion=[];
   for(let iz=0;iz<=N;iz++)for(let ix=0;ix<=N;ix++){const x=-6+ix*step,z=-6+iz*step,h=height(x,z);grid.push([x,h,z]);if(h>0)land++;maxElevation=Math.max(maxElevation,h);minElevation=Math.min(minElevation,h);}
   for(let iz=0;iz<=N;iz++)for(let ix=0;ix<=N;ix++){
     const i=iz*(N+1)+ix,p=grid[i],dx=(grid[iz*(N+1)+Math.min(N,ix+1)][1]-grid[iz*(N+1)+Math.max(0,ix-1)][1])/(ix===0||ix===N?step:2*step),dz=(grid[Math.min(N,iz+1)*(N+1)+ix][1]-grid[Math.max(0,iz-1)*(N+1)+ix][1])/(iz===0||iz===N?step:2*step),l=Math.hypot(dx,1,dz),slope=Math.hypot(dx,dz),n=fbm(p[0]*3.2,p[2]*3.2);
@@ -490,6 +528,13 @@ function buildCity(id){
     let c;
     if(p[1]<-.05){const blend=smooth(-.05,-1.8,p[1]);c=tint(color(palette.sand),color(palette.deep),blend*.7);const ripple=Math.sin(p[0]*11.4+Math.sin(p[2]*1.7)*.8)*.025;c=c.map(v=>clamp(v+ripple+(n-.5)*.035));}
     else{const beach=def.id==='beihai'?.3:def.id==='sanya'?.18:.22;c=tint(color(palette.sand),color(palette.grass),smooth(beach*.65,beach+.38,p[1]));c=tint(c,color(palette.rock),smooth(.4,1.1,slope)*.88);c=c.map(v=>clamp(v*(.94+n*.13)));}
+    // Damp sand, wind-combed grains and pale seams keep the shoreline continuous.
+    const damp=(1-smooth(.04,.24,Math.abs(p[1])))*.17;c=c.map((v,k)=>clamp(v*(1-damp)+[.012,.015,.008][k]*damp));
+    if(p[1]>-.12&&p[1]<.35){const sandRipple=Math.sin(p[0]*22.4+p[2]*4.1+Math.sin(p[2]*2.7)*1.5)*.012; c=c.map(v=>clamp(v+sandRipple));}
+    if(p[1]>.3){const vein=Math.pow(.5+.5*Math.sin(p[0]*11+p[2]*4.3+noise(p[0]*2,p[2]*2)*5),11)*smooth(.45,1.2,slope);c=tint(c,[.71,.72,.61],vein*.18);
+      const pathDistance=Math.abs(p[2]-(-3.45+.33*Math.sin(p[0]*1.15)));
+      if(def.id!=='beihai'&&pathDistance<.085&&slope<.8)c=tint(c,color(palette.sand),.45*(1-pathDistance/.085));
+    }
     cols.push(c);
   }
   for(let iz=0;iz<N;iz++)for(let ix=0;ix<N;ix++){
@@ -512,16 +557,16 @@ function buildCity(id){
     }
   }
   quad([-6,floor,-6],[6,floor,-6],[6,floor,6],[-6,floor,6],'#82ab9c');
-  function rock(x,z,size=.35,raised=0){const y=height(x,z)+raised;orb(x,y+size*.25,z,size,size*(.52+random()*.4),size*(.65+random()*.45),tint(color(palette.rock),[.64,.61,.51],random()*.28),7,4,0,.13);rockCount++;}
+  function rock(x,z,size=.35,raised=0){const y=height(x,z)+raised;orb(x,y+size*.25,z,size,size*(.52+random()*.4),size*(.65+random()*.45),tint(color(palette.rock),[.64,.61,.51],random()*.28),9,5,0,.11);rockCount++;}
   function grass(x,z,s=.3,underwater=false){
     const y=height(x,z),phase=random()*6.28,cc=underwater?'#357c6b':'#92a26a';
     for(let k=0;k<5;k++){const angle=k*2.4+phase,l=s*(.5+random()*.65),bx=x+Math.cos(angle)*.045,bz=z+Math.sin(angle)*.045,wx=Math.cos(angle+1.57)*.016,wz=Math.sin(angle+1.57)*.016,tip=[bx+Math.cos(angle)*l*.24,y+l,bz+Math.sin(angle)*l*.24],mid=[bx+Math.cos(angle)*l*.07,y+l*.55,bz+Math.sin(angle)*l*.07];
       quad([bx-wx,y,bz-wz],[bx+wx,y,bz+wz],[mid[0]+wx*.65,mid[1],mid[2]+wz*.65],[mid[0]-wx*.65,mid[1],mid[2]-wz*.65],cc,3,phase,.8);tri([mid[0]-wx*.65,mid[1],mid[2]-wz*.65],[mid[0]+wx*.65,mid[1],mid[2]+wz*.65],tip,cc,3,phase,1);
     }plantCount++;
   }
-  function shrub(x,z,s=.28){const y=height(x,z);orb(x,y+s*.32,z,s,s*.55,s*.8,'#718750',6,3,3,.1);plantCount++;}
-  function pine(x,z,s=1){const y=height(x,z),lean=(random()-.5)*.12;beam([x,y,z],[x+lean,y+s*.7,z],s*.035,'#776e51',5,0,s*.018);orb(x+lean,y+s*.7,z,s*.37,s*.23,s*.3,'#3f6546',7,3,3,.15);orb(x+lean*.5+s*.1,y+s*.89,z-s*.04,s*.29,s*.19,s*.24,'#53734b',7,3,3,.12);plantCount++;}
-  function broadleaf(x,z,s=.8){const y=height(x,z);beam([x,y,z],[x+s*.04,y+s*.66,z],s*.048,'#827856',5,0,s*.027);orb(x,y+s*.75,z,s*.36,s*.34,s*.33,'#527b4a',7,3,3,.15);orb(x+s*.19,y+s*.62,z+s*.06,s*.27,s*.26,s*.25,'#648b4c',6,3,3,.15);plantCount++;}
+  function shrub(x,z,s=.28){const y=height(x,z);orb(x,y+s*.32,z,s,s*.55,s*.8,'#718750',8,4,3,.09);plantCount++;}
+  function pine(x,z,s=1){const y=height(x,z),lean=(random()-.5)*.12;beam([x,y,z],[x+lean,y+s*.7,z],s*.035,'#776e51',6,0,s*.018);orb(x+lean,y+s*.7,z,s*.37,s*.23,s*.3,'#3f6546',9,4,3,.12);orb(x+lean*.5+s*.1,y+s*.89,z-s*.04,s*.29,s*.19,s*.24,'#53734b',9,4,3,.1);plantCount++;}
+  function broadleaf(x,z,s=.8){const y=height(x,z);beam([x,y,z],[x+s*.04,y+s*.66,z],s*.048,'#827856',6,0,s*.027);orb(x,y+s*.75,z,s*.36,s*.34,s*.33,'#527b4a',9,4,3,.11);orb(x+s*.19,y+s*.62,z+s*.06,s*.27,s*.26,s*.25,'#648b4c',8,4,3,.1);plantCount++;}
   function palm(x,z,s=1){
     const y=height(x,z),angle=random()*6.28,lean=.19*s,top=[x+Math.cos(angle)*lean,y+s*1.18,z+Math.sin(angle)*lean];
     let prev=[x,y,z];for(let k=1;k<=5;k++){const t=k/5,next=[x+Math.cos(angle)*lean*t*t,y+s*1.18*t,z+Math.sin(angle)*lean*t*t];beam(prev,next,s*(.041-.017*t),'#ad9770',5,0,s*(.038-.017*t));prev=next;}
@@ -533,7 +578,7 @@ function buildCity(id){
     }orb(top[0],top[1]-.07*s,top[2],s*.055,s*.07,s*.055,'#8b7748',5,3);plantCount++;
   }
   function star(x,z,s=.12){const y=height(x,z)+.025,c=[x,y+.025,z],a=random()*6.28;for(let k=0;k<10;k++){const t=a+k/10*Math.PI*2,u=a+(k+1)/10*Math.PI*2,r=k%2?s*.4:s,rr=(k+1)%2?s*.4:s;tri(c,[x+Math.cos(u)*rr,y,z+Math.sin(u)*rr],[x+Math.cos(t)*r,y,z+Math.sin(t)*r],k%2?'#c88e6d':'#e9ad80');}}
-  function shell(x,z,s=.09){const y=height(x,z)+.018,a=random()*6.28;for(let k=0;k<7;k++){const t=a+(-.7+k/7*1.4),u=a+(-.7+(k+1)/7*1.4);tri([x,y+.035,z],[x+Math.cos(u)*s,y,z+Math.sin(u)*s],[x+Math.cos(t)*s,y,z+Math.sin(t)*s],k%2?'#f0e6cc':'#d3c4aa');}}
+  function shell(x,z,s=.09){const y=height(x,z)+.014,a=random()*6.28;for(let k=0;k<9;k++){const t=a+(-.85+k/9*1.7),u=a+(-.85+(k+1)/9*1.7),v=s*(.7+.3*Math.cos(t-a));tri([x,y+s*.3,z],[x+Math.cos(u)*v,y,z+Math.sin(u)*v],[x+Math.cos(t)*v,y,z+Math.sin(t)*v],k%2?'#f0e6cc':'#d3c4aa');}shellCount++;}
   function coral(x,z,s=.3){
     const y=height(x,z),cc=['#d49d88','#e5c18d','#8cae8d','#a59aaa'][Math.floor(random()*4)];
     if((def.id!=='sanya'&&def.id!=='xiamen')||random()<.42){orb(x,y+s*.28,z,s,s*.5,s*.75,cc,7,4,0,.18);for(let k=0;k<3;k++)orb(x+(random()-.5)*s,y+s*.55,z+(random()-.5)*s,s*.22,s*.26,s*.22,'#c4c895',5,3);}
@@ -541,10 +586,13 @@ function buildCity(id){
     coralCount++;
   }
   function fish(x,y,z,s=.12,angle=0){
-    const cc=def.id==='sanya'?'#d3c56a':'#6d9d9e',p=(a,b,c)=>[x+a*Math.cos(angle)-c*Math.sin(angle),y+b,z+a*Math.sin(angle)+c*Math.cos(angle)];
+    const phase=random()*Math.PI*2,amp=.13+random()*.12,cc=def.id==='sanya'?(random()<.5?'#cbbb69':'#70b6b6'):'#7badae',p=(a,b,c)=>[x+a*Math.cos(angle)-c*Math.sin(angle),y+b,z+a*Math.sin(angle)+c*Math.cos(angle)],fin=tint(color(cc),[.37,.55,.55],.28);
     const nose=p(s,0,0),tail=p(-s*.7,0,0),top=p(0,s*.37,0),bot=p(0,-s*.32,0),left=p(0,0,s*.19),right=p(0,0,-s*.19);
-    for(const a of[[nose,top,left],[nose,left,bot],[nose,right,top],[nose,bot,right],[tail,left,top],[tail,bot,left],[tail,top,right],[tail,right,bot]])tri(...a,cc,3,random()*6.28,.2);
-    tri(tail,p(-s*1.15,s*.35,0),p(-s*1.15,-s*.35,0),cc,3,0,.3);fishCount++;
+    for(const a of[[nose,top,left],[nose,left,bot],[nose,right,top],[nose,bot,right],[tail,left,top],[tail,bot,left],[tail,top,right],[tail,right,bot]])tri(...a,cc,4,phase,amp);
+    tri(tail,p(-s*1.15,s*.35,0),p(-s*1.15,-s*.35,0),fin,4,phase,amp);
+    tri(p(s*.19,s*.02,s*.2),p(s*.58,s*.04,s*.13),p(s*.5,s*.09,s*.17),'#354d4d',4,phase,amp);
+    let maxBottom=-Infinity;for(let j=0;j<20;j++){const t=j/20*Math.PI*2;maxBottom=Math.max(maxBottom,height(x+Math.sin(t)*amp,z+Math.cos(t)*amp*.6));}
+    fishMotion.push({center:[x,y,z],phase,amplitude:amp,size:s,seabedClearance:+(y-.035-s*.37-maxBottom).toFixed(3)});fishCount++;
   }
   const landmarks=[];
   function house(x,z,s=.65,rot=0,roof='#b66b4e'){
@@ -566,6 +614,43 @@ function buildCity(id){
     }
   }
   function sailboat(x,z,s=.45,angle=-.3){const y=.06,p=(a,b,c)=>[x+a*Math.cos(angle)-c*Math.sin(angle),y+b,z+a*Math.sin(angle)+c*Math.cos(angle)];orb(x,y-.018,z,s*.49,s*.12,s*.19,'#eee9d6',8,3);beam(p(0,0,0),p(0,s*.9,0),.008,'#7c8174',5);tri(p(.02,s*.84,0),p(.02,s*.14,0),p(s*.43,s*.16,0),'#f2ebd7');tri(p(-.015,s*.72,0),p(-s*.32,s*.15,0),p(-.015,s*.15,0),'#d7b58e');}
+  function driftwood(x,z,s=.45){
+    const a=random()*6.28,y=height(x,z)+.025,dx=Math.cos(a),dz=Math.sin(a),p=t=>[x+dx*s*t,y+.025*Math.sin(t*4),z+dz*s*t];
+    for(let j=0;j<4;j++)beam(p(-.5+j*.25),p(-.25+j*.25),.025-j*.003,j%2?'#b3a181':'#a08e70',7,0,.024-j*.003);
+    beam(p(.12),[x+dx*s*.12-dz*.13,y+.05,z+dz*s*.12+dx*.13],.014,'#ae9c7e',5,0,.005);smallDetailCount++;
+  }
+  function crab(x,z,s=.075){
+    const y=height(x,z)+.018,col='#bd8868';orb(x,y+s*.17,z,s*.55,s*.27,s*.44,col,7,3);
+    for(const side of[-1,1])for(let j=0;j<3;j++){const a=[x+side*s*.35,y+s*.1,z+(j-1)*s*.28],b=[x+side*s*.92,y+s*.08,z+(j-1)*s*.56];beam(a,b,.0045,col,4);beam(b,[b[0]+side*s*.12,y-.005,b[2]+s*.13],.0035,col,4);}
+    for(const side of[-1,1]){beam([x+side*s*.35,y+s*.1,z-s*.22],[x+side*s*.72,y+s*.3,z-s*.65],.006,col,4);tri([x+side*s*.72,y+s*.3,z-s*.65],[x+side*s*.92,y+s*.45,z-s*.84],[x+side*s*.78,y+s*.38,z-s*.51],'#cf9b78');}smallDetailCount++;
+  }
+  function ropeCoil(x,y,z,r=.13){for(let turn=0;turn<2;turn++)for(let j=0;j<15;j++){const a=j/15*Math.PI*2,b=(j+1)/15*Math.PI*2,rr=r*(1-turn*.26);beam([x+Math.cos(a)*rr,y+turn*.01,z+Math.sin(a)*rr],[x+Math.cos(b)*rr,y+turn*.01,z+Math.sin(b)*rr],.006,'#b8a477',4);}smallDetailCount++;}
+  function fishingGear(x,z){
+    const y=height(x,z)+.025;ropeCoil(x,y,z,.12);
+    for(let j=0;j<5;j++){const zz=z+.16+j*.035;beam([x-.17,y,zz],[x+.16,y+.015,zz+.07],.0035,'#6b8678',4);beam([x-.14+j*.07,y,z+.12],[x-.11+j*.07,y+.013,z+.38],.0035,'#6b8678',4);}
+    for(const dx of[-.12,.12])orb(x+dx,y+.025,z+.38,.025,.03,.025,'#c7ae7b',6,3);smallDetailCount++;
+  }
+  function smallBoat(x,z,s=.55){
+    const y=height(x,z)+.065,a=-.4,cs=Math.cos(a),sn=Math.sin(a),p=(u,v,w)=>[x+u*cs-w*sn,y+v,z+u*sn+w*cs];
+    const hull=[p(-s*.55,0,0),p(-s*.37,.08,s*.21),p(s*.39,.075,s*.19),p(s*.61,.065,0),p(s*.39,.075,-s*.19),p(-s*.37,.08,-s*.21)],bottom=p(0,-.045,0);
+    for(let j=0;j<6;j++)tri(bottom,hull[(j+1)%6],hull[j],j%2?'#a38a64':'#9e7956');
+    quad(p(-s*.36,.037,-s*.16),p(-s*.36,.037,s*.16),p(s*.38,.037,s*.16),p(s*.38,.037,-s*.16),'#c5ac80');
+    for(let j=0;j<6;j++)beam(hull[j],hull[(j+1)%6],.014,'#7d7560',5);
+    for(const u of[-.22,.09])beam(p(u,.078,-s*.16),p(u,.078,s*.16),.023,'#af976d',5);
+    beam(p(-.25,.08,-.14),p(.45,.1,.33),.01,'#987e59',5);orb(...p(.47,.1,.35),.04,.012,.075,'#b59a71',6,3);ropeCoil(...p(-.11,.083,0),.065);smallDetailCount++;
+  }
+  function umbrella(x,z,s=.42){
+    const y=height(x,z);beam([x,y,z],[x,y+s*.94,z],.012,'#aa9570',6);
+    const top=[x,y+s*1.05,z];for(let j=0;j<10;j++){const a=j/10*Math.PI*2,b=(j+1)/10*Math.PI*2;tri(top,[x+Math.cos(b)*s*.52,y+s*.83,z+Math.sin(b)*s*.52],[x+Math.cos(a)*s*.52,y+s*.83,z+Math.sin(a)*s*.52],j%2?'#dfd4b0':'#a7b8a0');}
+    box(x+.18,y+.018,z+.19,.14,.018,.3,'#e6d7b1',.2);smallDetailCount++;
+  }
+  function spiralShell(x,z,s=.07){
+    const y=height(x,z)+.025;orb(x,y+s*.3,z,s*.8,s*.52,s*.62,'#dbc8a4',9,4);
+    for(let j=0;j<15;j++){const a=j/15*Math.PI*3.6,b=(j+1)/15*Math.PI*3.6,ra=s*(.65-j*.031),rb=s*(.65-(j+1)*.031);beam([x+Math.cos(a)*ra,y+s*.76,z+Math.sin(a)*ra],[x+Math.cos(b)*rb,y+s*.77,z+Math.sin(b)*rb],.004,'#b79c77',4);}smallDetailCount++;
+  }
+  const detailReservations=({qingdao:[[-1.5,-2.3,.5],[-.62,-2.65,.4],[.38,-2.87,.5],[-2.22,-2.82,.4],[2.85,-.62,.5]],dalian:[[3.7,-2.32,.45],[-3.8,-4.8,.4]],xiamen:[[-3.8,-1.6,.5],[-2.8,-3.25,.4],[2.4,.93,.35]],beihai:[[-2.8,-3.7,.45],[-1.7,-3.55,.45],[-.6,-3.53,.45],[.5,-3.67,.45]],sanya:[[-2.8,-.75,.4]]})[def.id]||[];
+  const clearDetail=(x,z,r=.12)=>detailReservations.every(p=>Math.hypot(x-p[0],z-p[1])>r+p[2]);
+  function addCoastalObject(predicate,fn,r=.35){for(let j=0;j<900;j++){const x=-4.8+random()*9.6,z=-4.7+random()*8.9,h=height(x,z);if(predicate(x,z,h)&&clearDetail(x,z,r)&&slopeAt(x,z)<.4){fn(x,z,h);detailReservations.push([x,z,r]);return true;}}return false;}
   const place=(amount,predicate,fn)=>{let made=0;for(let tries=0;tries<amount*55&&made<amount;tries++){const x=-5.65+random()*11.3,z=-5.65+random()*11.3,h=height(x,z);if(predicate(x,z,h)){fn(x,z,h,made);made++;}}return made;};
   const slopeAt=(x,z)=>Math.hypot(height(x+.08,z)-height(x-.08,z),height(x,z+.08)-height(x,z-.08))/.16;
   if(def.id==='qingdao'){
@@ -605,44 +690,84 @@ function buildCity(id){
     landmarks.push({label:'椰影白沙',pos:[-2.6,.65,.7],detail:'椰树沿温暖海湾生长，白沙连接热带植被。'},{label:'浅海珊瑚花园',pos:[2.2,-.25,2.05],detail:'清澈水体下的枝状珊瑚、团状珊瑚与热带鱼群。'});
   }
   const tropical=def.id==='sanya',southern=tropical||def.id==='xiamen';
+  // A few modest objects establish human scale without filling the coast with props.
+  addCoastalObject((x,z,h)=>h>.06&&h<.24,(x,z)=>driftwood(x,z,.42),.32);
+  addCoastalObject((x,z,h)=>h>.08&&h<.3,(x,z)=>driftwood(x,z,.27),.24);
+  if(def.id==='qingdao'){
+    addCoastalObject((x,z,h)=>h>.1&&h<.35,(x,z)=>fishingGear(x,z),.42);
+    addCoastalObject((x,z,h)=>h>.02&&h<.2,(x,z)=>spiralShell(x,z,.115),.17);
+  }else if(def.id==='dalian'){
+    place(7,(x,z,h)=>h<-.6&&h>-1.25&&(x>1||x<-1),(x,z,h)=>{
+      const a=random()*6.28,xx=Math.cos(a),zz=Math.sin(a),s=.06+random()*.025;
+      for(let j=0;j<4;j++)orb(x+(j-1.5)*s*.55*xx,h+.04,z+(j-1.5)*s*.55*zz,s*.46,s*.36,s*.46,j%2?'#626a4d':'#798264',6,3);
+      for(let j=0;j<5;j++){const q=(j-2)*s*.37;tri([x+q*xx-.012,h+.065,z+q*zz],[x+q*xx+.012,h+.065,z+q*zz],[x+q*xx,h+.092,z+q*zz],'#8f9873');}smallDetailCount++;
+    });
+    place(6,(x,z,h)=>h>-.32&&h<.04,(x,z,h)=>{const y=h+.015;for(let k=0;k<3;k++){const a=k*2.4;quad([x,y,z],[x+.022,y,z],[x+Math.cos(a)*.21,y+.01,z+Math.sin(a)*.21],[x+Math.cos(a)*.2-.02,y+.01,z+Math.sin(a)*.2],'#667c49');}smallDetailCount++;});
+  }else if(def.id==='xiamen'){
+    addCoastalObject((x,z,h)=>h>.025&&h<.15,(x,z)=>smallBoat(x,z,.61),.65);
+    addCoastalObject((x,z,h)=>h>.12&&h<.3,(x,z,h)=>{ropeCoil(x,h+.025,z,.12);fishingGear(x+.21,z);},.48);
+  }else if(def.id==='beihai'){
+    addCoastalObject((x,z,h)=>h>.12&&h<.29,(x,z)=>umbrella(x,z,.52),.48);
+    addCoastalObject((x,z,h)=>h>.08&&h<.2,(x,z,h)=>{shell(x-.06,z,.14);shell(x+.07,z-.015,.12);orb(x-.015,h+.038,z+.012,.018,.018,.018,'#f4efd7',7,4);},.27);
+  }else{
+    addCoastalObject((x,z,h)=>h>.09&&h<.3,(x,z)=>umbrella(x,z,.48),.48);
+    addCoastalObject((x,z,h)=>h>.07&&h<.25,(x,z,h)=>{for(let j=0;j<3;j++)orb(x+(j-1)*.075,h+.045,z+Math.sin(j*2)*.05,.052,.046,.046,j%2?'#a18b57':'#7e8150',8,4);smallDetailCount++;},.25);
+  }
+  for(const pool of tidePools)for(let j=0;j<5;j++){const a=j/5*Math.PI*2;rock(pool[0]+Math.cos(a)*pool[2]*.88,pool[1]+Math.sin(a)*pool[2]*.7,.045+random()*.035);}
+  place(68,(x,z,h)=>h>-.18&&h<.25&&clearDetail(x,z,.06),(x,z)=>rock(x,z,.015+random()*.027));
+  place(42,(x,z,h)=>h>.02&&h<.3&&clearDetail(x,z,.05),(x,z)=>shell(x,z,.026+random()*.028));
+  place(6,(x,z,h)=>h>.03&&h<.2&&clearDetail(x,z,.11),(x,z)=>crab(x,z,.055+random()*.025));
+  place(def.id==='beihai'?25:35,(x,z,h)=>h>.24&&h<1.3&&slopeAt(x,z)<.7&&clearDetail(x,z,.09),(x,z)=>grass(x,z,.075+random()*.1));
   place(tropical?39:22,(x,z,h)=>h<-.3&&h>-1.7,(x,z,h)=>grass(x,z,.16+random()*.25,true));
   place(tropical?27:southern?13:8,(x,z,h)=>h<-.35&&h>-1.6,(x,z)=>coral(x,z,.13+random()*(tropical?.24:.12)));
   place(18,(x,z,h)=>h<-.08&&h>-1.7,(x,z)=>star(x,z,.065+random()*.065));
   place(30,(x,z,h)=>h<.15&&h>-1.6,(x,z)=>shell(x,z,.04+random()*.06));
-  // Small schooling groups remain under water even at the lowest modelled tide.
-  place(tropical?4:2,(x,z,h)=>z>.5&&h<-.75,(sx,sz,hh,j)=>{
-    for(let k=0;k<6;k++){const x=sx+(random()-.5)*.65,z=sz+(random()-.5)*.6,y=Math.max(height(x,z)+.22,-.48);if(y<-.35)fish(x,y,z,.07+random()*.055,j*.7+.5);}
-  });
+  // Each fish is one rigid animated mesh: every vertex shares phase and swim amplitude.
+  // Sample the whole orbit plus body radius against terrain and conservative low tide.
+  const fishHubs=[],fishPaths=[];
+  place(tropical?3:2,(x,z,h)=>z>.7&&h<-1.02&&x>-4.6&&x<4.6,(x,z)=>fishHubs.push([x,z]));
+  const fishTarget=tropical?20:14;
+  for(let j=0;j<fishTarget*45&&fishCount<fishTarget;j++){
+    const hub=fishHubs[j%Math.max(1,fishHubs.length)]||[0,4.5],x=hub[0]+(random()-.5)*1.0,z=hub[1]+(random()-.5)*.8,y=-.64-random()*.09;
+    if(Math.abs(x)>5.35||Math.abs(z)>5.35)continue;
+    let highest=-Infinity;
+    for(let ix=-1;ix<=1;ix++)for(let iz=-1;iz<=1;iz++)highest=Math.max(highest,height(x+ix*.42,z+iz*.31));
+    if(highest>y-.2||fishPaths.some(p=>Math.hypot(x-p[0],z-p[1])<.1))continue;
+    fish(x,y,z,.075+random()*.035,(fishCount%3)*.18+.18);fishPaths.push([x,z]);
+  }
   // Face-on specimen shells in the limestone, and a few tidal boulders below the surface.
   place(9,(x,z,h)=>h<-.55&&h>-1.75,(x,z)=>rock(x,z,.10+random()*.15));
-  return {data:new Float32Array(Geo.data),height,landmarks,stats:{vertices:Geo.data.length/12,triangles:Geo.data.length/36,landPercent:Math.round(land/grid.length*100),maxElevation:+maxElevation.toFixed(2),minElevation:+minElevation.toFixed(2),plants:plantCount,rocks:rockCount,corals:coralCount,fish:fishCount,habitat:def.habitat,terrain:def.terrainLabel,scale:'艺术化地形 · 非实测',seed:def.seed}};
+  return {data:new Float32Array(Geo.data),height,landmarks,stats:{vertices:Geo.data.length/12,triangles:Geo.data.length/36,landPercent:Math.round(land/grid.length*100),maxElevation:+maxElevation.toFixed(2),minElevation:+minElevation.toFixed(2),plants:plantCount,rocks:rockCount,corals:coralCount,fish:fishCount,fishPaths:fishMotion,shells:shellCount,coastalDetails:smallDetailCount,tidePools:tidePools.length,localNote:def.localNote,habitat:def.habitat,terrain:def.terrainLabel,scale:'艺术化地形 · 非实测',seed:def.seed}};
 }
 
 const cyanWGSL=/*wgsl*/`
-struct Global{vp:mat4x4f,lightVP:mat4x4f,eye:vec4f,sun:vec4f,sunColor:vec4f,sea:vec4f,env:vec4f,motion:vec4f,ripples:array<vec4f,4>,extra:vec4f};
+struct Global{vp:mat4x4f,lightVP:mat4x4f,eye:vec4f,sun:vec4f,sunColor:vec4f,sea:vec4f,env:vec4f,motion:vec4f,ripples:array<vec4f,8>,extra:vec4f,controls:vec4f};
 @group(0) @binding(0) var<uniform> g:Global;
 @group(0) @binding(1) var shadowMap:texture_depth_2d;
 @group(0) @binding(2) var shadowSampler:sampler_comparison;
 struct Input{@location(0) p:vec3f,@location(1) n:vec3f,@location(2) c:vec3f,@location(3) kind:f32,@location(4) aux:vec2f};
 struct Output{@builtin(position) position:vec4f,@location(0) p:vec3f,@location(1) n:vec3f,@location(2) c:vec3f,@location(3) kind:f32,@location(4) aux:vec2f,@location(5) light:vec4f};
-fn wave(p:vec2f)->f32{var w=sin(p.x*2.3+p.y*.72+g.env.x*.92)*.035+sin(p.y*3.9-p.x*.5-g.env.x*1.24)*.02+sin(p.x*7.1+p.y*4.2+g.env.x*.7)*.008;for(var i=0;i<4;i++){let r=g.ripples[i];let d=distance(p,r.xy);let age=g.env.x-r.z;if(age>=0.&&age<6.){w+=sin(d*11.-age*8.)*exp(-d*.6-age*.7)*r.w;}}return w*g.env.z;}
+fn wave(p:vec2f)->f32{var w=(sin(p.x*2.3+p.y*.72+g.env.x*.92)*.035+sin(p.y*3.9-p.x*.5-g.env.x*1.24)*.02+sin(p.x*7.1+p.y*4.2+g.env.x*.7)*.008)*g.env.z;for(var i=0;i<min(8,i32(g.extra.w));i++){let r=g.ripples[i];let d=distance(p,r.xy);let age=g.env.x-r.z;if(age>=0.&&age<6.){w+=sin(d*11.-age*8.)*exp(-d*.65-age*.85)*r.w;}}return w;}
+fn waveSlope(p:vec2f)->vec2f{var grad=vec2f(cos(p.x*2.3+p.y*.72+g.env.x*.92)*.0805-cos(p.y*3.9-p.x*.5-g.env.x*1.24)*.01,cos(p.x*2.3+p.y*.72+g.env.x*.92)*.0252+cos(p.y*3.9-p.x*.5-g.env.x*1.24)*.078)*g.env.z;for(var i=0;i<min(8,i32(g.extra.w));i++){let r=g.ripples[i];let age=g.env.x-r.z;if(age>=0.&&age<6.){let q=p-r.xy;let d=max(length(q),.025);let phase=d*11.-age*8.;let slope=(11.*cos(phase)-.65*sin(phase))*exp(-d*.65-age*.85)*r.w;grad+=q/d*slope;}}return grad;}
 fn deform(point:vec3f,kind:f32,aux:vec2f)->vec3f{var p=point;if(kind>0.5&&kind<1.5){p.y=g.env.y+wave(p.xz);}if(kind>1.5&&kind<2.5){p.y=-3.8+(3.8+g.env.y)*aux.y+wave(p.xz)*aux.y;}if(kind>6.5&&kind<7.5){p.y+=g.env.y+wave(p.xz);}if(kind>2.5&&kind<3.5){p.x+=sin(g.env.x*1.2+p.z*2.+aux.x)*.035*aux.y*(.4+g.env.z);}
+if(kind>3.5&&kind<4.5){p.x+=sin(g.env.x*.42+aux.x)*aux.y;p.z+=cos(g.env.x*.42+aux.x)*aux.y*.6;p.y+=sin(g.env.x*.9+aux.x)*.035;}
 if(kind<5.5||kind>6.5){let q=max(abs(p.xz)-vec2f(5.64),vec2f(0.));let ll=length(q);if(ll>.36){let rounded=sign(p.xz)*(min(abs(p.xz),vec2f(5.64))+q/ll*.36);p.x=rounded.x;p.z=rounded.y;}let h=clamp((p.y+3.8)/6.6,0.,1.);let soft=g.motion.w;p.x+=g.motion.x*h*h*soft;p.z+=g.motion.y*h*h*soft;p.y=-3.8+(p.y+3.8)*(1.+g.motion.z*.16*soft);p.x*=1.-g.motion.z*.075*soft;p.z*=1.-g.motion.z*.075*soft;}
 return p;}
 @vertex fn vs(v:Input)->Output{var o:Output;let p=deform(v.p,v.kind,v.aux);o.position=g.vp*vec4f(p,1.);o.p=p;o.n=v.n;o.c=v.c;o.kind=v.kind;o.aux=v.aux;o.light=g.lightVP*vec4f(p,1.);return o;}
 @vertex fn vsShadow(v:Input)->@builtin(position) vec4f{return g.lightVP*vec4f(deform(v.p,v.kind,v.aux),1.);}
 fn shadeShadow(light:vec4f)->f32{let p=light.xyz/light.w;let uv=p.xy*vec2f(.5,-.5)+vec2f(.5);if(any(uv<vec2f(.002))||any(uv>vec2f(.998))||p.z<0.||p.z>1.){return 1.;}let texel=1./1536.;var s=0.;s+=textureSampleCompareLevel(shadowMap,shadowSampler,uv+vec2f(-.6,-.6)*texel,p.z-.0014);s+=textureSampleCompareLevel(shadowMap,shadowSampler,uv+vec2f(.6,-.6)*texel,p.z-.0014);s+=textureSampleCompareLevel(shadowMap,shadowSampler,uv+vec2f(-.6,.6)*texel,p.z-.0014);s+=textureSampleCompareLevel(shadowMap,shadowSampler,uv+vec2f(.6,.6)*texel,p.z-.0014);return s*.25;}
 @fragment fn fs(v:Output)->@location(0) vec4f{
-var n=normalize(v.n);var color=v.c;let view=normalize(g.eye.xyz-v.p);let sun=normalize(g.sun.xyz);let daylight=g.sun.w;let depth=max(0.,g.env.y-v.p.y);let time=g.env.x;let kind=v.kind;var alpha=1.;
-if(kind>5.5&&kind<6.5){let q=v.p.xz/vec2f(7.7,7.2);let s=exp(-dot(q,q)*2.1);return vec4f(vec3f(.93333,.93333,.90588)*(1.-s*.17),1.);}
-if(kind>0.5&&kind<2.5){if(kind>1.5&&g.env.w<.5){discard;}if(v.aux.x>g.env.y+.13){discard;}if(kind>1.5&&v.p.y<v.aux.x+.008){discard;}var d=max(.02,g.env.y-v.aux.x);if(kind<1.5){n=normalize(vec3f(-.13*cos(v.p.x*2.3+v.p.z*.72+time*.92),1.,-.13*cos(v.p.z*3.9-v.p.x*.5-time*1.24)));}let fresnel=pow(1.-max(0.,dot(n,view)),3.);let shallow=vec3f(.30,.81,.82);let deep=mix(g.sea.rgb,vec3f(.08,.38,.50),.24);color=mix(shallow,deep,clamp(d/3.4,0.,1.));color*=.58+.42*daylight;color+=g.sunColor.rgb*pow(max(0.,dot(reflect(-sun,n),view)),140.)*.8*daylight;
+var n=normalize(v.n);var color=v.c;let view=normalize(g.eye.xyz-v.p);let sun=normalize(g.sun.xyz);let radiance=g.sun.w;let daylight=clamp(g.sun.w,0.,1.);let depth=max(0.,g.env.y-v.p.y);let time=g.env.x;let kind=v.kind;var alpha=1.;
+if(kind>5.5&&kind<6.5){let offset=-sun.xz*min(4.,(1.-sun.y)*4.);let q=(v.p.xz-offset)/vec2f(7.6,7.);let s=exp(-dot(q,q)*2.1);var occlusion=0.;if(dot(q,q)<2.5){occlusion=1.-shadeShadow(v.light);}let ground=vec3f(.93333,.93333,.90588)*(1.-s*.14-occlusion*.19*min(radiance,1.));return vec4f(ground,1.);}
+if(kind>0.5&&kind<2.5){if(kind>1.5&&g.env.w<.5){discard;}if(v.aux.x>g.env.y+.13){discard;}if(kind>1.5&&v.p.y<v.aux.x+.008){discard;}var d=max(.02,g.env.y-v.aux.x);if(kind<1.5){let grad=waveSlope(v.p.xz);n=normalize(vec3f(-grad.x,1.,-grad.y));}let fresnel=pow(1.-max(0.,dot(n,view)),3.);let shallow=vec3f(.30,.81,.82);let deep=mix(g.sea.rgb,vec3f(.08,.38,.50),.24);color=mix(shallow,deep,clamp(d/3.4,0.,1.));color*=.58+.42*daylight;color+=g.sunColor.rgb*pow(max(0.,dot(reflect(-sun,n),view)),100.)*.95*radiance;
 let a=abs(sin(v.p.x*3.1+sin(v.p.z*2.8)+time*.29)+sin(v.p.z*4.1+time*.4));let caustic=pow(1.-smoothstep(.025,.18,a),2.);color+=vec3f(.18,.29,.17)*caustic*.15;
 alpha=clamp(.24+d*.045+fresnel*.25,.22,.69);if(kind>1.5){let edge=pow(abs(dot(n,view)),.6);alpha=.17+d*.037+fresnel*.18;color+=vec3f(.16,.23,.25)*(1.-edge)*.35;let softbox=pow(max(0.,dot(reflect(-view,n),normalize(vec3f(-1.,1.8,2.)))),18.);color+=vec3f(.25,.31,.28)*softbox;let stripe=pow(max(0.,sin(v.p.y*8.+v.p.x*.8+v.p.z*.8)),20.);color+=vec3f(.1,.16,.13)*stripe*.14;}
 else{let shore=1.-smoothstep(.06,.34,d);let foam=shore*(.5+.5*sin(v.p.x*13.+v.p.z*11.+time*1.8));let crest=pow(max(0.,sin(v.p.x*2.3+v.p.z*.72+time*.92)),26.)*.16;let streak=pow(max(0.,sin(v.p.z*12.+sin(v.p.x*1.7)+time*.7)),55.)*.11;let f=clamp(foam+crest+streak,0.,.8);color=mix(color,vec3f(.93,.99,.91),f*.76);alpha+=f*.25;let edge=1.-smoothstep(.0,.06,6.-max(abs(v.p.x),abs(v.p.z)));color+=vec3f(.13,.2,.15)*edge;}
-return vec4f(clamp(color,vec3f(0.),vec3f(1.)),clamp(alpha,0.,.85));}
+alpha*=.4+g.controls.x*1.25;return vec4f(clamp(color,vec3f(0.),vec3f(1.)),clamp(alpha,0.,.9));}
 if(kind>6.5){return vec4f(mix(vec3f(.62,.85,.78),vec3f(.96,1.,.89),daylight),.75);}
-let diffuse=max(0.,dot(n,sun));let shadow=shadeShadow(v.light);let sky=.12+.12*max(n.y,0.);let light=g.sunColor.w+sky+diffuse*.57*daylight*mix(.48,1.,shadow);color*=light;color=mix(color,color*g.sunColor.rgb,.3*daylight);color+=vec3f(.08,.13,.15)*(1.-daylight);
+let diffuse=max(0.,dot(n,sun));let shadow=shadeShadow(v.light);let sky=.10+.11*max(n.y,0.);let light=g.sunColor.w+sky+diffuse*.61*radiance*mix(.48,1.,shadow);color*=light;color=mix(color,color*g.sunColor.rgb,.3*daylight);color+=vec3f(.08,.13,.15)*(1.-daylight);
 let ao=.95+.05*clamp(v.p.y*.35,0.,1.);color*=ao;
+if(kind<.5&&n.y>.45&&v.p.y>g.env.y){let wet=1.-smoothstep(.015,.25,v.p.y-g.env.y);color*=1.-wet*.10;color+=g.sunColor.rgb*pow(max(0.,dot(reflect(-sun,n),view)),55.)*wet*.21*radiance;let fine=sin(v.p.x*103.+v.p.z*47.)*sin(v.p.z*121.-v.p.x*31.);color*=1.+fine*.018;}
 if(v.p.y<g.env.y&&kind<4.5){let absorb=1.-exp(-depth*.22);color=mix(color,g.sea.rgb*.72,absorb*.52);let s1=sin(v.p.x*4.8+sin(v.p.z*4.3+time*.38));let s2=sin(v.p.z*5.8+sin(v.p.x*3.6-time*.3));let caustic=pow(1.-smoothstep(.018,.09,abs(s1+s2)),2.);color+=vec3f(.09,.16,.12)*caustic*exp(-depth*.22)*(.3+.7*daylight);}
 else{let grain=sin(v.p.x*79.+v.p.z*91.)*sin(v.p.y*51.+v.p.z*67.);color*=1.+grain*.012;let sheen=pow(max(0.,dot(reflect(-sun,n),view)),32.)*.05*daylight;color+=vec3f(sheen);}
 if(kind>4.5&&kind<5.5){color=max(color,v.c*.75);}
@@ -652,22 +777,23 @@ let fog=clamp(g.extra.x*.28+distance(g.eye.xyz,v.p)*.0008,0.,.32);color=mix(colo
 const cyanGLVertex=`#version 300 es
 precision highp float;
 layout(location=0) in vec3 aPos;layout(location=1) in vec3 aNormal;layout(location=2) in vec3 aColor;layout(location=3) in float aKind;layout(location=4) in vec2 aAux;
-uniform mat4 uVP,uLightVP;uniform vec4 uEye,uSun,uSunColor,uSea,uEnv,uMotion,uRipples[4],uExtra;
+uniform mat4 uVP,uLightVP;uniform vec4 uEye,uSun,uSunColor,uSea,uEnv,uMotion,uRipples[8],uExtra,uControls;
 out vec3 vPos,vNormal,vColor;out float vKind;out vec2 vAux;out vec4 vLight;
-float wave(vec2 p){float w=sin(p.x*2.3+p.y*.72+uEnv.x*.92)*.035+sin(p.y*3.9-p.x*.5-uEnv.x*1.24)*.02+sin(p.x*7.1+p.y*4.2+uEnv.x*.7)*.008;for(int i=0;i<4;i++){vec4 r=uRipples[i];float d=distance(p,r.xy),age=uEnv.x-r.z;if(age>=0.&&age<6.)w+=sin(d*11.-age*8.)*exp(-d*.6-age*.7)*r.w;}return w*uEnv.z;}
-vec3 deform(vec3 p){if(aKind>.5&&aKind<1.5)p.y=uEnv.y+wave(p.xz);if(aKind>1.5&&aKind<2.5)p.y=-3.8+(3.8+uEnv.y)*aAux.y+wave(p.xz)*aAux.y;if(aKind>6.5)p.y+=uEnv.y+wave(p.xz);if(aKind>2.5&&aKind<3.5)p.x+=sin(uEnv.x*1.2+p.z*2.+aAux.x)*.035*aAux.y*(.4+uEnv.z);if(aKind<5.5||aKind>6.5){vec2 q=max(abs(p.xz)-vec2(5.64),vec2(0));float ll=length(q);if(ll>.36)p.xz=sign(p.xz)*(min(abs(p.xz),vec2(5.64))+q/ll*.36);float h=clamp((p.y+3.8)/6.6,0.,1.);p.x+=uMotion.x*h*h*uMotion.w;p.z+=uMotion.y*h*h*uMotion.w;p.y=-3.8+(p.y+3.8)*(1.+uMotion.z*.16*uMotion.w);p.xz*=1.-uMotion.z*.075*uMotion.w;}return p;}
+float wave(vec2 p){float w=(sin(p.x*2.3+p.y*.72+uEnv.x*.92)*.035+sin(p.y*3.9-p.x*.5-uEnv.x*1.24)*.02+sin(p.x*7.1+p.y*4.2+uEnv.x*.7)*.008)*uEnv.z;for(int i=0;i<min(8,int(uExtra.w));i++){vec4 r=uRipples[i];float d=distance(p,r.xy),age=uEnv.x-r.z;if(age>=0.&&age<6.)w+=sin(d*11.-age*8.)*exp(-d*.65-age*.85)*r.w;}return w;}
+vec3 deform(vec3 p){if(aKind>.5&&aKind<1.5)p.y=uEnv.y+wave(p.xz);if(aKind>1.5&&aKind<2.5)p.y=-3.8+(3.8+uEnv.y)*aAux.y+wave(p.xz)*aAux.y;if(aKind>6.5)p.y+=uEnv.y+wave(p.xz);if(aKind>2.5&&aKind<3.5)p.x+=sin(uEnv.x*1.2+p.z*2.+aAux.x)*.035*aAux.y*(.4+uEnv.z);if(aKind>3.5&&aKind<4.5){p.x+=sin(uEnv.x*.42+aAux.x)*aAux.y;p.z+=cos(uEnv.x*.42+aAux.x)*aAux.y*.6;p.y+=sin(uEnv.x*.9+aAux.x)*.035;}if(aKind<5.5||aKind>6.5){vec2 q=max(abs(p.xz)-vec2(5.64),vec2(0));float ll=length(q);if(ll>.36)p.xz=sign(p.xz)*(min(abs(p.xz),vec2(5.64))+q/ll*.36);float h=clamp((p.y+3.8)/6.6,0.,1.);p.x+=uMotion.x*h*h*uMotion.w;p.z+=uMotion.y*h*h*uMotion.w;p.y=-3.8+(p.y+3.8)*(1.+uMotion.z*.16*uMotion.w);p.xz*=1.-uMotion.z*.075*uMotion.w;}return p;}
 void main(){vec3 p=deform(aPos);gl_Position=uVP*vec4(p,1);gl_Position.z=gl_Position.z*2.-gl_Position.w;vPos=p;vNormal=aNormal;vColor=aColor;vKind=aKind;vAux=aAux;vLight=uLightVP*vec4(p,1);}`;
 const cyanGLFragment=`#version 300 es
 precision highp float;
 in vec3 vPos,vNormal,vColor;in float vKind;in vec2 vAux;in vec4 vLight;
-uniform vec4 uEye,uSun,uSunColor,uSea,uEnv,uMotion,uRipples[4],uExtra;uniform sampler2D uShadow;
+uniform vec4 uEye,uSun,uSunColor,uSea,uEnv,uMotion,uRipples[8],uExtra,uControls;uniform sampler2D uShadow;
 out vec4 fragColor;
+vec2 waveSlope(vec2 p){vec2 grad=vec2(cos(p.x*2.3+p.y*.72+uEnv.x*.92)*.0805-cos(p.y*3.9-p.x*.5-uEnv.x*1.24)*.01,cos(p.x*2.3+p.y*.72+uEnv.x*.92)*.0252+cos(p.y*3.9-p.x*.5-uEnv.x*1.24)*.078)*uEnv.z;for(int i=0;i<min(8,int(uExtra.w));i++){vec4 r=uRipples[i];float age=uEnv.x-r.z;if(age>=0.&&age<6.){vec2 q=p-r.xy;float d=max(length(q),.025),phase=d*11.-age*8.;float slope=(11.*cos(phase)-.65*sin(phase))*exp(-d*.65-age*.85)*r.w;grad+=q/d*slope;}}return grad;}
 float shadow(){vec3 p=vLight.xyz/vLight.w;vec2 uv=p.xy*.5+.5;if(any(lessThan(uv,vec2(.002)))||any(greaterThan(uv,vec2(.998)))||p.z<0.||p.z>1.)return 1.;float s=0.;for(int x=0;x<2;x++)for(int y=0;y<2;y++){float dep=texture(uShadow,uv+(vec2(x,y)-.5)/1536.).r;s+=step(p.z-.0014,dep);}return s*.25;}
-void main(){vec3 n=normalize(vNormal),color=vColor,view=normalize(uEye.xyz-vPos),sun=normalize(uSun.xyz);float daylight=uSun.w,depth=max(0.,uEnv.y-vPos.y),time=uEnv.x,kind=vKind,alpha=1.;
-if(kind>5.5&&kind<6.5){vec2 q=vPos.xz/vec2(7.7,7.2);fragColor=vec4(vec3(.93333,.93333,.90588)*(1.-exp(-dot(q,q)*2.1)*.17),1.);return;}
-if(kind>.5&&kind<2.5){if(kind>1.5&&uEnv.w<.5)discard;if(vAux.x>uEnv.y+.13)discard;if(kind>1.5&&vPos.y<vAux.x+.008)discard;float d=max(.02,uEnv.y-vAux.x);if(kind<1.5)n=normalize(vec3(-.13*cos(vPos.x*2.3+vPos.z*.72+time*.92),1.,-.13*cos(vPos.z*3.9-vPos.x*.5-time*1.24)));float fresnel=pow(1.-max(0.,dot(n,view)),3.);color=mix(vec3(.30,.81,.82),mix(uSea.rgb,vec3(.08,.38,.50),.24),clamp(d/3.4,0.,1.));color*=.58+.42*daylight;color+=uSunColor.rgb*pow(max(0.,dot(reflect(-sun,n),view)),140.)*.8*daylight;float a=abs(sin(vPos.x*3.1+sin(vPos.z*2.8)+time*.29)+sin(vPos.z*4.1+time*.4));float caustic=pow(1.-smoothstep(.025,.18,a),2.);color+=vec3(.18,.29,.17)*caustic*.15;alpha=clamp(.24+d*.045+fresnel*.25,.22,.69);if(kind>1.5){float edge=pow(abs(dot(n,view)),.6);alpha=.17+d*.037+fresnel*.18;color+=vec3(.16,.23,.25)*(1.-edge)*.35;float softbox=pow(max(0.,dot(reflect(-view,n),normalize(vec3(-1.,1.8,2.)))),18.);color+=vec3(.25,.31,.28)*softbox;float stripe=pow(max(0.,sin(vPos.y*8.+vPos.x*.8+vPos.z*.8)),20.);color+=vec3(.1,.16,.13)*stripe*.14;}else{float shore=1.-smoothstep(.06,.34,d);float foam=shore*(.5+.5*sin(vPos.x*13.+vPos.z*11.+time*1.8));float crest=pow(max(0.,sin(vPos.x*2.3+vPos.z*.72+time*.92)),26.)*.16;float streak=pow(max(0.,sin(vPos.z*12.+sin(vPos.x*1.7)+time*.7)),55.)*.11;float f=clamp(foam+crest+streak,0.,.8);color=mix(color,vec3(.93,.99,.91),f*.76);alpha+=f*.25;float edge=1.-smoothstep(.0,.06,6.-max(abs(vPos.x),abs(vPos.z)));color+=vec3(.13,.2,.15)*edge;}fragColor=vec4(clamp(color,0.,1.),clamp(alpha,0.,.85));return;}
+void main(){vec3 n=normalize(vNormal),color=vColor,view=normalize(uEye.xyz-vPos),sun=normalize(uSun.xyz);float radiance=uSun.w,daylight=clamp(uSun.w,0.,1.),depth=max(0.,uEnv.y-vPos.y),time=uEnv.x,kind=vKind,alpha=1.;
+if(kind>5.5&&kind<6.5){vec2 offset=-sun.xz*min(4.,(1.-sun.y)*4.),q=(vPos.xz-offset)/vec2(7.6,7.);float s=exp(-dot(q,q)*2.1),occlusion=0.;if(dot(q,q)<2.5)occlusion=1.-shadow();fragColor=vec4(vec3(.93333,.93333,.90588)*(1.-s*.14-occlusion*.19*min(radiance,1.)),1.);return;}
+if(kind>.5&&kind<2.5){if(kind>1.5&&uEnv.w<.5)discard;if(vAux.x>uEnv.y+.13)discard;if(kind>1.5&&vPos.y<vAux.x+.008)discard;float d=max(.02,uEnv.y-vAux.x);if(kind<1.5){vec2 grad=waveSlope(vPos.xz);n=normalize(vec3(-grad.x,1.,-grad.y));}float fresnel=pow(1.-max(0.,dot(n,view)),3.);color=mix(vec3(.30,.81,.82),mix(uSea.rgb,vec3(.08,.38,.50),.24),clamp(d/3.4,0.,1.));color*=.58+.42*daylight;color+=uSunColor.rgb*pow(max(0.,dot(reflect(-sun,n),view)),100.)*.95*radiance;float a=abs(sin(vPos.x*3.1+sin(vPos.z*2.8)+time*.29)+sin(vPos.z*4.1+time*.4));float caustic=pow(1.-smoothstep(.025,.18,a),2.);color+=vec3(.18,.29,.17)*caustic*.15;alpha=clamp(.24+d*.045+fresnel*.25,.22,.69);if(kind>1.5){float edge=pow(abs(dot(n,view)),.6);alpha=.17+d*.037+fresnel*.18;color+=vec3(.16,.23,.25)*(1.-edge)*.35;float softbox=pow(max(0.,dot(reflect(-view,n),normalize(vec3(-1.,1.8,2.)))),18.);color+=vec3(.25,.31,.28)*softbox;float stripe=pow(max(0.,sin(vPos.y*8.+vPos.x*.8+vPos.z*.8)),20.);color+=vec3(.1,.16,.13)*stripe*.14;}else{float shore=1.-smoothstep(.06,.34,d);float foam=shore*(.5+.5*sin(vPos.x*13.+vPos.z*11.+time*1.8));float crest=pow(max(0.,sin(vPos.x*2.3+vPos.z*.72+time*.92)),26.)*.16;float streak=pow(max(0.,sin(vPos.z*12.+sin(vPos.x*1.7)+time*.7)),55.)*.11;float f=clamp(foam+crest+streak,0.,.8);color=mix(color,vec3(.93,.99,.91),f*.76);alpha+=f*.25;float edge=1.-smoothstep(.0,.06,6.-max(abs(vPos.x),abs(vPos.z)));color+=vec3(.13,.2,.15)*edge;}alpha*=.4+uControls.x*1.25;fragColor=vec4(clamp(color,0.,1.),clamp(alpha,0.,.9));return;}
 if(kind>6.5){fragColor=vec4(mix(vec3(.62,.85,.78),vec3(.96,1.,.89),daylight),.75);return;}
-float diffuse=max(0.,dot(n,sun));float light=uSunColor.w+.12+.12*max(n.y,0.)+diffuse*.57*daylight*mix(.48,1.,shadow());color*=light;color=mix(color,color*uSunColor.rgb,.3*daylight);color+=vec3(.08,.13,.15)*(1.-daylight);color*=.95+.05*clamp(vPos.y*.35,0.,1.);
+float diffuse=max(0.,dot(n,sun));float light=uSunColor.w+.10+.11*max(n.y,0.)+diffuse*.61*radiance*mix(.48,1.,shadow());color*=light;color=mix(color,color*uSunColor.rgb,.3*daylight);color+=vec3(.08,.13,.15)*(1.-daylight);color*=.95+.05*clamp(vPos.y*.35,0.,1.);if(kind<.5&&n.y>.45&&vPos.y>uEnv.y){float wet=1.-smoothstep(.015,.25,vPos.y-uEnv.y);color*=1.-wet*.10;color+=uSunColor.rgb*pow(max(0.,dot(reflect(-sun,n),view)),55.)*wet*.21*radiance;float fine=sin(vPos.x*103.+vPos.z*47.)*sin(vPos.z*121.-vPos.x*31.);color*=1.+fine*.018;}
 if(vPos.y<uEnv.y&&kind<4.5){float absorb=1.-exp(-depth*.22);color=mix(color,uSea.rgb*.72,absorb*.52);float s1=sin(vPos.x*4.8+sin(vPos.z*4.3+time*.38)),s2=sin(vPos.z*5.8+sin(vPos.x*3.6-time*.3));float caustic=pow(1.-smoothstep(.018,.09,abs(s1+s2)),2.);color+=vec3(.09,.16,.12)*caustic*exp(-depth*.22)*(.3+.7*daylight);}else{float grain=sin(vPos.x*79.+vPos.z*91.)*sin(vPos.y*51.+vPos.z*67.);color*=1.+grain*.012;color+=vec3(pow(max(0.,dot(reflect(-sun,n),view)),32.)*.05*daylight);}if(kind>4.5&&kind<5.5)color=max(color,vColor*.75);float fog=clamp(uExtra.x*.28+distance(uEye.xyz,vPos)*.0008,0.,.32);color=mix(color,vec3(.86,.9,.86),fog);fragColor=vec4(clamp(color,.015,1.),1.);}`;
 
 let cyanCanvas=C$('scene'),cyanRenderer=null;
@@ -675,19 +801,19 @@ function newSceneCanvas(){const next=cyanCanvas.cloneNode(false);cyanCanvas.repl
 const meshAttributes=[{shaderLocation:0,offset:0,format:'float32x3'},{shaderLocation:1,offset:12,format:'float32x3'},{shaderLocation:2,offset:24,format:'float32x3'},{shaderLocation:3,offset:36,format:'float32'},{shaderLocation:4,offset:40,format:'float32x2'}];
 async function makeWebGPU(){
  if(!navigator.gpu)throw Error('此浏览器没有 WebGPU');
- const adapter=await Promise.race([navigator.gpu.requestAdapter({powerPreference:'high-performance'}),new Promise((_,reject)=>setTimeout(()=>reject(Error('WebGPU 适配器响应超时')),3500))]);if(!adapter)throw Error('未找到 WebGPU 适配器');
- const device=await adapter.requestDevice(),format=navigator.gpu.getPreferredCanvasFormat();
+ cyanDebug.bootPhase='WebGPU adapter';const adapter=await Promise.race([navigator.gpu.requestAdapter({powerPreference:'high-performance'}),new Promise((_,reject)=>setTimeout(()=>reject(Error('WebGPU 适配器响应超时')),3500))]);if(!adapter)throw Error('未找到 WebGPU 适配器');
+ cyanDebug.bootPhase='WebGPU device';const device=await adapter.requestDevice(),format=navigator.gpu.getPreferredCanvasFormat();
  device.pushErrorScope('validation');const module=device.createShaderModule({label:'Cyanland · sea glass / terrain / shadows',code:cyanWGSL});
- const info=await module.getCompilationInfo();if(info.messages.some(m=>m.type==='error')){device.destroy();throw Error(info.messages.filter(m=>m.type==='error').map(m=>m.lineNum+': '+m.message).join('\n'));}
- const global=device.createBuffer({size:304,usage:GPUBufferUsage.UNIFORM|GPUBufferUsage.COPY_DST});
+ cyanDebug.bootPhase='WGSL compilation';const info=await module.getCompilationInfo();if(info.messages.some(m=>m.type==='error')){device.destroy();throw Error(info.messages.filter(m=>m.type==='error').map(m=>m.lineNum+': '+m.message).join('\n'));}
+ const global=device.createBuffer({size:384,usage:GPUBufferUsage.UNIFORM|GPUBufferUsage.COPY_DST});
  const shadow=device.createTexture({size:[1536,1536],format:'depth32float',usage:GPUTextureUsage.RENDER_ATTACHMENT|GPUTextureUsage.TEXTURE_BINDING});const shadowView=shadow.createView();
  const layout=device.createBindGroupLayout({entries:[{binding:0,visibility:3,buffer:{type:'uniform'}},{binding:1,visibility:2,texture:{sampleType:'depth'}},{binding:2,visibility:2,sampler:{type:'comparison'}}]});
  const bind=device.createBindGroup({layout,entries:[{binding:0,resource:{buffer:global}},{binding:1,resource:shadowView},{binding:2,resource:device.createSampler({compare:'less-equal',minFilter:'linear',magFilter:'linear'})}]});
  const desc={layout:device.createPipelineLayout({bindGroupLayouts:[layout]}),vertex:{module,entryPoint:'vs',buffers:[{arrayStride:48,attributes:meshAttributes}]},fragment:{module,entryPoint:'fs',targets:[{format}]},primitive:{topology:'triangle-list',cullMode:'none'},depthStencil:{format:'depth24plus',depthWriteEnabled:true,depthCompare:'less'},multisample:{count:4}};
- const solid=device.createRenderPipeline(desc),glass=device.createRenderPipeline({...desc,fragment:{module,entryPoint:'fs',targets:[{format,blend:{color:{srcFactor:'src-alpha',dstFactor:'one-minus-src-alpha'},alpha:{srcFactor:'one',dstFactor:'one-minus-src-alpha'}}}]},depthStencil:{format:'depth24plus',depthWriteEnabled:false,depthCompare:'less-equal'}});
+ cyanDebug.bootPhase='WebGPU pipelines';const solid=device.createRenderPipeline(desc),glass=device.createRenderPipeline({...desc,fragment:{module,entryPoint:'fs',targets:[{format,blend:{color:{srcFactor:'src-alpha',dstFactor:'one-minus-src-alpha'},alpha:{srcFactor:'one',dstFactor:'one-minus-src-alpha'}}}]},depthStencil:{format:'depth24plus',depthWriteEnabled:false,depthCompare:'less-equal'}});
  const shadowLayout=device.createBindGroupLayout({entries:[{binding:0,visibility:1,buffer:{type:'uniform'}}]}),shadowBind=device.createBindGroup({layout:shadowLayout,entries:[{binding:0,resource:{buffer:global}}]});
  const shadowPipe=device.createRenderPipeline({layout:device.createPipelineLayout({bindGroupLayouts:[shadowLayout]}),vertex:{module,entryPoint:'vsShadow',buffers:[{arrayStride:48,attributes:meshAttributes}]},primitive:{topology:'triangle-list',cullMode:'none'},depthStencil:{format:'depth32float',depthWriteEnabled:true,depthCompare:'less',depthBias:2,depthBiasSlopeScale:1.5}});
- const error=await device.popErrorScope();if(error){device.destroy();throw Error(error.message);}
+ cyanDebug.bootPhase='WebGPU validation';const error=await device.popErrorScope();if(error){device.destroy();throw Error(error.message);}
  const ctx=cyanCanvas.getContext('webgpu');if(!ctx){device.destroy();throw Error('WebGPU画布不可用');}ctx.configure({device,format,alphaMode:'opaque'});
  let meshes={},depth,msaa,width=0,height=0,stopped=false,shadowTick=0;
  function upload(data){const b=device.createBuffer({size:Math.max(4,data.byteLength),usage:GPUBufferUsage.VERTEX|GPUBufferUsage.COPY_DST});device.queue.writeBuffer(b,0,data);return {b,count:data.length/12};}
@@ -703,13 +829,13 @@ function makeWebGL(){
  const gl=cyanCanvas.getContext('webgl2',{alpha:false,antialias:true,preserveDrawingBuffer:false,powerPreference:'high-performance'});if(!gl)throw Error('此设备没有可用的 WebGPU 或 WebGL2');
  const compile=(type,src)=>{const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s;};
  const program=(v,f)=>{const p=gl.createProgram();gl.attachShader(p,compile(gl.VERTEX_SHADER,v));gl.attachShader(p,compile(gl.FRAGMENT_SHADER,f));gl.linkProgram(p);if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(p));return p;};
- const main=program(cyanGLVertex,cyanGLFragment),shadow=program(cyanGLVertex,`#version 300 es\nprecision highp float;void main(){}`);
- const locations=p=>Object.fromEntries(['uVP','uLightVP','uEye','uSun','uSunColor','uSea','uEnv','uMotion','uRipples[0]','uExtra','uShadow'].map(n=>[n,gl.getUniformLocation(p,n)]));const mainLoc=locations(main),shadowLoc=locations(shadow);
+ cyanDebug.bootPhase='WebGL shaders';const main=program(cyanGLVertex,cyanGLFragment),shadow=program(cyanGLVertex,`#version 300 es\nprecision highp float;void main(){}`);
+ const locations=p=>Object.fromEntries(['uVP','uLightVP','uEye','uSun','uSunColor','uSea','uEnv','uMotion','uRipples[0]','uExtra','uControls','uShadow'].map(n=>[n,gl.getUniformLocation(p,n)]));const mainLoc=locations(main),shadowLoc=locations(shadow);
  const shadowTex=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,shadowTex);gl.texImage2D(gl.TEXTURE_2D,0,gl.DEPTH_COMPONENT24,1536,1536,0,gl.DEPTH_COMPONENT,gl.UNSIGNED_INT,null);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
  const fb=gl.createFramebuffer();gl.bindFramebuffer(gl.FRAMEBUFFER,fb);gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.DEPTH_ATTACHMENT,gl.TEXTURE_2D,shadowTex,0);gl.drawBuffers([gl.NONE]);gl.readBuffer(gl.NONE);if(gl.checkFramebufferStatus(gl.FRAMEBUFFER)!==gl.FRAMEBUFFER_COMPLETE)throw Error('阴影缓冲区不可用');gl.bindFramebuffer(gl.FRAMEBUFFER,null);
  let meshes={},stopped=false,tick=0;
  const upload=data=>{const vao=gl.createVertexArray(),b=gl.createBuffer();gl.bindVertexArray(vao);gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,data,gl.STATIC_DRAW);for(const [i,size,offset] of [[0,3,0],[1,3,12],[2,3,24],[3,1,36],[4,2,40]]){gl.enableVertexAttribArray(i);gl.vertexAttribPointer(i,size,gl.FLOAT,false,48,offset);}return {vao,b,count:data.length/12};};
- const uniforms=(loc,u,isShadow=false)=>{gl.uniformMatrix4fv(loc.uVP,false,u.subarray(isShadow?16:0,isShadow?32:16));gl.uniformMatrix4fv(loc.uLightVP,false,u.subarray(16,32));for(const [n,offset] of [['uEye',32],['uSun',36],['uSunColor',40],['uSea',44],['uEnv',48],['uMotion',52],['uExtra',72]])gl.uniform4fv(loc[n],u.subarray(offset,offset+4));gl.uniform4fv(loc['uRipples[0]'],u.subarray(56,72));};
+ const uniforms=(loc,u,isShadow=false)=>{gl.uniformMatrix4fv(loc.uVP,false,u.subarray(isShadow?16:0,isShadow?32:16));gl.uniformMatrix4fv(loc.uLightVP,false,u.subarray(16,32));for(const [n,offset] of [['uEye',32],['uSun',36],['uSunColor',40],['uSea',44],['uEnv',48],['uMotion',52],['uExtra',88],['uControls',92]])gl.uniform4fv(loc[n],u.subarray(offset,offset+4));gl.uniform4fv(loc['uRipples[0]'],u.subarray(56,88));};
  const draw=m=>{gl.bindVertexArray(m.vao);gl.drawArrays(gl.TRIANGLES,0,m.count);};
  const renderer={name:'WebGL2 · 兼容模式',setScene(city,water,floor){for(const m of Object.values(meshes).flat()){gl.deleteVertexArray(m.vao);gl.deleteBuffer(m.b);}meshes={land:upload(city.data),water:upload(water.surface),walls:water.walls.map(upload),rim:upload(water.rim),floor:upload(floor)};tick=0;},draw(u,w,h,wallOrder){if(stopped)return;if(cyanCanvas.width!==w||cyanCanvas.height!==h){cyanCanvas.width=w;cyanCanvas.height=h;}gl.enable(gl.DEPTH_TEST);gl.disable(gl.CULL_FACE);gl.depthFunc(gl.LEQUAL);gl.depthMask(true);gl.disable(gl.BLEND);
  if(tick++%2===0){gl.bindFramebuffer(gl.FRAMEBUFFER,fb);gl.viewport(0,0,1536,1536);gl.clear(gl.DEPTH_BUFFER_BIT);gl.useProgram(shadow);uniforms(shadowLoc,u,true);gl.enable(gl.POLYGON_OFFSET_FILL);gl.polygonOffset(1.5,2);draw(meshes.land);gl.disable(gl.POLYGON_OFFSET_FILL);}
@@ -757,7 +883,7 @@ function makeWebGL(){
   function toggleExplore() {
     const explore = document.body.dataset.explore !== 'true'; setPanel(false); call('setExplore', explore);
     document.body.dataset.explore = String(explore);
-    toast(explore ? '自由探索 · 拖动环绕，双指缩放，长按平移' : '已返回海岸手记');
+    toast(explore ? '自由探索 · 拖动环绕，滑水拨浪，双指缩放' : '已返回海岸手记');
     requestAnimationFrame(() => window.dispatchEvent(new Event('resize')));
   }
   function openAbout() {
@@ -813,8 +939,10 @@ function makeWebGL(){
     $('aboutDescription').textContent = city.description || city.subtitle || '';
     $('aboutFeatures').replaceChildren(); (city.features || []).forEach(feature => { const span = document.createElement('span'); span.textContent = feature; $('aboutFeatures').append(span); });
     $('aboutLocation').textContent = `${Number(city.lat).toFixed(2)}°N / ${Number(city.lon).toFixed(2)}°E`;
-    $('aboutEcology').textContent = cityEcology[city.id] || '观察水下随波摆动的海草、礁石与沙纹，让一座海岸慢慢进入视线。';
+    $('aboutEcology').textContent = city.ecology || cityEcology[city.id] || '观察水下随波摆动的海草、礁石与沙纹，让一座海岸慢慢进入视线。';
+    $('aboutLocalNote').textContent = city.localNote || ''; $('aboutLocalNote').hidden = !city.localNote;
   }
+    
   function buildCities(defs) {
     cities = Array.isArray(defs) ? defs : Object.values(defs || {});
     ['cityNav', 'cityCards'].forEach(id => {
@@ -828,6 +956,18 @@ function makeWebGL(){
       });
     });
     const initial = cities.find(c => c.id === 'qingdao') || cities[0]; if (initial) selectCity(initial);
+  }
+  function updateInteraction(mode) {
+    const water = mode === 'water';
+    document.body.dataset.interaction = water ? 'water' : 'orbit';
+    setPressed($('interactionOrbit'), !water); setPressed($('interactionWater'), water); setPressed($('waterInteract'), water);
+    $('waterInteract').setAttribute('aria-label', water ? '当前为拨浪模式，点击切换环绕' : '切换拨浪模式');
+    $('waterInteract').title = water ? '拨浪中 · 点击返回环绕' : '拨浪 · 滑动海水画出涟漪';
+    $('waterInteract').querySelector('span').textContent = water ? '环绕' : '拨浪';
+  }
+  function selectInteraction(mode, announce = false) {
+    updateInteraction(mode); call('setInteraction', mode);
+    if (announce) toast(mode === 'water' ? '拨浪模式 · 滑动海面画出涟漪；双指缩放，长按平移。' : '已回到环绕模式 · 滑过海面也能拨动水波。');
   }
   function activeIs(id) { return document.activeElement === $(id); }
   function update(state = {}) {
@@ -855,6 +995,21 @@ function makeWebGL(){
     if (s.wave != null && !activeIs('waveAmount')) { $('waveAmount').value = s.wave; $('waveOutput').textContent = `${Math.round(s.wave * 100)}%`; }
     if (s.cutaway != null) $('cutawayToggle').checked = s.cutaway;
     if (s.annotations != null) $('annotationToggle').checked = s.annotations;
+    if (Number.isFinite(s.annotationOpacity)) {
+      if (!activeIs('annotationOpacity')) $('annotationOpacity').value = s.annotationOpacity;
+      $('annotationOpacityOutput').textContent = `${Math.round(s.annotationOpacity * 100)}%`;
+      document.documentElement.style.setProperty('--annotation-opacity', String(s.annotationOpacity));
+    }
+    if (Number.isFinite(s.waterOpacity)) {
+      if (!activeIs('waterOpacity')) $('waterOpacity').value = s.waterOpacity;
+      $('waterOpacityOutput').textContent = `${Math.round((1 - s.waterOpacity) * 100)}%`;
+    }
+    if (Number.isFinite(s.sunStrength)) {
+      if (!activeIs('sunStrength')) $('sunStrength').value = s.sunStrength;
+      $('sunStrengthOutput').textContent = `${Math.round(s.sunStrength * 100)}%`;
+    }
+    if (s.interaction != null) updateInteraction(s.interaction);
+
     if (s.explore != null) document.body.dataset.explore = String(s.explore);
     if (s.fps != null) $('fpsLabel').textContent = `${Math.max(0, Math.round(s.fps))} FPS`;
     if (s.renderer) $('rendererLabel').textContent = `${String(s.renderer).toUpperCase()} · PROCEDURAL WORLD`;
@@ -907,6 +1062,20 @@ function makeWebGL(){
   $('waveAmount').addEventListener('input', event => { const value = Number(event.target.value); $('waveOutput').textContent = `${Math.round(value * 100)}%`; call('setWave', value); });
   $('cutawayToggle').addEventListener('change', event => call('setCutaway', event.target.checked));
   $('annotationToggle').addEventListener('change', event => call('setAnnotations', event.target.checked));
+  $('annotationOpacity').addEventListener('input', event => {
+    const value = Number(event.target.value); $('annotationOpacityOutput').textContent = `${Math.round(value * 100)}%`;
+    document.documentElement.style.setProperty('--annotation-opacity', String(value)); call('setAnnotationOpacity', value);
+  });
+  $('waterOpacity').addEventListener('input', event => {
+    const value = Number(event.target.value); $('waterOpacityOutput').textContent = `${Math.round((1 - value) * 100)}%`; call('setWaterOpacity', value);
+  });
+  $('sunStrength').addEventListener('input', event => {
+    const value = Number(event.target.value); $('sunStrengthOutput').textContent = `${Math.round(value * 100)}%`; call('setSunStrength', value);
+  });
+  $('interactionOrbit').addEventListener('click', () => selectInteraction('orbit'));
+  $('interactionWater').addEventListener('click', () => selectInteraction('water'));
+  $('waterInteract').addEventListener('click', () => selectInteraction(document.body.dataset.interaction === 'water' ? 'orbit' : 'water', true));
+
   ['resetScene', 'drawerReset'].forEach(id => $(id).addEventListener('click', () => { call('resetView'); toast('视角已归位'); }));
   ['squishScene', 'drawerSquish'].forEach(id => $(id).addEventListener('click', () => call('squish')));
   $('saveImage').addEventListener('click', () => { call('screenshot'); });
@@ -919,50 +1088,88 @@ function makeWebGL(){
   window.CyanUI = { init: buildCities, update, toast, setPanel, setError };
 })();
 
-const cyanState={city:'qingdao',date:new Date(),live:true,playing:false,speed:360,weather:'clear',jelly:.8,wave:.7,cutaway:true,annotations:true,explore:false,loading:true};
-try{const p=JSON.parse(localStorage.getItem('cyanland.v1')||'null');if(p&&typeof p==='object'){if(CITY_DEFS.some(c=>c.id===p.city))cyanState.city=p.city;if(['clear','cloudy','rain','fog'].includes(p.weather))cyanState.weather=p.weather;for(const key of ['jelly','wave'])if(Number.isFinite(p[key]))cyanState[key]=cClamp(p[key],0,1);for(const key of ['cutaway','annotations'])if(typeof p[key]==='boolean')cyanState[key]=p[key];}}catch(_){/* Optional local preferences never block the sand table. */}
+const cyanState={city:'qingdao',date:new Date(),live:true,playing:false,speed:360,weather:'clear',jelly:.8,wave:.7,cutaway:true,annotations:false,annotationOpacity:.45,waterOpacity:.48,sunStrength:1.1,interaction:'orbit',explore:false,loading:true};
+try{const p=JSON.parse(localStorage.getItem('cyanland.v1')||'null');if(p&&typeof p==='object'){if(CITY_DEFS.some(c=>c.id===p.city))cyanState.city=p.city;if(['clear','cloudy','rain','fog'].includes(p.weather))cyanState.weather=p.weather;for(const key of ['jelly','wave'])if(Number.isFinite(p[key]))cyanState[key]=cClamp(p[key],0,1);if(typeof p.cutaway==='boolean')cyanState.cutaway=p.cutaway;
+// First v2 visit clears the old always-on labels; subsequent visits honor the new preference.
+if(p.schemaVersion>=2){if(typeof p.annotations==='boolean')cyanState.annotations=p.annotations;for(const [key,min,max] of [['annotationOpacity',0,1],['waterOpacity',.2,1],['sunStrength',.35,1.6]])if(Number.isFinite(p[key]))cyanState[key]=cClamp(p[key],min,max);if(['orbit','water'].includes(p.interaction))cyanState.interaction=p.interaction;}}}catch(_){/* Optional local preferences never block the sand table. */}
 const cyanCamera={yaw:.64,pitch:.64,zoom:1,pan:[0,0],vp:null,eye:null,target:null,half:10};
 const cyanSpring={x:0,z:0,vx:0,vz:0,squash:0,vs:0};
 let cyanCity=null,cyanWater=null,cyanEnvironment=null,cyanTime=0,cyanFrameNo=0,cyanLast=0,cyanFps=0,cyanUiTime=0,cyanSampleTime=-1,cyanPendingShot=false,cyanGestureCleanup=null,cyanBuildToken=0;
 let cyanResolution=Math.min(devicePixelRatio||1,1.6),cyanPerformanceTime=0,cyanPerformanceFrames=0,cyanSaveTimer;
-const cyanUniform=new Float32Array(76),cyanRipples=Array.from({length:4},()=>[0,0,-99,0]);let cyanRippleIndex=0;
-const cyanDebug=window.__cyanland={state:cyanState,camera:cyanCamera,frame:0,renderer:'启动中',cityData:null,environment:null,stats:{},failures:[]};
+const cyanUniform=new Float32Array(96),cyanRipples=Array.from({length:8},()=>[0,0,-99,0]),cyanDismissedLabels=new Set();let cyanRippleIndex=0;
+const cyanDebug=window.__cyanland={state:cyanState,camera:cyanCamera,frame:0,renderer:'启动中',cityData:null,environment:null,stats:{},failures:[],uniform:cyanUniform,ripples:cyanRipples,rippleCount:0,lastWaterHit:null,interactionMode:'idle',pickWater:(x,y)=>pickCyanWater(x,y)};
 const cityDef=()=>CITY_DEFS.find(c=>c.id===cyanState.city)||CITY_DEFS[0];
-function persistCyan(){clearTimeout(cyanSaveTimer);cyanSaveTimer=setTimeout(()=>{try{const {city,weather,jelly,wave,cutaway,annotations}=cyanState;localStorage.setItem('cyanland.v1',JSON.stringify({city,weather,jelly,wave,cutaway,annotations}));}catch(_){/* Read-only / full storage: scene remains usable. */}},160);}
+function persistCyan(){clearTimeout(cyanSaveTimer);cyanSaveTimer=setTimeout(()=>{try{const {city,weather,jelly,wave,cutaway,annotations,annotationOpacity,waterOpacity,sunStrength,interaction}=cyanState;localStorage.setItem('cyanland.v1',JSON.stringify({schemaVersion:2,city,weather,jelly,wave,cutaway,annotations,annotationOpacity,waterOpacity,sunStrength,interaction}));}catch(_){/* Read-only / full storage: scene remains usable. */}},160);}
 function sampleEnvironment(){const c=cityDef();cyanEnvironment=CyanEnvironment.sample(cyanState.date,{...c,seaColor:c.sea},cyanState.weather);cyanDebug.environment=cyanEnvironment;cyanSampleTime=cyanTime;}
 function refreshCyanUI(){if(!cyanEnvironment)sampleEnvironment();window.CyanUI?.update({...cyanState,city:cityDef(),environment:cyanEnvironment,fps:Math.round(cyanFps),renderer:cyanRenderer?.name||'启动中'});}
 function showCyanError(message){cyanDebug.failures.push(message);let el=C$('cyanFatal');if(!el){el=document.createElement('div');el.id='cyanFatal';el.style.cssText='position:absolute;inset:20%;padding:28px;background:#f5f6ed;border:1px solid #cbd4c7;border-radius:24px;z-index:20;color:#23473c;display:grid;place-content:center;text-align:center;gap:18px';C$('stage').append(el);}el.replaceChildren();const p=document.createElement('p');p.textContent=message;const b=document.createElement('button');b.textContent='重新连接画面';b.onclick=()=>location.reload();el.append(p,b);cyanState.loading=false;refreshCyanUI();}
 function floorGeometry(){const data=Geo.data;Geo.data=[];Geo.quad([-120,-3.91,-120],[-120,-3.91,120],[120,-3.91,120],[120,-3.91,-120],'#f0f1eb',6);const floor=new Float32Array(Geo.data);Geo.data=data;return floor;}
 const cyanFloor=floorGeometry();
-async function loadCyanCity(id){if(!CITY_DEFS.some(c=>c.id===id))return;const token=++cyanBuildToken;cyanState.city=id;cyanState.loading=true;refreshCyanUI();await new Promise(requestAnimationFrame);if(token!==cyanBuildToken)return;try{const city=buildCity(id);if(token!==cyanBuildToken)return;const water=buildWater(city.height);cyanRenderer?.setScene(city,water,cyanFloor);cyanCity=city;cyanWater=water;cyanDebug.cityData=city;cyanDebug.stats={...city.stats,vertices:city.data.length/12,waterVertices:water.surface.length/12};cyanState.loading=false;sampleEnvironment();makeCyanAnnotations();cyanSpring.vs=-3.8;persistCyan();refreshCyanUI();}catch(e){showCyanError('海岸生成失败：'+e.message);throw e;}}
-function makeCyanAnnotations(){const el=C$('annotations');if(!el)return;el.replaceChildren();for(const [i,item] of (cyanCity?.landmarks||[]).entries()){const b=document.createElement('button');b.type='button';b.className='annotation scene-label';b.dataset.index=i;b.textContent=item.label;b.setAttribute('aria-label',item.label+'，查看详情');b.onclick=()=>{let dialog=C$('landmarkDialog');if(!dialog){dialog=document.createElement('dialog');dialog.id='landmarkDialog';dialog.className='cyan-dialog';dialog.style.padding='26px';document.body.append(dialog);}dialog.replaceChildren();const title=document.createElement('h2');title.textContent=item.label;const p=document.createElement('p');p.textContent=item.detail;const close=document.createElement('button');close.textContent='收好这段风景';close.onclick=()=>dialog.close();dialog.append(title,p,close);dialog.showModal();};el.append(b);}}
+async function loadCyanCity(id){if(!CITY_DEFS.some(c=>c.id===id))return;const token=++cyanBuildToken;cyanState.city=id;cyanState.loading=true;refreshCyanUI();await new Promise(requestAnimationFrame);if(token!==cyanBuildToken)return;try{const city=buildCity(id);if(token!==cyanBuildToken)return;const water=buildWater(city.height);cyanRenderer?.setScene(city,water,cyanFloor);cyanCity=city;cyanWater=water;for(const r of cyanRipples)r.splice(0,4,0,0,-99,0);cyanDebug.lastWaterHit=null;cyanDebug.cityData=city;cyanDebug.stats={...city.stats,vertices:city.data.length/12,waterVertices:water.surface.length/12};cyanState.loading=false;sampleEnvironment();makeCyanAnnotations();cyanSpring.vs=-3.8;persistCyan();refreshCyanUI();}catch(e){showCyanError('海岸生成失败：'+e.message);throw e;}}
+function makeCyanAnnotations(){const el=C$('annotations');if(!el)return;cyanDismissedLabels.clear();el.replaceChildren();for(const [i,item] of (cyanCity?.landmarks||[]).entries()){const b=document.createElement('button');b.type='button';b.className='annotation scene-label';b.dataset.index=i;b.textContent=item.label;b.title='点击收起这条注释';b.setAttribute('aria-label',item.label+'，点击收起');b.onclick=()=>{cyanDismissedLabels.add(i);b.hidden=true;};el.append(b);}updateCyanAnnotations();}
 function projectCyan(p){const m=cyanCamera.vp;if(!m)return [0,0,-1];const a=[...p,1],q=[0,0,0,0];for(let r=0;r<4;r++)for(let k=0;k<4;k++)q[r]+=m[k*4+r]*a[k];return [(q[0]/q[3]*.5+.5)*cyanCanvas.clientWidth,(-q[1]/q[3]*.5+.5)*cyanCanvas.clientHeight,q[2]/q[3]];}
-function updateCyanAnnotations(){const el=C$('annotations');if(!el)return;el.hidden=!cyanState.annotations||cyanState.explore;for(const b of el.children){const item=cyanCity?.landmarks[+b.dataset.index];if(!item)continue;const p=projectCyan(item.pos);b.style.left=p[0]+'px';b.style.top=p[1]+'px';b.hidden=p[2]<0||p[0]<35||p[0]>cyanCanvas.clientWidth-35||p[1]<30||p[1]>cyanCanvas.clientHeight-35;}}
-function addCyanRipple(x,y,strength=.14){const rect=cyanCanvas.getBoundingClientRect(),px=x-rect.left,py=y-rect.top;let best=null,dist=1e9;for(let z=-5.7;z<5.9;z+=.35)for(let xx=-5.7;xx<5.9;xx+=.35){if(cyanCity.height(xx,z)>cyanEnvironment.tide.height)continue;const q=projectCyan([xx,cyanEnvironment.tide.height,z]),d=(q[0]-px)**2+(q[1]-py)**2;if(d<dist){dist=d;best=[xx,z];}}if(best&&dist<15000){cyanRipples[cyanRippleIndex++%4]=[...best,cyanTime,strength];}}
-function attachCyanGestures(){cyanGestureCleanup?.();const pointers=new Map();let mode='',origin=null,previous=null,pinch=null,longTimer=0,tapStart=0,moved=false;const canvas=cyanCanvas,abort=new AbortController(),opts={signal:abort.signal};
+function updateCyanAnnotations(){const el=C$('annotations');if(!el)return;el.hidden=!cyanState.annotations||cyanState.explore;for(const b of el.children){const i=+b.dataset.index,item=cyanCity?.landmarks[i];if(!item)continue;const p=projectCyan(item.pos);b.style.left=p[0]+'px';b.style.top=p[1]+'px';b.style.opacity=String(cyanState.annotationOpacity);b.style.pointerEvents=cyanState.annotationOpacity<.05?'none':'auto';b.hidden=cyanDismissedLabels.has(i)||p[2]<0||p[0]<35||p[0]>cyanCanvas.clientWidth-35||p[1]<30||p[1]>cyanCanvas.clientHeight-35;}}
+// Orthographic ray / sea-plane intersection, with a terrain occlusion check.
+// This avoids a grid search on every pointer event, and never stirs water through a hill.
+function pickCyanWater(x,y){if(!cyanCity||!cyanEnvironment||!cyanCamera.vp)return null;const rect=cyanCanvas.getBoundingClientRect();if(x<rect.left||x>rect.right||y<rect.top||y>rect.bottom)return null;const nx=(x-rect.left)/rect.width*2-1,ny=1-(y-rect.top)/rect.height*2,aspect=rect.width/rect.height,forward=CV.norm(CV.sub(cyanCamera.target,cyanCamera.eye)),right=CV.norm(CV.cross(forward,[0,1,0])),up=CV.cross(right,forward),ox=nx*cyanCamera.half*aspect-cyanCamera.pan[0],oy=ny*cyanCamera.half-cyanCamera.pan[1];const origin=cyanCamera.target.map((v,i)=>v+right[i]*ox+up[i]*oy-forward[i]*30);const t=(cyanEnvironment.tide.height-origin[1])/forward[1];if(t<0)return null;const p=origin.map((v,i)=>v+forward[i]*t);if(Math.abs(p[0])>5.95||Math.abs(p[2])>5.95||cyanCity.height(p[0],p[2])>cyanEnvironment.tide.height-.025)return null;
+for(let d=Math.max(0,t-20);d<t-.15;d+=.42){const q=origin.map((v,i)=>v+forward[i]*d);if(Math.abs(q[0])<6&&Math.abs(q[2])<6&&cyanCity.height(q[0],q[2])>q[1]+.08)return null;}return {x:p[0],z:p[2],depth:cyanEnvironment.tide.height-cyanCity.height(p[0],p[2])};}
+function addCyanRipple(x,y,strength=.14){const hit=pickCyanWater(x,y);if(!hit)return null;const slot=cyanRipples[cyanRippleIndex++%8];slot.splice(0,4,hit.x,hit.z,cyanTime,strength);cyanDebug.rippleCount++;cyanDebug.lastWaterHit=hit;return hit;}
+function attachCyanGestures(){
+ cyanGestureCleanup?.();const pointers=new Map();
+ let mode='',origin=null,previous=null,pinch=null,longTimer=0,tapStart=0,moved=false,multi=false,lastEmit=-999,lastEmitPoint=null;
+ const canvas=cyanCanvas,abort=new AbortController(),opts={signal:abort.signal};
+ const setMode=value=>{mode=value;cyanDebug.interactionMode=value||'idle';canvas.classList.toggle('is-stirring',value==='water');};
  const stopLong=()=>clearTimeout(longTimer),center=()=>{const a=[...pointers.values()];return {x:(a[0].x+a[1].x)/2,y:(a[0].y+a[1].y)/2,d:Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y)};};
- canvas.tabIndex=0;canvas.style.touchAction='none';canvas.addEventListener('contextmenu',e=>e.preventDefault(),opts);
- canvas.addEventListener('pointerdown',e=>{if(e.button>0&&e.button!==2)return;e.preventDefault();canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===1){origin=previous={x:e.clientX,y:e.clientY};tapStart=performance.now();moved=false;mode=e.shiftKey||e.button===2?'pan':'orbit';longTimer=setTimeout(()=>{if(!moved&&pointers.size===1){mode='pan';canvas.classList.add('is-panning');canvas.setAttribute('aria-label','移动海岸沙盘');}},430);}else if(pointers.size===2){stopLong();mode='pinch';pinch=center();}},opts);
- canvas.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});e.preventDefault();if(pointers.size>=2){const c=center();if(pinch){cyanCamera.zoom=cClamp(cyanCamera.zoom*c.d/Math.max(5,pinch.d),.58,2.1);cyanCamera.pan[0]+=(c.x-pinch.x)*cyanCamera.half*2/canvas.clientHeight;cyanCamera.pan[1]-=(c.y-pinch.y)*cyanCamera.half*2/canvas.clientHeight;}pinch=c;return;}const dx=e.clientX-previous.x,dy=e.clientY-previous.y;if(Math.hypot(e.clientX-origin.x,e.clientY-origin.y)>7){moved=true;stopLong();}if(mode==='pan'){const scale=cyanCamera.half*2/canvas.clientHeight;cyanCamera.pan[0]=cClamp(cyanCamera.pan[0]+dx*scale,-5,5);cyanCamera.pan[1]=cClamp(cyanCamera.pan[1]-dy*scale,-4,4);}else{cyanCamera.yaw-=dx*.006;cyanCamera.pitch=cClamp(cyanCamera.pitch+dy*.004,.25,1.17);cyanSpring.vx+=dx*.006;cyanSpring.vz+=dy*.006;}previous={x:e.clientX,y:e.clientY};},opts);
- const end=e=>{stopLong();if(!pointers.has(e.pointerId))return;const wasTap=pointers.size===1&&!moved&&performance.now()-tapStart<400;pointers.delete(e.pointerId);if(wasTap){addCyanRipple(e.clientX,e.clientY);cyanSpring.vs-=.4;}if(pointers.size===1){previous=origin=[...pointers.values()][0];mode='orbit';moved=true;pinch=null;}else if(!pointers.size){mode='';pinch=null;canvas.classList.remove('is-panning');}};canvas.addEventListener('pointerup',end,opts);canvas.addEventListener('pointercancel',e=>{moved=true;end(e);},opts);
+ canvas.tabIndex=0;canvas.dataset.interaction=cyanState.interaction;canvas.style.touchAction='none';canvas.addEventListener('contextmenu',e=>e.preventDefault(),opts);
+ canvas.addEventListener('pointerdown',e=>{
+  if(e.button>0&&e.button!==2)return;e.preventDefault();canvas.focus({preventScroll:true});canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(pointers.size===1){origin=previous={x:e.clientX,y:e.clientY};tapStart=performance.now();moved=false;multi=false;lastEmit=-999;lastEmitPoint=null;
+   const hit=pickCyanWater(e.clientX,e.clientY);setMode(e.shiftKey||e.button===2?'pan':cyanState.interaction==='water'||hit?'water':'orbit');
+   longTimer=setTimeout(()=>{if(!moved&&pointers.size===1){setMode('pan');canvas.classList.add('is-panning');}},430);
+  }else{multi=true;moved=true;stopLong();if(pointers.size===2){setMode('pinch');pinch=center();}else pinch=null;}
+ },opts);
+ canvas.addEventListener('pointermove',e=>{
+  if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});e.preventDefault();
+  if(pointers.size>=2){if(pointers.size===2){const c=center();if(pinch){cyanCamera.zoom=cClamp(cyanCamera.zoom*c.d/Math.max(5,pinch.d),.58,2.1);cyanCamera.pan[0]=cClamp(cyanCamera.pan[0]+(c.x-pinch.x)*cyanCamera.half*2/canvas.clientHeight,-5,5);cyanCamera.pan[1]=cClamp(cyanCamera.pan[1]-(c.y-pinch.y)*cyanCamera.half*2/canvas.clientHeight,-4,4);}pinch=c;}return;}
+  const dx=e.clientX-previous.x,dy=e.clientY-previous.y,distance=Math.hypot(e.clientX-origin.x,e.clientY-origin.y);
+  if(distance>(mode==='water'?3:7)){moved=true;stopLong();}
+  if(mode==='pan'){const scale=cyanCamera.half*2/canvas.clientHeight;cyanCamera.pan[0]=cClamp(cyanCamera.pan[0]+dx*scale,-5,5);cyanCamera.pan[1]=cClamp(cyanCamera.pan[1]-dy*scale,-4,4);}
+  else if(mode==='water'){
+   if(moved){const now=performance.now();if(now-lastEmit>62||!lastEmitPoint||Math.hypot(e.clientX-lastEmitPoint.x,e.clientY-lastEmitPoint.y)>14){const hit=addCyanRipple(e.clientX,e.clientY,cClamp(.08+Math.hypot(dx,dy)*.0035,.08,.25));if(hit){lastEmit=now;lastEmitPoint={x:e.clientX,y:e.clientY};cyanSpring.vx+=dx*.0006;cyanSpring.vz+=dy*.0006;}}}
+  }else{cyanCamera.yaw-=dx*.006;cyanCamera.pitch=cClamp(cyanCamera.pitch+dy*.004,.25,1.17);cyanSpring.vx+=dx*.006;cyanSpring.vz+=dy*.006;}
+  previous={x:e.clientX,y:e.clientY};
+ },opts);
+ const end=e=>{
+  stopLong();if(!pointers.has(e.pointerId))return;const wasTap=e.type!=='pointercancel'&&pointers.size===1&&!multi&&!moved&&performance.now()-tapStart<400;
+  pointers.delete(e.pointerId);if(wasTap){addCyanRipple(e.clientX,e.clientY,.15);cyanSpring.vs-=.4;}
+  if(pointers.size===1){previous=origin=[...pointers.values()][0];moved=true;setMode('pan');pinch=null;}
+  else if(!pointers.size){setMode('');pinch=null;canvas.classList.remove('is-panning');}
+ };
+ canvas.addEventListener('pointerup',end,opts);canvas.addEventListener('pointercancel',end,opts);
+ canvas.addEventListener('lostpointercapture',e=>{if(pointers.has(e.pointerId)){pointers.delete(e.pointerId);stopLong();if(!pointers.size){setMode('');canvas.classList.remove('is-panning');}}},opts);
  canvas.addEventListener('wheel',e=>{e.preventDefault();cyanCamera.zoom=cClamp(cyanCamera.zoom*Math.exp(-e.deltaY*.001),.58,2.1);},{...opts,passive:false});
- canvas.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','-','0',' '].includes(e.key))e.preventDefault();if(e.key==='ArrowLeft')cyanCamera.yaw-=.1;if(e.key==='ArrowRight')cyanCamera.yaw+=.1;if(e.key==='ArrowUp')cyanCamera.pitch=cClamp(cyanCamera.pitch+.08,.25,1.17);if(e.key==='ArrowDown')cyanCamera.pitch=cClamp(cyanCamera.pitch-.08,.25,1.17);if(e.key==='+')cyanCamera.zoom=cClamp(cyanCamera.zoom*1.1,.58,2.1);if(e.key==='-')cyanCamera.zoom=cClamp(cyanCamera.zoom/1.1,.58,2.1);if(e.key==='0')resetCyanView();if(e.key===' ')CyanApp.squish();},opts);cyanGestureCleanup=()=>abort.abort();}
+ canvas.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','-','0',' '].includes(e.key))e.preventDefault();if(e.key==='ArrowLeft')cyanCamera.yaw-=.1;if(e.key==='ArrowRight')cyanCamera.yaw+=.1;if(e.key==='ArrowUp')cyanCamera.pitch=cClamp(cyanCamera.pitch+.08,.25,1.17);if(e.key==='ArrowDown')cyanCamera.pitch=cClamp(cyanCamera.pitch-.08,.25,1.17);if(e.key==='+')cyanCamera.zoom=cClamp(cyanCamera.zoom*1.1,.58,2.1);if(e.key==='-')cyanCamera.zoom=cClamp(cyanCamera.zoom/1.1,.58,2.1);if(e.key==='0')resetCyanView();if(e.key===' ')CyanApp.squish();},opts);
+ cyanGestureCleanup=()=>{stopLong();abort.abort();};
+}
 function resetCyanView(){Object.assign(cyanCamera,{yaw:.64,pitch:.64,zoom:1,pan:[0,0]});}
 function cyanCameraUniform(w,h){const aspect=w/h,target=[0,.15,0],r=30,eye=[Math.sin(cyanCamera.yaw)*Math.cos(cyanCamera.pitch)*r,Math.sin(cyanCamera.pitch)*r+.15,Math.cos(cyanCamera.yaw)*Math.cos(cyanCamera.pitch)*r];const view=CM.look(eye,target),right=[view[0],view[4],view[8]],up=[view[1],view[5],view[9]];
  let rx=0,ry=0;for(const x of [-6.2,6.2])for(const y of [-3.85,4.8])for(const z of [-6.2,6.2]){const p=CV.sub([x,y,z],target);rx=Math.max(rx,Math.abs(CV.dot(p,right)));ry=Math.max(ry,Math.abs(CV.dot(p,up)));}const half=Math.max(ry/.89,rx/(aspect*.88))/cyanCamera.zoom;const vp=CM.mul(CM.ortho(-half*aspect,half*aspect,-half,half,.1,90),view);vp[12]+=cyanCamera.pan[0]/(half*aspect);vp[13]+=cyanCamera.pan[1]/half;Object.assign(cyanCamera,{vp,eye,target,half});cyanUniform.set(vp,0);cyanUniform.set([...eye,1],32);
- const light=CV.norm([cyanEnvironment.lightDirection[0],Math.max(.17,cyanEnvironment.lightDirection[1]),cyanEnvironment.lightDirection[2]]),le=light.map(v=>v*30),lv=CM.mul(CM.ortho(-11,11,-11,11,.1,70),CM.look(le,[0,0,0]));cyanUniform.set(lv,16);cyanUniform.set([...light,cClamp(cyanEnvironment.lightIntensity,0,1.2)],36);cyanUniform.set([...cyanEnvironment.sunColor,Math.max(.25,cyanEnvironment.ambient*.75)],40);cyanUniform.set([...cyanEnvironment.seaColor,0],44);cyanUniform.set([cyanTime,cyanEnvironment.tide.height,cyanState.wave,cyanState.cutaway?1:0],48);cyanUniform.set([cyanSpring.x,cyanSpring.z,cyanSpring.squash,cyanState.jelly],52);cyanRipples.forEach((p,i)=>cyanUniform.set(p,56+i*4));cyanUniform.set([1-cyanEnvironment.visibility,w,h,0],72);
+ const light=CV.norm([cyanEnvironment.lightDirection[0],Math.max(.12,cyanEnvironment.lightDirection[1]),cyanEnvironment.lightDirection[2]]),le=light.map(v=>v*36),lv=CM.mul(CM.ortho(-14,14,-14,14,.1,85),CM.look(le,[0,-.6,0]));cyanUniform.set(lv,16);cyanUniform.set([...light,cClamp(cyanEnvironment.lightIntensity*cyanState.sunStrength,0,1.65)],36);cyanUniform.set([...cyanEnvironment.sunColor,Math.max(.25,cyanEnvironment.ambient*.75)],40);cyanUniform.set([...cyanEnvironment.seaColor,0],44);cyanUniform.set([cyanTime,cyanEnvironment.tide.height,cyanState.wave,cyanState.cutaway?1:0],48);cyanUniform.set([cyanSpring.x,cyanSpring.z,cyanSpring.squash,cyanState.jelly],52);let activeRipples=0;for(const p of cyanRipples){const age=cyanTime-p[2];if(age>=0&&age<6)cyanUniform.set(p,56+activeRipples++*4);}cyanUniform.set([1-cyanEnvironment.visibility,w,h,activeRipples],88);cyanUniform.set([cyanState.waterOpacity,cyanState.sunStrength,cyanState.annotationOpacity,cyanState.interaction==='water'?1:0],92);
  return [[0,[0,0,6]],[1,[6,0,0]],[2,[0,0,-6]],[3,[-6,0,0]]].sort((a,b)=>CV.dot(a[1],eye)-CV.dot(b[1],eye)).map(x=>x[0]);}
 function updateCyanSpring(dt){let left=dt;while(left>0){const d=Math.min(left,1/120);cyanSpring.vx+=(-cyanSpring.x*36-cyanSpring.vx*4.2)*d;cyanSpring.vz+=(-cyanSpring.z*36-cyanSpring.vz*4.2)*d;cyanSpring.vs+=(-cyanSpring.squash*55-cyanSpring.vs*3.4)*d;cyanSpring.x+=cyanSpring.vx*d;cyanSpring.z+=cyanSpring.vz*d;cyanSpring.squash+=cyanSpring.vs*d;left-=d;}}
+function updateCyanAtmosphere(){const layer=C$('sunAtmosphere');if(!layer||!cyanEnvironment)return;const source=cyanEnvironment.sun.direction.map((v,i)=>v*13+(i===1?2.4:0));const p=projectCyan(source),w=cyanCanvas.clientWidth,h=cyanCanvas.clientHeight;const x=cClamp(p[0]/w,.12,.88),y=cClamp(p[1]/h,.065,.26),alpha=cClamp(cyanEnvironment.lightIntensity*cyanState.sunStrength*.58,0,.82);layer.style.setProperty('--sun-x',(x*100).toFixed(2)+'%');layer.style.setProperty('--sun-y',(y*100).toFixed(2)+'%');layer.style.setProperty('--sun-alpha',String(alpha));layer.style.setProperty('--sun-angle',(Math.atan2(h*.57-y*h,w*.5-x*w)*180/Math.PI-90).toFixed(2)+'deg');layer.hidden=cyanEnvironment.sun.altitude<-.8;}
 function downloadCyanFrame(){cyanPendingShot=false;cyanCanvas.toBlob(blob=>{if(!blob)return;const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Cyanland-'+cityDef().name+'-'+CyanEnvironment.formatDate(cyanState.date).isoDate+'.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});}
 function cyanFrame(now){requestAnimationFrame(cyanFrame);if(!cyanRenderer||!cyanCity||document.hidden){cyanLast=now;return;}const real=(now-(cyanLast||now-16.7))/1000,dt=cClamp(real,0,.07);cyanLast=now;cyanTime+=dt;updateCyanSpring(dt);if(cyanState.live)cyanState.date=new Date();else if(cyanState.playing)cyanState.date=new Date(cyanState.date.getTime()+dt*cyanState.speed*1000);
  if(cyanTime-cyanSampleTime>.16)sampleEnvironment();const w=Math.max(1,Math.round(cyanCanvas.clientWidth*cyanResolution)),h=Math.max(1,Math.round(cyanCanvas.clientHeight*cyanResolution));const order=cyanCameraUniform(w,h);try{cyanRenderer.draw(cyanUniform,w,h,order);}catch(e){recoverRenderer(e.message);return;}cyanFrameNo++;cyanDebug.frame=cyanFrameNo;
  if(cyanPendingShot)downloadCyanFrame();if(real>0&&real<2){cyanPerformanceFrames++;cyanPerformanceTime+=real;}if(cyanPerformanceTime>1){cyanFps=cyanPerformanceFrames/cyanPerformanceTime;if(cyanTime>4&&cyanFps<36&&cyanResolution>.85)cyanResolution=Math.max(.85,cyanResolution-.15);cyanPerformanceTime=0;cyanPerformanceFrames=0;}
- if(cyanTime-cyanUiTime>.3){cyanUiTime=cyanTime;refreshCyanUI();updateCyanAnnotations();}if(cyanFrameNo===1){cyanState.loading=false;refreshCyanUI();}}
+ if(cyanTime-cyanUiTime>.2){cyanUiTime=cyanTime;refreshCyanUI();updateCyanAnnotations();updateCyanAtmosphere();}if(cyanFrameNo===1){cyanState.loading=false;refreshCyanUI();}}
 const CyanApp=window.CyanApp={
  setCity:id=>loadCyanCity(id),setDate(iso){if(!/^\d{4}-\d{2}-\d{2}$/.test(iso))return;const fmt=CyanEnvironment.formatDate(cyanState.date),next=new Date(iso+'T'+String(fmt.hour).padStart(2,'0')+':'+String(fmt.minute).padStart(2,'0')+':00+08:00');if(!Number.isFinite(+next)||CyanEnvironment.formatDate(next).isoDate!==iso)return;cyanState.date=next;cyanState.live=false;sampleEnvironment();refreshCyanUI();},
  setHour(hour){hour=Number(hour);if(!Number.isFinite(hour))return;const iso=CyanEnvironment.formatDate(cyanState.date).isoDate;cyanState.date=new Date(new Date(iso+'T00:00:00+08:00').getTime()+cClamp(hour,0,24)*3600000);cyanState.live=false;sampleEnvironment();refreshCyanUI();},
  setLive(value){cyanState.live=!!value;if(value){cyanState.date=new Date();cyanState.playing=false;}sampleEnvironment();refreshCyanUI();},setPlaying(value){cyanState.playing=!!value;if(value)cyanState.live=false;refreshCyanUI();},setSpeed(value){if(Number.isFinite(+value))cyanState.speed=cClamp(+value,1,3600);refreshCyanUI();},
- setWeather(value){if(!['clear','cloudy','rain','fog'].includes(value))return;cyanState.weather=value;sampleEnvironment();persistCyan();refreshCyanUI();},setJelly(value){if(Number.isFinite(+value))cyanState.jelly=cClamp(+value,0,1);persistCyan();refreshCyanUI();},setWave(value){if(Number.isFinite(+value))cyanState.wave=cClamp(+value,0,1);persistCyan();refreshCyanUI();},setCutaway(value){cyanState.cutaway=!!value;persistCyan();refreshCyanUI();},setAnnotations(value){cyanState.annotations=!!value;persistCyan();refreshCyanUI();updateCyanAnnotations();},resetView:resetCyanView,squish(){cyanSpring.vs=-5.8;cyanSpring.vx+=1.3;cyanSpring.vz-=.9;},screenshot(){cyanPendingShot=true;},setExplore(value){cyanState.explore=!!value;refreshCyanUI();updateCyanAnnotations();},
+ setWeather(value){if(!['clear','cloudy','rain','fog'].includes(value))return;cyanState.weather=value;sampleEnvironment();persistCyan();refreshCyanUI();updateCyanAtmosphere();},setJelly(value){if(Number.isFinite(+value))cyanState.jelly=cClamp(+value,0,1);persistCyan();refreshCyanUI();},setWave(value){if(Number.isFinite(+value))cyanState.wave=cClamp(+value,0,1);persistCyan();refreshCyanUI();},setCutaway(value){cyanState.cutaway=!!value;persistCyan();refreshCyanUI();},setAnnotations(value){cyanState.annotations=!!value;if(value)cyanDismissedLabels.clear();persistCyan();refreshCyanUI();updateCyanAnnotations();},
+ setAnnotationOpacity(value){if(Number.isFinite(+value))cyanState.annotationOpacity=cClamp(+value,0,1);persistCyan();refreshCyanUI();updateCyanAnnotations();},setWaterOpacity(value){if(Number.isFinite(+value))cyanState.waterOpacity=cClamp(+value,.2,1);persistCyan();refreshCyanUI();},setSunStrength(value){if(Number.isFinite(+value))cyanState.sunStrength=cClamp(+value,.35,1.6);persistCyan();refreshCyanUI();updateCyanAtmosphere();},setInteraction(value){if(!['orbit','water'].includes(value))return;cyanState.interaction=value;cyanCanvas.dataset.interaction=value;persistCyan();refreshCyanUI();},
+ resetView:resetCyanView,squish(){cyanSpring.vs=-5.8;cyanSpring.vx+=1.3;cyanSpring.vz-=.9;},screenshot(){cyanPendingShot=true;},setExplore(value){cyanState.explore=!!value;refreshCyanUI();updateCyanAnnotations();},
  registerCity(def,builder){if(typeof registerCity==='function'){registerCity(def,builder);window.CyanUI?.init(CITY_DEFS);}},getState:()=>({...cyanState})};
 let cyanRecovering=false;
 async function recoverRenderer(message){if(cyanRecovering)return;cyanRecovering=true;cyanDebug.failures.push(message);try{cyanRenderer?.stop();newSceneCanvas();cyanRenderer=makeWebGL();cyanDebug.renderer=cyanRenderer.name;cyanRenderer.setScene(cyanCity,cyanWater,cyanFloor);attachCyanGestures();refreshCyanUI();}catch(e){showCyanError(e.message);}cyanRecovering=false;}
