@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>发射果冻 · 我的任务发射台</title>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content"><meta name="color-scheme" content="light"><meta name="theme-color" content="#efeee8"><meta name="launch-jelly-version" content="2026.10.26.mobile2"><title>发射果冻 · 我的任务发射台</title>
 <style>
 :root{--paper:#efeee8;--ink:#243832;--muted:#7a847a;--line:#d4d7cc;--accent:#e77945;--mint:#d6e5cb}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;font-size:13px;overflow:hidden}button,input{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:5px}header{position:absolute;z-index:5;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:27px 36px;border-bottom:1px solid #cbd0c466;background:#efeee8c9;pointer-events:none}header>*{pointer-events:auto}.brand{display:flex;align-items:center;gap:14px}.brandmark{width:28px;height:28px;border:1.5px solid var(--ink);transform:rotate(-12deg);border-radius:8px 7px 9px 5px;position:relative}.brandmark:before,.brandmark:after{content:"";position:absolute;border:1px solid var(--ink);width:12px;height:12px;left:6px;top:6px;border-radius:4px}.brandmark:after{transform:rotate(35deg)}.brand strong{font-size:12px;letter-spacing:2px;font-weight:600}.brand small{font-size:9px;display:block;letter-spacing:1.8px;margin-top:5px;color:var(--muted)}.header-right{display:flex;align-items:center;gap:27px}.edition{font-size:10px;letter-spacing:1.6px;color:var(--muted)}.sound{border:1px solid var(--line);padding:9px 13px;border-radius:25px;background:transparent;font-size:10px;letter-spacing:1px;display:flex;gap:8px;align-items:center}.sound i{width:5px;height:5px;display:block;border-radius:50%;background:#9aa296}.sound[aria-pressed=true] i{background:var(--accent)}main{height:100svh;position:relative}#scene{display:block;position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}#scene:active{cursor:grabbing}.intro{position:absolute;top:127px;left:52px;pointer-events:none}.kicker{font-size:10px;letter-spacing:2.7px;color:var(--muted);display:flex;align-items:center;gap:9px}.kicker:before{content:"";height:5px;width:5px;background:var(--accent);border-radius:50%}h1{font-size:clamp(40px,4.3vw,70px);letter-spacing:-3px;font-weight:400;margin:15px 0 12px;line-height:1.03}h1 em{font-family:Georgia,serif;font-weight:400;font-style:italic;color:#788f76}.intro p{font-size:12px;line-height:1.8;color:#7a847a;margin:15px 0}.intro .cn{font-size:11px;letter-spacing:3px;color:#566659}.spec{position:absolute;left:52px;bottom:116px;pointer-events:none}.spec .n{font-family:Georgia,serif;font-size:38px;color:#9da58e;line-height:1}.spec small{display:block;color:var(--muted);font-size:9px;letter-spacing:2px;margin-top:12px}.controls{position:absolute;top:135px;right:37px;width:224px;z-index:3;background:#f5f4eddb;backdrop-filter:blur(18px);border:1px solid #fff9;border-radius:13px;padding:21px 21px 19px;box-shadow:0 10px 35px #60705b08}.eyebrow{font-size:9px;letter-spacing:1.8px;color:var(--muted)}.controls h2{font-size:14px;font-weight:500;margin:8px 0 24px}.range-row{margin:20px 0}.range-label{display:flex;justify-content:space-between;font-size:11px;margin-bottom:11px}.range-label output{font-family:monospace;font-size:11px;color:#7b8a70}input[type=range]{appearance:none;width:100%;height:3px;border-radius:4px;background:linear-gradient(to right,#789777 0%,#789777 var(--v,50%),#d9ddcf var(--v,50%),#d9ddcf 100%);display:block;cursor:ew-resize}input[type=range]::-webkit-slider-thumb{appearance:none;width:12px;height:12px;background:#f6f5ee;border:3px solid #7e9779;border-radius:50%;box-shadow:0 1px 5px #53634e20}input[type=range]::-moz-range-thumb{width:8px;height:8px;background:#f6f5ee;border:3px solid #7e9779;border-radius:50%}.controls hr{border:0;border-top:1px solid #d5dacb;margin:24px 0 15px}.small-note{font-size:10px;line-height:1.9;color:var(--muted);display:flex;gap:9px}.small-note b{font-size:14px;font-weight:400;color:#83977b}.view-controls{display:flex;gap:6px;margin-top:16px}.view-controls button{flex:1;border:1px solid #d4d9ca;background:transparent;border-radius:5px;padding:8px 3px;font-size:10px}.view-controls button.active{background:#e0e7d8;border-color:#a6b99b}.timeline{position:absolute;bottom:29px;left:50%;transform:translateX(-50%);width:min(760px,calc(100% - 90px));background:#f6f5efed;border:1px solid #fff;border-radius:13px;padding:17px 20px 16px;box-shadow:0 12px 40px #3c513015;display:grid;grid-template-columns:145px 1fr 93px;gap:22px;align-items:center;z-index:5;backdrop-filter:blur(20px)}.launch{border:0;border-radius:7px;background:var(--ink);color:#f4f3e8;padding:15px 12px;display:flex;align-items:center;justify-content:space-between;text-align:left}.launch b{font-size:12px;font-weight:500;letter-spacing:1px}.launch span{font-size:16px;color:#becdb5}.launch:disabled{opacity:.55;cursor:default}.progress-label{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px;font-size:10px}.progress-label strong{font-weight:500}.progress-label span{color:var(--muted);font-family:monospace;font-size:10px}.track{height:2px;background:#d9ddcf;position:relative}.track .fill{height:100%;width:0;background:var(--accent);transition:width .2s linear}.ticks{display:flex;justify-content:space-between;margin-top:9px;color:#8b9383;font-size:8px;letter-spacing:.5px}.timer{text-align:right;font-family:monospace;font-size:19px;letter-spacing:-1px;color:#a5693c}.timer small{display:block;font-family:Arial,sans-serif;color:#929980;font-size:8px;letter-spacing:1.5px;margin-top:6px}.footer{position:absolute;bottom:32px;left:36px;display:flex;flex-direction:column;gap:6px;font-size:8px;letter-spacing:1.5px;color:#849079;pointer-events:none}.status-dot{width:5px;height:5px;border-radius:50%;background:#83a178;display:inline-block;margin-right:6px}.shortcut{position:absolute;bottom:42px;right:37px;font-size:9px;color:#929b88;letter-spacing:.5px}.shortcut kbd{font-size:9px;padding:3px 5px;border:1px solid #d1d6c7;border-radius:3px;margin-right:6px;font-family:inherit}.annotation{position:absolute;pointer-events:none;opacity:0;transition:opacity .7s;color:#668b7e;font-size:9px;letter-spacing:1px;border-left:1px solid #8baa91;padding:5px 9px;white-space:nowrap}.annotation.visible{opacity:.8}#hint{position:absolute;left:50%;bottom:157px;transform:translateX(-50%);font-size:10px;color:#5d776c;letter-spacing:1px;pointer-events:none;transition:opacity 1s;white-space:nowrap}.loading{position:absolute;z-index:20;inset:0;display:grid;place-items:center;background:var(--paper);transition:opacity .6s}.loading[hidden]{display:none}.loading-inner{text-align:center;max-width:420px;padding:25px}.loading .ring{border:1px solid #d0d9c8;border-top-color:#66825d;width:34px;height:34px;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 23px}.loading h2{font-weight:400;font-family:Georgia,serif;font-size:28px}.loading p{color:var(--muted);font-size:12px;line-height:1.8}.loading button{background:#243832;color:white;border:0;padding:12px 18px;border-radius:6px;margin-top:14px}.loading a{color:#5c7951}.toast{position:absolute;top:94px;left:50%;transform:translateX(-50%) translateY(-8px);border:1px solid #d9decf;background:#f7f7efed;border-radius:30px;padding:10px 18px;font-size:11px;z-index:8;opacity:0;transition:.4s;pointer-events:none}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}@keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:1100px){.intro{left:28px;top:117px}h1{font-size:49px}.controls{right:24px;width:194px;padding:17px}.edition{display:none}.spec{left:30px}.footer,.shortcut{display:none}.timeline{bottom:24px;width:680px;max-width:calc(100% - 48px)}}
@@ -28,12 +28,60 @@
 
 @media(min-width:701px){.task-list-area{min-height:104px;flex-shrink:0}}
 
+/* Compact screens reserve a real viewport for the miniature. Sheets never cover it. */
+.mobile-brand,.task-dock,.material-open-button{display:none}
+.material-dialog{border:1px solid #fff;border-radius:18px;padding:24px;width:min(360px,calc(100vw - 28px));max-height:calc(var(--app-height,100dvh) - 32px);overflow:auto;background:#f6f6ed;color:var(--ink);box-shadow:0 22px 90px #1f3c3433}
+.material-dialog::backdrop{background:#2b40384d;backdrop-filter:blur(5px)}
+.material-dialog h2{font-size:20px;font-weight:400;margin:10px 0 22px}.material-dialog .range-row{margin:23px 0}.material-dialog .range-label{font-size:12px}.material-dialog .view-controls{display:flex;margin-top:25px;gap:8px}.material-dialog .view-controls button{min-height:40px;font-size:11px}.material-dialog .dialog-close{width:100%;min-height:42px;border:0;border-radius:7px;background:#2c4635;color:#f4f6eb;margin-top:22px;font-size:12px}.task-edit-dialog{max-height:calc(var(--app-height,100dvh) - 24px);overflow:auto;overscroll-behavior:contain}
+body.compact-ui{--timeline-h:66px;--dock-h:74px;--bottom-gap:max(10px,env(safe-area-inset-bottom));--scene-top:calc(var(--header-h,64px) + 42px);--scene-bottom:calc(var(--bottom-gap) + var(--timeline-h) + 12px);--panel-bottom:calc(var(--bottom-gap) + var(--timeline-h) + 10px)}
+.compact-ui main{position:fixed;inset:auto 0 auto;top:var(--viewport-top,0px);height:var(--app-height,100dvh);width:100%;overflow:hidden}
+.compact-ui header{position:fixed;top:var(--viewport-top,0px);padding:12px 12px 11px;padding-top:max(12px,env(safe-area-inset-top));gap:7px;min-height:62px;background:#efeee8f5;align-items:center}
+.compact-ui .brand{gap:6px;min-width:0}.compact-ui .brandmark{width:21px;height:21px;flex:0 0 21px}.compact-ui .brand-copy{display:none}.compact-ui .mobile-brand{display:inline;white-space:nowrap;font-size:10px;letter-spacing:.3px}.compact-ui .header-right{gap:6px;min-width:0}.compact-ui .edition{display:none}.compact-ui .mode-switch{padding:2px;gap:0}.compact-ui .mode-switch button{font-size:10px;padding:9px 8px;min-height:36px}.compact-ui .sound{padding:8px;gap:5px;min-height:36px}.compact-ui .sound span{font-size:0}.compact-ui .sound span:after{content:'声音';font-size:8px}.compact-ui .sound i{width:4px;height:4px}
+.compact-ui #scene{position:absolute;inset:var(--scene-top) 0 var(--scene-bottom);width:100%;height:auto;max-height:none;touch-action:none}
+.compact-ui.task-mode{--scene-bottom:calc(var(--panel-bottom) + var(--dock-h) + 10px)}
+.compact-ui.task-mode.task-panel-expanded{--scene-bottom:calc(var(--panel-bottom) + var(--sheet-h,300px) + 10px)}
+.compact-ui.presentation-mode{--scene-bottom:calc(var(--panel-bottom) + var(--tour-sheet-h,260px) + 10px)}
+.compact-ui .intro,.compact-ui .spec,.compact-ui .footer,.compact-ui .shortcut,.compact-ui #hint,.compact-ui .annotation{display:none}
+.compact-ui .world-status,.compact-ui.task-mode .world-status,.compact-ui.presentation-mode .world-status{position:absolute;left:14px;top:calc(var(--header-h,64px) + 13px);transform:none;max-width:calc(100% - 178px);font-size:8px;letter-spacing:0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;line-height:14px}
+.compact-ui .controls,.compact-ui.task-mode .controls,.compact-ui.presentation-mode .controls{display:flex;align-items:center;gap:6px;position:absolute;top:calc(var(--header-h,64px) + 3px);right:12px;bottom:auto;left:auto;width:148px;height:34px;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent;backdrop-filter:none;z-index:4}
+.compact-ui .controls>.eyebrow,.compact-ui .controls>h2,.compact-ui .controls>.range-row,.compact-ui .controls>hr,.compact-ui .controls>.small-note,.compact-ui .controls>.view-controls{display:none}
+.compact-ui .controls .squish,.compact-ui.task-mode .controls .squish{width:100px;flex:1;min-height:34px;padding:8px 9px;margin:0;border-radius:7px;border:1px solid #d0dbc3;background:#f8f9f0;font-size:9px;letter-spacing:0;white-space:nowrap}
+.compact-ui .squish span{font-size:15px}.compact-ui .material-open-button{display:block;flex:0 0 42px;min-height:34px;padding:6px;border:1px solid #d0dbc3;border-radius:7px;background:#f8f9f0;color:#6b845e;font-size:9px}
+.compact-ui .timeline,.compact-ui.task-mode .timeline,.compact-ui.presentation-mode .timeline{position:absolute;left:12px;right:12px;bottom:var(--bottom-gap);width:auto;max-width:none;height:var(--timeline-h);transform:none;display:grid;grid-template-columns:102px minmax(0,1fr) 62px;gap:10px;align-items:center;border-radius:12px;padding:10px;background:#f8f8f0;box-shadow:0 7px 25px #43553c0c;backdrop-filter:none}
+.compact-ui .launch{min-height:44px;gap:5px;padding:11px 9px;border-radius:7px}.compact-ui .launch b{font-size:10px;letter-spacing:0;white-space:nowrap}.compact-ui .launch span{font-size:12px}.compact-ui .progress-label{font-size:8px;line-height:1.5;margin-bottom:8px}.compact-ui .progress-label strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.compact-ui .progress-label span,.compact-ui .ticks{display:none}.compact-ui .timer{font-size:15px;white-space:nowrap}.compact-ui .timer small{font-size:6px;letter-spacing:.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:5px}
+.compact-ui .task-dock{display:none;position:absolute;left:12px;right:12px;bottom:var(--panel-bottom);height:var(--dock-h);border:1px solid #fff;border-radius:14px;align-items:center;padding:9px 10px;background:#f8f8f1;box-shadow:0 8px 25px #314c3208;gap:9px;z-index:6}
+.compact-ui.task-mode:not(.task-panel-expanded) .task-dock{display:flex}
+.task-dock-open{display:flex;align-items:center;gap:11px;min-width:0;flex:1;min-height:50px;padding:0;border:0;background:transparent;text-align:left}
+.task-dock-ring{display:grid;place-items:center;background:conic-gradient(#789369 var(--progress,0%),#e2e8d8 0);height:43px;width:43px;flex:0 0 43px;border-radius:50%;padding:3px}.task-dock-ring>span{display:flex;align-items:baseline;justify-content:center;gap:1px;width:100%;height:100%;padding-top:11px;background:#f8f8f1;border-radius:50%}.task-dock-ring strong{font-family:Georgia,serif;font-size:16px;font-weight:400;line-height:1}.task-dock-ring small{font-size:7px;color:#849478}
+.task-dock-copy{min-width:0;flex:1;display:block}.task-dock-copy strong{display:block;font-size:12px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;color:#3e583b}.task-dock-copy small{display:block;font-size:9px;margin-top:5px;color:#8b987b}.task-dock-arrow{font-size:13px;color:#95a885;padding:5px 0}.task-quick-add{height:43px;width:43px;flex:0 0 43px;display:grid;place-items:center;border:1px solid #cbd8bf;border-radius:10px;color:#5d7c4e;font-size:23px;background:#e9efdf}
+.compact-ui .task-panel,.compact-ui.task-panel-expanded .task-panel{display:none;left:12px;right:12px;top:auto;bottom:var(--panel-bottom);height:var(--sheet-h,300px);width:auto;max-height:none;margin:0;padding:14px 15px;border-radius:15px;background:#f8f8f1;box-shadow:0 -3px 30px #384e3408;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scroll-padding-top:48px;backdrop-filter:none}
+.compact-ui.task-mode.task-panel-expanded .task-panel{display:block}
+.compact-ui .task-panel .task-eyebrow{position:sticky;top:-14px;z-index:2;background:#f8f8f1;padding:8px 0;margin:-3px 0 0;min-height:38px;font-size:7px;letter-spacing:.5px}.compact-ui .task-panel .task-eyebrow>span:first-child{font-size:6px;letter-spacing:.5px}.compact-ui #storageStatus{max-width:68px;font-size:8px;margin-left:auto}.compact-ui .task-drawer-toggle{display:block;font-size:10px;min-width:58px;min-height:36px;padding:8px;border-radius:7px;border:1px solid #d5dfc8;background:#eff3e6;color:#668653;white-space:nowrap;letter-spacing:0}
+.compact-ui .mission-name-label{font-size:9px;margin-top:9px;display:block}.compact-ui .mission-name{font-size:19px;margin-top:5px;padding:2px 0 5px;min-width:0}.compact-ui .task-lede{display:none}.compact-ui .task-progress-hero{padding:11px 0 15px;gap:11px}.compact-ui .task-progress-ring{height:43px;width:43px;flex-basis:43px}.compact-ui .task-progress-ring>div{padding-top:10px}.compact-ui .task-progress-ring strong{font-size:17px}.compact-ui .task-progress-copy strong{font-size:11px}.compact-ui .task-progress-copy p{font-size:10px;line-height:1.55}.compact-ui .task-add-line input,.compact-ui .task-add-options input{font-size:16px}.compact-ui .task-add-line input{padding:11px}.compact-ui .task-add-line button{height:43px;min-width:43px}.compact-ui .task-add-options>div{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}.compact-ui .task-add-options summary{font-size:10px;min-height:34px}.compact-ui .task-add-options label{font-size:9px}.compact-ui .task-add-options input{height:38px}
+.compact-ui .task-filters{margin-top:3px;gap:24px}.compact-ui .task-filters button{font-size:11px;min-height:39px;padding:9px 0}.compact-ui .task-list-area{max-height:none;min-height:66px;overflow:visible;flex:none}.compact-ui .task-row{min-height:58px;padding:12px 0;gap:11px;align-items:center}.compact-ui .task-check{height:29px;width:29px;flex-basis:29px;margin:0;border-radius:8px}.compact-ui .task-check:checked:after{font-size:15px}.compact-ui .task-title{font-size:12px;line-height:1.6;min-height:28px}.compact-ui .task-edit{height:40px;width:36px;flex-basis:36px;margin:0;font-size:19px}.compact-ui .tag-pill,.compact-ui .due-pill{font-size:9px}.compact-ui .task-meta{gap:7px}.compact-ui .task-empty{padding:15px 0 17px}.compact-ui .task-empty strong{font-size:11px}.compact-ui .task-empty p{font-size:10px}.compact-ui .task-templates button{min-height:37px;font-size:10px;padding:9px 12px}.compact-ui .auto-launch-label{font-size:10px;min-height:45px;line-height:1.7}.compact-ui .auto-launch-label input{width:17px;height:17px;flex-basis:17px}.compact-ui .task-archive{min-height:43px;font-size:11px}.compact-ui .task-tools>summary{min-height:40px;font-size:11px}.compact-ui .task-tools-buttons button{font-size:11px;min-height:39px}.compact-ui .task-local-note{font-size:9px;line-height:1.8}.compact-ui .task-history{max-height:none;overflow:visible;font-size:10px}.compact-ui .task-history-record>summary{font-size:10px}.compact-ui .task-history-tasks{font-size:10px}.compact-ui .task-undo{font-size:10px;line-height:1.7;min-height:39px;max-width:100%;white-space:normal}
+.compact-ui .tour-panel,.compact-ui.presentation-mode .tour-panel{top:auto;left:12px;right:12px;bottom:var(--panel-bottom);width:auto;height:var(--tour-sheet-h,260px);max-height:none;padding:15px;overflow:auto;overscroll-behavior:contain;background:#f8f8f1;backdrop-filter:none}.compact-ui .tour-panel h2{font-size:16px;margin:10px 0}.compact-ui .tour-panel p{font-size:11px;line-height:1.8}.compact-ui .tour-list button{font-size:10px;min-height:36px}.compact-ui .tour-nav button{font-size:10px;min-height:36px}.compact-ui .tour-why{font-size:10px;line-height:1.7}.compact-ui .world-hotspots{display:none!important}
+.compact-ui .toast{position:absolute;top:calc(var(--header-h,64px) + 4px);font-size:10px;line-height:1.6;white-space:normal;max-width:calc(100% - 28px);width:max-content;z-index:12;padding:8px 13px;text-align:center;pointer-events:none}
+.compact-ui .task-edit-dialog{padding:22px}.compact-ui .task-edit-dialog h2{font-size:18px}.compact-ui .task-edit-dialog input{font-size:16px;min-height:42px}.compact-ui .task-edit-actions button{min-height:40px}
+.compact-ui.compact-landscape{--scene-bottom:12px;--sidebar-w:300px}
+.compact-ui.compact-landscape header{min-height:56px;padding-top:8px;padding-bottom:8px}.compact-ui.compact-landscape .brand-copy{display:block}.compact-ui.compact-landscape .brand strong{font-size:9px}.compact-ui.compact-landscape .brand small{display:none}.compact-ui.compact-landscape .mobile-brand{display:none}.compact-ui.compact-landscape #scene{left:0;right:calc(var(--sidebar-w) + 24px);width:auto;bottom:12px;top:calc(var(--header-h,56px) + 37px)}
+.compact-ui.compact-landscape .controls{right:calc(var(--sidebar-w) + 24px)}.compact-ui.compact-landscape .world-status{max-width:calc(100% - var(--sidebar-w) - 210px)}
+.compact-ui.compact-landscape .timeline{left:auto;right:12px;width:var(--sidebar-w);grid-template-columns:91px minmax(0,1fr) 55px;gap:8px;padding:9px}.compact-ui.compact-landscape .launch{padding:10px 7px}.compact-ui.compact-landscape .timer{font-size:13px}
+.compact-ui.compact-landscape .task-dock{top:calc(var(--header-h,56px) + 38px);bottom:auto;left:auto;right:12px;width:var(--sidebar-w)}
+.compact-ui.compact-landscape .task-panel,.compact-ui.compact-landscape.task-panel-expanded .task-panel,.compact-ui.compact-landscape .tour-panel{top:calc(var(--header-h,56px) + 38px);bottom:var(--panel-bottom);left:auto;right:12px;width:var(--sidebar-w);height:auto;max-height:none;padding:12px}
+.compact-ui.compact-landscape .task-panel .task-eyebrow{top:-12px}.compact-ui.compact-landscape .mission-name{font-size:17px}.compact-ui.compact-landscape .task-progress-hero{padding-top:8px}.compact-ui.compact-landscape .toast{left:calc((100% - var(--sidebar-w) - 24px)/2);max-width:calc(100% - var(--sidebar-w) - 40px)}
+@media(max-width:350px){.compact-ui .brandmark{display:none}.compact-ui .mobile-brand{font-size:9px}.compact-ui header{padding-left:10px;padding-right:10px;gap:4px}.compact-ui .mode-switch button{font-size:9px;padding:9px 7px}.compact-ui .header-right{gap:4px}.compact-ui .sound{padding:7px}.compact-ui .timeline{grid-template-columns:94px minmax(0,1fr) 55px;gap:7px;padding:9px}.compact-ui .timer{font-size:13px}.compact-ui .task-dock-copy strong{font-size:11px}.compact-ui .task-panel .task-eyebrow>span:first-child{max-width:120px;font-size:5px}.compact-ui .task-panel .task-drawer-toggle{min-width:51px;font-size:9px}}
+
+.compact-ui #scene{height:calc(100% - var(--scene-top) - var(--scene-bottom))}.compact-ui.compact-landscape #scene{width:calc(100% - var(--sidebar-w) - 24px);height:calc(100% - var(--header-h,56px) - 49px)}.task-dock[hidden]{display:none!important}.compact-ui.keyboard-editing{--timeline-h:0px;--scene-top:calc(var(--header-h,64px) + 8px);--panel-bottom:10px}.compact-ui.keyboard-editing .timeline,.compact-ui.keyboard-editing .controls,.compact-ui.keyboard-editing .world-status{display:none}
+
+.compact-legend,.task-panel-quick-add{display:none}.compact-ui .desktop-legend{display:none}.compact-ui .compact-legend{display:inline;font-size:11px;font-weight:500;letter-spacing:0;color:#667f58}.compact-ui .task-panel-quick-add{display:block;width:35px;height:36px;flex:0 0 35px;border:1px solid #d1ddc4;background:#edf2e4;color:#6a8857;border-radius:7px;font-size:20px}.compact-ui .task-panel .task-eyebrow>span:first-child{max-width:none;font-size:10px;gap:6px}
+
 </style></head><body class="task-mode">
-<header><div class="brand"><div class="brandmark" aria-hidden="true"></div><div><strong>MATTER STUDIES</strong><small>微 观 世 界 · 材 质 研 究 所</small></div></div><div class="header-right"><span class="edition">A LITTLE PROGRESS. A BIG LAUNCH.</span><nav class="mode-switch" aria-label="体验模式"><button id="modeTasks" class="active" aria-pressed="true">我的任务</button><button id="modeExplore" aria-pressed="false">自由探索</button><button id="modePresent" aria-pressed="false">方案导览</button></nav><button class="sound" id="sound" aria-pressed="false" aria-label="开启或关闭声音"><i></i><span>声音 OFF</span></button></div></header>
+<header><div class="brand"><div class="brandmark" aria-hidden="true"></div><span class="mobile-brand">发射果冻</span><div class="brand-copy"><strong>MATTER STUDIES</strong><small>微 观 世 界 · 材 质 研 究 所</small></div></div><div class="header-right"><span class="edition">A LITTLE PROGRESS. A BIG LAUNCH.</span><nav class="mode-switch" aria-label="体验模式"><button id="modeTasks" class="active" aria-pressed="true">我的任务</button><button id="modeExplore" aria-pressed="false">自由探索</button><button id="modePresent" aria-pressed="false">方案导览</button></nav><button class="sound" id="sound" aria-pressed="false" aria-label="开启或关闭声音"><i></i><span>声音 OFF</span></button></div></header>
 <main><canvas id="scene" aria-label="可拖拽的果冻海岛发射场立体模型。拖拽水面搅动，拖拽侧面倾斜，右键拖拽旋转，滚轮缩放。" role="img"></canvas>
 <section class="intro"><div class="kicker">A LITTLE WORLD, SOFTLY HELD.</div><h1>Launch<br><em>Jelly.</em></h1><div class="cn">发 射 果 冻</div><p>一座岛屿，一次升空。<br>把火箭发射场，轻轻装进果冻里。</p></section>
+<section id="taskDock" class="task-dock" aria-label="任务进度与快捷入口" hidden><button id="taskDockOpen" class="task-dock-open" type="button" aria-expanded="false" aria-controls="taskPanel"><span id="taskDockRing" class="task-dock-ring" style="--progress:0%" role="progressbar" aria-label="任务完成进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span><strong id="taskDockPercent">0</strong><small>%</small></span></span><span class="task-dock-copy"><strong id="taskDockName">我的发射计划</strong><small id="taskDockCount">完成 0 / 0 项</small></span><span class="task-dock-arrow" aria-hidden="true">查看 ↑</span></button><button id="taskQuickAdd" class="task-quick-add" type="button" aria-label="添加新任务">＋</button></section>
 <section id="taskPanel" class="task-panel" aria-label="我的任务发射台">
-  <div class="task-eyebrow"><span><i></i> YOUR PERSONAL LAUNCHPAD</span><span id="storageStatus">本机保存</span><button id="taskPanelToggle" class="task-drawer-toggle" type="button" aria-expanded="false" aria-controls="taskPanel">展开 ↗</button></div>
+  <div class="task-eyebrow"><span><i></i><span class="desktop-legend">YOUR PERSONAL LAUNCHPAD</span><span class="compact-legend">我的任务</span></span><span id="storageStatus">本机保存</span><button id="taskPanelQuickAdd" class="task-panel-quick-add" type="button" aria-label="在当前清单中添加任务">＋</button><button id="taskPanelToggle" class="task-drawer-toggle" type="button" aria-expanded="false" aria-controls="taskPanel">展开 ↗</button></div>
   <label class="mission-name-label" for="missionName">清单名称 · 点击可修改</label>
   <input id="missionName" class="mission-name" value="今天的小小发射计划" maxlength="80" aria-label="清单名称" autocomplete="off">
   <p class="task-lede">做完眼前的小事，把今天送上轨道。</p>
@@ -51,8 +99,9 @@
   <div class="task-bottom"><button id="taskUndo" class="task-undo" type="button" hidden>撤销删除</button><details class="task-tools"><summary>备份与记录 <span>↓</span></summary><div class="task-tools-buttons"><button id="taskExport" type="button">导出备份</button><button id="taskImport" type="button">导入恢复</button></div><input id="taskImportFile" type="file" accept=".json,application/json" hidden><div id="taskHistory" class="task-history">完成的旅程，将留在这里。</div></details><p class="task-local-note">仅保存在此浏览器 · 记录保留最近 12 轮，请定期导出。</p></div>
 </section>
 <dialog id="taskEditDialog" class="task-edit-dialog" aria-labelledby="taskEditHeading"><form id="taskEditForm"><div class="task-eyebrow">MISSION DETAIL</div><h2 id="taskEditHeading">给这件小事一个名字。</h2><label for="taskEditTitle">任务名称<input id="taskEditTitle" maxlength="140" required></label><label for="taskEditTag">标签<input id="taskEditTag" maxlength="18" list="taskTagOptions" placeholder="工作 / 生活 / 学习"></label><label for="taskEditDue">截止日期<input id="taskEditDue" type="date" min="2020-01-01" max="2099-12-31"></label><div class="task-edit-actions"><button id="taskDelete" type="button" class="task-delete">删除任务</button><button id="taskEditCancel" type="button">取消</button><button type="submit" class="task-save">保存</button></div></form></dialog>
+<dialog id="materialDialog" class="material-dialog" aria-labelledby="materialHeading"><div class="eyebrow">SOFT MATTER / CONTROLS</div><h2 id="materialHeading">让世界柔软一点。</h2><div id="materialContent"></div><button id="materialClose" class="dialog-close" type="button">完成，回到小岛</button></dialog>
 
-<section class="controls" aria-label="材质参数"><div class="eyebrow">THE MATERIAL</div><h2>让世界柔软一点。</h2><div class="range-row"><label class="range-label" for="stiffness">果冻硬度 <output id="stiffnessVal">32%</output></label><input id="stiffness" type="range" min="10" max="100" value="32" style="--v:24.4%"></div><div class="range-row"><label class="range-label" for="damping">波浪阻尼 <output id="dampingVal">38%</output></label><input id="damping" type="range" min="0" max="100" value="38" style="--v:38%"></div><div class="range-row"><label class="range-label" for="wind">海面风速 <output id="windVal">6.0 m/s</output></label><input id="wind" type="range" min="0" max="20" step=".5" value="6" style="--v:30%"></div><button id="squish" class="squish" aria-label="揉捏果冻，观察挤压与回弹">揉一下果冻<span>↘</span></button><hr><div class="small-note"><b>↔</b><span>捏住侧面，松手看回弹<br>划过海面，留下涟漪</span></div><div class="view-controls" aria-label="观察视角"><button class="active" id="viewAll">全景</button><button id="viewSea">海底</button><button id="resetView" aria-label="恢复默认视角">↺ 复位</button></div></section>
+<section class="controls" aria-label="材质参数"><div class="eyebrow">THE MATERIAL</div><h2>让世界柔软一点。</h2><div class="range-row"><label class="range-label" for="stiffness">果冻硬度 <output id="stiffnessVal">32%</output></label><input id="stiffness" type="range" min="10" max="100" value="32" style="--v:24.4%"></div><div class="range-row"><label class="range-label" for="damping">波浪阻尼 <output id="dampingVal">38%</output></label><input id="damping" type="range" min="0" max="100" value="38" style="--v:38%"></div><div class="range-row"><label class="range-label" for="wind">海面风速 <output id="windVal">6.0 m/s</output></label><input id="wind" type="range" min="0" max="20" step=".5" value="6" style="--v:30%"></div><button id="squish" class="squish" aria-label="揉捏果冻，观察挤压与回弹">揉一下果冻<span>↘</span></button><button id="materialOpen" class="material-open-button" type="button" aria-haspopup="dialog" aria-controls="materialDialog" aria-label="调整材质和观察视角">材质</button><hr><div class="small-note"><b>↔</b><span>捏住侧面，松手看回弹<br>划过海面，留下涟漪</span></div><div class="view-controls" aria-label="观察视角"><button class="active" id="viewAll">全景</button><button id="viewSea">海底</button><button id="resetView" aria-label="恢复默认视角">↺ 复位</button></div></section>
 
 <div id="worldStatus" class="world-status" aria-live="off">海风 6.0 m/s · 海浪与船只持续运动</div>
 <section id="tourPanel" class="tour-panel" aria-label="方案导览" hidden>
@@ -1032,11 +1081,17 @@ function syncPresentationUI(){
   document.body.classList.toggle('presentation-mode',presenting);
   document.body.classList.toggle('task-mode',presentationState.mode==='tasks');
   if(presentationState.mode!=='tasks')setTaskPanelExpanded(false);
+  if(window.__jellyViewportReady)queueViewportLayout();
 }
 
 function setTaskPanelExpanded(expanded){
+  const changed=document.body.classList.contains('task-panel-expanded')!==!!expanded;
+  if(!expanded&&isCompactScene()&&$('taskPanel')?.contains(document.activeElement)){document.activeElement.blur();$('taskDockOpen')?.focus({preventScroll:true});}
   document.body.classList.toggle('task-panel-expanded',!!expanded);
-  const button=$('taskPanelToggle');if(button){button.textContent=expanded?'收起 ↙':'展开 ↗';button.setAttribute('aria-expanded',String(!!expanded));}
+  const button=$('taskPanelToggle');if(button){button.textContent=expanded?'收起 ↓':'展开 ↑';button.setAttribute('aria-expanded',String(!!expanded));}
+  if($('taskDockOpen'))$('taskDockOpen').setAttribute('aria-expanded',String(!!expanded));
+  if(changed&&expanded&&$('taskPanel'))$('taskPanel').scrollTop=0;
+  if(window.__jellyViewportReady)syncViewportLayout();
 }
 
 function setPresentationCamera(stop){
@@ -1053,6 +1108,7 @@ function setPresentationCamera(stop){
 function setPresentationMode(mode){
   mode=['tasks','present','explore'].includes(mode)?mode:'tasks';
   const changed=presentationState.mode!==mode;presentationState.mode=mode;
+  if(typeof taskHandleModeChange==='function')taskHandleModeChange(mode);
   if(mode==='present'){
     if(changed)selectTourStop(0);
   }else if(changed){
@@ -1066,6 +1122,7 @@ function selectTourStop(index){
   const n=Number(index);if(!Number.isFinite(n))return;
   presentationState.index=clamp(Math.round(n),0,tourStops.length-1);
   presentationState.mode='present';setPresentationCamera(tourStops[presentationState.index]);
+  if(typeof taskHandleModeChange==='function')taskHandleModeChange('present');
   syncPresentationUI();updatePresentationOverlay();
 }
 
@@ -1090,9 +1147,7 @@ function getPresentationOffset(baseTarget,dt){
 }
 
 function applyTaskCameraOffset(vp){
-  if(presentationState.mode!=='tasks')return;
-  if(canvas.clientWidth<700)vp[13]+=.48;
-  else if(canvas.clientWidth>=1100)vp[12]+=.09;
+  if(!isCompactScene()&&presentationState.mode==='tasks'&&canvas.clientWidth>=1100)vp[12]+=.09;
 }
 
 function updatePresentationOverlay(){
@@ -1120,7 +1175,7 @@ function updatePresentationOverlay(){
 }
 
 $('modeExplore')?.addEventListener('click',()=>setPresentationMode('explore'));
-$('modeTasks')?.addEventListener('click',()=>setPresentationMode('tasks'));
+$('modeTasks')?.addEventListener('click',()=>{setPresentationMode('tasks');if(isCompactScene())setTaskPanelExpanded(true);});
 $('taskPanelToggle')?.addEventListener('click',()=>setTaskPanelExpanded(!document.body.classList.contains('task-panel-expanded')));
 $('modePresent')?.addEventListener('click',()=>setPresentationMode('present'));
 $('tourPrev')?.addEventListener('click',()=>selectTourStop(presentationState.index-1));
@@ -1147,11 +1202,14 @@ const TASK_STORAGE_KEY='launch-jelly.tasks.v1',TASK_VERSION=1,TASK_LIMIT=120;
 const taskState={version:TASK_VERSION,name:'我的发射计划',tasks:[],autoLaunch:true,archives:[],celebratedTaskSet:null};
 let taskFilter='all',taskPendingLaunch=null,taskUndoRecord=null,taskUndoTimer=null,taskEditingId=null;
 let taskStorageAvailable=true,taskStorageMessage='自动保存在此浏览器',taskNoticeTimer=null;
+let taskUnreadableStorage=null,taskEditReturnFocus=null;
 
 function taskNewId(){return typeof crypto!=='undefined'&&crypto.randomUUID?crypto.randomUUID():'task-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,10);}
 function taskToday(){const now=new Date();return now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');}
 function taskDateValid(value){if(value==='')return true;if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value))return false;const [y,m,d]=value.split('-').map(Number),date=new Date(0);date.setUTCFullYear(y,m-1,d);date.setUTCHours(0,0,0,0);return y>=2020&&y<=2099&&date.getUTCFullYear()===y&&date.getUTCMonth()===m-1&&date.getUTCDate()===d;}
 function taskPlainText(value,max,allowEmpty=false){if(typeof value!=='string')throw new Error('文字字段类型不正确');const clean=value.trim();if((!allowEmpty&&!clean)||clean.length>max||/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(clean))throw new Error('文字字段为空或超过长度限制');return clean;}
+function taskCleanInput(value){return String(value).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g,'').replace(/\s+/g,' ').trim();}
+function taskShowPanel(){if(typeof setPresentationMode==='function')setPresentationMode('tasks');if(typeof setTaskPanelExpanded==='function')setTaskPanelExpanded(true);}
 function taskValidateList(list){
   if(!Array.isArray(list)||list.length>TASK_LIMIT)throw new Error('每轮最多保存 120 项任务');
   const ids=new Set();
@@ -1178,22 +1236,28 @@ function taskValidateBackup(value){
 function taskNotice(message){clearTimeout(taskNoticeTimer);taskNoticeTimer=setTimeout(()=>toast(message),250);}
 function taskPersist(){
   if(!taskStorageAvailable)return;
-  try{localStorage.setItem(TASK_STORAGE_KEY,JSON.stringify(taskState));taskStorageMessage='自动保存在此浏览器';}
+  try{
+    // Keep unreadable original data recoverable before writing the first valid edit.
+    if(taskUnreadableStorage!==null){localStorage.setItem(TASK_STORAGE_KEY+'.recovery',taskUnreadableStorage);taskUnreadableStorage=null;}
+    localStorage.setItem(TASK_STORAGE_KEY,JSON.stringify(taskState));taskStorageMessage='自动保存在此浏览器';
+  }
   catch(error){taskStorageAvailable=false;taskStorageMessage='本次修改仅保存在内存 · 请导出备份';taskNotice('浏览器无法保存任务，请用“导出备份”保留本次修改。');}
   taskRenderStorage();
 }
 try{
   const saved=localStorage.getItem(TASK_STORAGE_KEY);
-  if(saved){try{Object.assign(taskState,taskValidateBackup(JSON.parse(saved)));}catch(error){taskStorageMessage='本地存档无法读取 · 新修改前不会覆盖原存档';taskNotice('本地任务存档无法读取，已打开空白清单。你可以导入有效备份。');}}
+  if(saved){try{Object.assign(taskState,taskValidateBackup(JSON.parse(saved)));}catch(error){taskUnreadableStorage=saved;taskStorageMessage='本地存档无法读取 · 原始数据会在修改前另存';taskNotice('本地任务存档无法读取，原始数据已保留。你可以导入有效备份。');}}
 }catch(error){taskStorageAvailable=false;taskStorageMessage='浏览器未允许保存 · 请导出备份';taskNotice('当前浏览器不允许本地保存，仍可使用任务清单并导出备份。');}
 
 function taskStats(){const total=taskState.tasks.length,done=taskState.tasks.filter(task=>task.done).length,today=taskToday();return {total,done,left:total-done,percent:total?Math.round(done/total*100):0,ready:total>0&&done===total,overdue:taskState.tasks.filter(task=>!task.done&&task.due&&task.due<today).length};}
 function taskSetSignature(){return JSON.stringify(taskState.tasks.map(task=>task.id).sort());}
 function taskCancelLaunch(){if(taskPendingLaunch!==null){clearTimeout(taskPendingLaunch);taskPendingLaunch=null;}}
+function taskHandleModeChange(mode){if(mode!=='tasks'&&taskPendingLaunch!==null){taskCancelLaunch();renderTaskMetrics();}}
+function taskIsEditing(){return !!$('taskEditDialog')?.open||!!document.activeElement?.matches?.('input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]),textarea,select,[contenteditable="true"]');}
 function taskResetFlight(){if((S.running||S.ended||S.mission>=0)&&typeof resetTaskFlight==='function')resetTaskFlight();}
 function canLaunchTasks(notify=false){
   const stats=taskStats();if(stats.ready)return true;
-  if(notify){setPresentationMode('tasks');toast(stats.total?'还有 '+stats.left+' 项任务，完成后再点火。':'先添加一项自己的任务，完成后就能发射。');}
+  if(notify){taskShowPanel();toast(stats.total?'还有 '+stats.left+' 项任务，完成后再点火。':'先添加一项自己的任务，完成后就能发射。');}
   return false;
 }
 function syncTaskLaunchButton(){
@@ -1216,12 +1280,14 @@ function taskMaybeLaunch(beforeReady,reason){
   if(reason!=='toggle'||beforeReady||!taskStats().ready||!taskState.autoLaunch)return;
   taskPendingLaunch=setTimeout(()=>{
     taskPendingLaunch=null;
-    if(taskStats().ready&&taskState.autoLaunch&&!S.running){setPresentationMode('tasks');start();}
+    const taskMode=typeof presentationState==='undefined'||presentationState.mode==='tasks';
+    if(taskStats().ready&&taskState.autoLaunch&&!S.running&&taskMode&&!taskIsEditing())start();
     renderTaskMetrics();
   },900);
 }
 function taskMutated({reason='edit',beforeReady=false,resetFlight=false}={}){
   taskCancelLaunch();
+  if(taskUndoRecord?.kind==='import'&&reason!=='undo')taskClearUndo();
   if(resetFlight){taskState.celebratedTaskSet=null;taskResetFlight();}
   taskPersist();taskMaybeLaunch(beforeReady,reason);renderTasks();
 }
@@ -1233,6 +1299,10 @@ function taskRenderStorage(){
 }
 function renderTaskMetrics(){
   const stats=taskStats(),percent=$('taskPercent');if(percent)percent.textContent=String(stats.percent);
+  if($('taskDockName'))$('taskDockName').textContent=taskState.name;
+  if($('taskDockCount'))$('taskDockCount').textContent='完成 '+stats.done+' / '+stats.total+' 项';
+  if($('taskDockPercent'))$('taskDockPercent').textContent=String(stats.percent);
+  const dockRing=$('taskDockRing');if(dockRing){dockRing.style.setProperty('--progress',stats.percent+'%');dockRing.setAttribute('aria-valuenow',String(stats.percent));dockRing.setAttribute('aria-valuetext','已完成 '+stats.done+' 项，共 '+stats.total+' 项');}
   const ring=$('taskProgressRing');if(ring){ring.style.setProperty('--progress',stats.percent+'%');ring.setAttribute('aria-valuenow',String(stats.percent));ring.setAttribute('aria-valuetext','已完成 '+stats.done+' 项，共 '+stats.total+' 项');}
   if($('taskCountLabel'))$('taskCountLabel').textContent='已完成 '+stats.done+' / '+stats.total+' 项'+(stats.overdue?' · '+stats.overdue+' 项逾期':'');
   let summary=!stats.total?'加入自己的任务，让每一次完成都离发射更近。':!stats.ready?'再完成 '+stats.left+' 项任务，就能发射这枚火箭。':S.running?(S.paused?'庆祝已暂停，随时可以继续。':'你已完成这一轮，火箭正在为你升空。'):taskPendingLaunch!==null?'全部完成！准备点火…':S.ended?'这一轮已完成，火箭也已归来。归档后，开始下一程。':'全部完成！可以发射庆祝，或归档开始下一轮。';
@@ -1297,25 +1367,31 @@ function renderTasks(){
   renderTaskMetrics();renderTaskTags();renderTaskHistory();
 }
 function taskClearUndo(){clearTimeout(taskUndoTimer);taskUndoTimer=null;taskUndoRecord=null;if($('taskUndo'))$('taskUndo').hidden=true;}
+function taskSetUndo(record,label,duration=12000){
+  taskClearUndo();taskUndoRecord=record;
+  const button=$('taskUndo');if(button){button.hidden=false;button.textContent=label;}
+  taskUndoTimer=setTimeout(taskClearUndo,duration);
+}
 function taskRemove(id){
   const index=taskState.tasks.findIndex(task=>task.id===id);if(index<0)return;
-  taskClearUndo();const [removed]=taskState.tasks.splice(index,1);taskUndoRecord={task:removed,index};
-  const undo=$('taskUndo');if(undo){undo.hidden=false;undo.textContent='已删除「'+(removed.title.length>15?removed.title.slice(0,15)+'…':removed.title)+'」· 撤销';}
-  taskUndoTimer=setTimeout(()=>taskClearUndo(),6000);
-  taskMutated({reason:'delete',resetFlight:!taskState.tasks.length});toast('已删除任务，可在 6 秒内撤销。');
+  const [removed]=taskState.tasks.splice(index,1);
+  taskSetUndo({kind:'delete',task:removed,index},'已删除「'+(removed.title.length>15?removed.title.slice(0,15)+'…':removed.title)+'」· 撤销');
+  taskMutated({reason:'delete',resetFlight:!taskState.tasks.length});toast('已删除任务，可在 12 秒内撤销。');
 }
-function taskCloseEdit(){const dialog=$('taskEditDialog');if(dialog?.open&&typeof dialog.close==='function')dialog.close();else dialog?.removeAttribute('open');taskEditingId=null;}
+function taskRestoreEditFocus(){const target=taskEditReturnFocus;taskEditReturnFocus=null;if(target?.isConnected)target.focus({preventScroll:true});}
+function taskCloseEdit(){const dialog=$('taskEditDialog');if(dialog?.open&&typeof dialog.close==='function')dialog.close();else dialog?.removeAttribute('open');taskEditingId=null;taskRestoreEditFocus();}
 function taskOpenEdit(id){
   const task=taskState.tasks.find(item=>item.id===id);if(!task)return;
   taskCancelLaunch();renderTaskMetrics();
+  taskShowPanel();taskEditReturnFocus=document.activeElement;
   taskEditingId=id;$('taskEditTitle').value=task.title;$('taskEditTag').value=task.tag;$('taskEditDue').value=task.due;
   $('taskEditTitle').setCustomValidity('');$('taskEditTag').setCustomValidity('');$('taskEditDue').setCustomValidity('');
   const dialog=$('taskEditDialog');if(typeof dialog?.showModal==='function')dialog.showModal();else dialog?.setAttribute('open','');
-  $('taskEditTitle')?.focus();
+  $('taskEditTitle')?.focus({preventScroll:true});
 }
 function taskReadForm(titleId,tagId,dueId){
   const title=$(titleId),tag=$(tagId),due=$(dueId);title.setCustomValidity('');tag.setCustomValidity('');due.setCustomValidity('');
-  const cleanTitle=title.value.trim().replace(/\s+/g,' '),cleanTag=tag.value.trim();
+  const cleanTitle=taskCleanInput(title.value),cleanTag=taskCleanInput(tag.value);
   if(!cleanTitle||cleanTitle.length>140){title.setCustomValidity('请填写 1–140 字的任务名称。');title.reportValidity();return null;}
   if(cleanTag.length>18){tag.setCustomValidity('标签最多 18 字。');tag.reportValidity();return null;}
   if(!taskDateValid(due.value)){due.setCustomValidity('请选择有效的日期。');due.reportValidity();return null;}
@@ -1325,10 +1401,11 @@ $('taskAddForm')?.addEventListener('submit',event=>{
   event.preventDefault();if(taskState.tasks.length>=TASK_LIMIT){toast('每轮最多 120 项任务，请先完成并归档这一轮。');return;}
   const value=taskReadForm('taskTitle','taskTag','taskDue');if(!value)return;
   taskState.tasks.push({id:taskNewId(),...value,done:false,createdAt:Date.now()});
-  taskMutated({reason:'add',resetFlight:true});$('taskTitle').value='';$('taskTitle').focus();
+  taskShowPanel();if(taskFilter==='done')taskFilter='active';
+  taskMutated({reason:'add',resetFlight:true});$('taskTitle').value='';$('taskTitle').focus({preventScroll:true});
 });
 $('missionName')?.addEventListener('input',event=>{
-  taskCancelLaunch();taskState.name=event.target.value.slice(0,80).trim()||'我的发射计划';taskPersist();renderTaskMetrics();
+  taskCancelLaunch();if(taskUndoRecord?.kind==='import')taskClearUndo();taskState.name=taskCleanInput(event.target.value).slice(0,80)||'我的发射计划';taskPersist();renderTaskMetrics();
 });
 $('missionName')?.addEventListener('blur',()=>{if($('missionName'))$('missionName').value=taskState.name;});
 $('taskEditForm')?.addEventListener('submit',event=>{
@@ -1339,48 +1416,115 @@ $('taskEditForm')?.addEventListener('submit',event=>{
 });
 for(const id of ['taskTitle','taskTag','taskDue','taskEditTitle','taskEditTag','taskEditDue'])$(id)?.addEventListener('input',event=>event.target.setCustomValidity(''));
 $('taskEditCancel')?.addEventListener('click',taskCloseEdit);
-$('taskEditDialog')?.addEventListener('cancel',()=>{taskEditingId=null;});
+$('taskEditDialog')?.addEventListener('cancel',()=>{taskEditingId=null;taskRestoreEditFocus();});
+$('taskEditDialog')?.addEventListener('click',event=>{const dialog=event.currentTarget;if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)taskCloseEdit();}});
 $('taskDelete')?.addEventListener('click',()=>{const id=taskEditingId;taskCloseEdit();if(id)taskRemove(id);});
 $('taskUndo')?.addEventListener('click',()=>{
   if(!taskUndoRecord)return;
+  if(taskUndoRecord.kind==='import'){
+    const previous=taskUndoRecord.state;taskCancelLaunch();taskClearUndo();taskCloseEdit();taskResetFlight();Object.assign(taskState,previous);taskFilter='all';
+    if($('missionName'))$('missionName').value=taskState.name;
+    taskPersist();renderTasks();taskShowPanel();toast('已撤销导入，原清单和归档已恢复。');return;
+  }
   if(taskState.tasks.length>=TASK_LIMIT){toast('清单已满，无法撤销。');return;}
-  const {task,index}=taskUndoRecord;taskState.tasks.splice(Math.min(index,taskState.tasks.length),0,task);taskClearUndo();taskMutated({reason:'undo',resetFlight:true});toast('任务已恢复。');
+  const {task,index}=taskUndoRecord;taskState.tasks.splice(Math.min(index,taskState.tasks.length),0,task);if(taskFilter==='done'&&!task.done||taskFilter==='active'&&task.done)taskFilter='all';taskClearUndo();taskMutated({reason:'undo',resetFlight:true});taskShowPanel();toast('任务已恢复。');
 });
 $('taskFilters')?.addEventListener('click',event=>{const button=event.target.closest('button[data-task-filter]');if(!button||!['all','active','done'].includes(button.dataset.taskFilter))return;taskFilter=button.dataset.taskFilter;renderTasks();});
-$('autoLaunch')?.addEventListener('change',event=>{taskCancelLaunch();taskState.autoLaunch=event.target.checked;taskPersist();renderTaskMetrics();});
+$('autoLaunch')?.addEventListener('change',event=>{taskCancelLaunch();if(taskUndoRecord?.kind==='import')taskClearUndo();taskState.autoLaunch=event.target.checked;taskPersist();renderTaskMetrics();});
 $('taskArchive')?.addEventListener('click',()=>{
   const stats=taskStats();if(!stats.ready||S.running||taskPendingLaunch!==null)return;
+  if(taskState.archives.length>=12&&!window.confirm('归档只保留最近 12 轮。本次将移除最早的「'+taskState.archives[taskState.archives.length-1].name+'」。建议先导出备份。继续归档吗？'))return;
   taskState.archives.unshift({id:taskNewId(),name:taskState.name,completedAt:Date.now(),total:stats.total,tasks:taskState.tasks.map(task=>({...task}))});
-  taskState.archives=taskState.archives.slice(0,12);taskState.tasks=[];taskState.celebratedTaskSet=null;taskClearUndo();taskFilter='all';taskMutated({reason:'archive',resetFlight:true});toast('这一轮已归档。新的旅程，从一件小事开始。');$('taskTitle')?.focus();
+  taskState.archives=taskState.archives.slice(0,12);taskState.tasks=[];taskState.celebratedTaskSet=null;taskClearUndo();taskFilter='all';taskMutated({reason:'archive',resetFlight:true});taskShowPanel();toast('这一轮已归档。新的旅程，从一件小事开始。');$('taskTitle')?.focus({preventScroll:true});
 });
 function taskAddTemplate(kind){
   const templates=kind==='study'?{name:'今天的学习计划',tag:'学习',titles:['明确今天要掌握的知识点','专注学习 25 分钟','完成一组练习或一次实践','用自己的话复述重点','回顾错题，记录下次的起点']}:{name:'今天的工作计划',tag:'工作',titles:['写下今天最重要的产出','完成一段不被打断的专注工作','推进最重要的一项交付','处理需要回复或协作的事情','整理成果，安排下一步']};
   if(taskState.tasks.length+templates.titles.length>TASK_LIMIT){toast('剩余空间不足以加入模板，每轮最多 120 项。');return;}
   const wasEmpty=taskState.tasks.length===0;if(wasEmpty&&taskState.name==='我的发射计划'){taskState.name=templates.name;if($('missionName'))$('missionName').value=taskState.name;}
   for(const title of templates.titles)taskState.tasks.push({id:taskNewId(),title,tag:templates.tag,due:taskToday(),done:false,createdAt:Date.now()});
-  taskMutated({reason:'template',resetFlight:true});toast('已加入 5 项'+(kind==='study'?'学习':'工作')+'任务，点击名称即可改成自己的安排。');
+  if(taskFilter==='done')taskFilter='active';taskShowPanel();taskMutated({reason:'template',resetFlight:true});toast('已加入 5 项'+(kind==='study'?'学习':'工作')+'任务，点击名称即可改成自己的安排。');
 }
 $('taskTemplateWork')?.addEventListener('click',()=>taskAddTemplate('work'));
 $('taskTemplateStudy')?.addEventListener('click',()=>taskAddTemplate('study'));
 $('taskExport')?.addEventListener('click',()=>{
-  const data=JSON.stringify({...taskState,exportedAt:new Date().toISOString()},null,2),url=URL.createObjectURL(new Blob([data],{type:'application/json;charset=utf-8'})),link=document.createElement('a');
-  link.href=url;link.download='发射果冻-任务备份-'+taskToday()+'.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('任务和最近 12 轮归档已导出。');
+  try{
+    const data=JSON.stringify({...taskState,exportedAt:new Date().toISOString()},null,2),url=URL.createObjectURL(new Blob([data],{type:'application/json;charset=utf-8'})),link=document.createElement('a');
+    link.href=url;link.download='发射果冻-任务备份-'+taskToday()+'.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('备份已生成，请在浏览器下载或分享菜单中保存文件。');
+  }catch(error){toast('浏览器未能生成备份，请保留此页面并重试。');}
 });
-$('taskImport')?.addEventListener('click',()=>$('taskImportFile')?.click());
+$('taskImport')?.addEventListener('click',()=>{taskCancelLaunch();renderTaskMetrics();$('taskImportFile')?.click();});
 $('taskImportFile')?.addEventListener('change',async event=>{
   const input=event.target,file=input.files?.[0];if(!file)return;
+  taskCancelLaunch();renderTaskMetrics();
   try{
     if(file.size>1024*1024)throw new Error('备份文件不能超过 1 MB');
     let data;try{data=JSON.parse(await file.text());}catch(error){throw new Error('文件不是有效的 JSON 备份');}
     const restored=taskValidateBackup(data);
-    if((taskState.tasks.length||taskState.archives.length)&&!window.confirm('导入会替换当前清单和归档。建议先导出当前备份。继续导入吗？'))return;
+    const hasPrevious=taskState.tasks.length>0||taskState.archives.length>0;
+    if(hasPrevious&&!window.confirm('导入会替换当前清单和归档。导入后 30 秒内、继续编辑前可以撤销。建议先导出当前备份。继续导入吗？'))return;
+    const previous=hasPrevious?taskValidateBackup(taskState):null;
     taskCancelLaunch();taskClearUndo();taskCloseEdit();taskResetFlight();Object.assign(taskState,restored);taskFilter='all';
-    if($('missionName'))$('missionName').value=taskState.name;taskPersist();renderTasks();toast('备份已恢复。全完成的清单可手动发射庆祝。');setPresentationMode('tasks');
+    if(previous)taskSetUndo({kind:'import',state:previous},'已恢复备份 · 撤销导入',30000);
+    if($('missionName'))$('missionName').value=taskState.name;taskPersist();renderTasks();taskShowPanel();toast(previous?'备份已恢复，可在 30 秒内、继续编辑前撤销导入。':'备份已恢复。全完成的清单可手动发射庆祝。');
   }catch(error){toast('未导入：'+(error?.message||'备份格式不正确')+'。现有任务已保留。');}
   finally{input.value='';}
 });
 if($('missionName'))$('missionName').value=taskState.name;
 renderTasks();
+
+// Actual scene and sheet rectangles, including browser chrome, rotation and the keyboard.
+window.__jellyViewportReady=true;
+let viewportLayoutQueued=false,materialNodes=[];
+function isCompactScene(){return innerWidth<=700||(innerHeight<=500&&innerWidth<=1000);}
+function syncViewportLayout(){
+  if(!window.__jellyViewportReady)return;
+  const root=document.documentElement,v=window.visualViewport;
+  const h=Math.round(v?.height||innerHeight),compact=isCompactScene(),landscape=compact&&innerWidth>700;
+  document.body.classList.toggle('compact-ui',compact);document.body.classList.toggle('compact-landscape',landscape);
+  const editing=!!document.activeElement?.matches?.('input:not([type=checkbox]):not([type=range]):not([type=file]),textarea');
+  const keyboard=compact&&!landscape&&h<450&&editing;document.body.classList.toggle('keyboard-editing',keyboard);
+  root.style.setProperty('--app-height',h+'px');root.style.setProperty('--viewport-top',(v?.offsetTop||0)+'px');
+  const header=document.querySelector('header'),headerHeight=Math.ceil(header.getBoundingClientRect().height);root.style.setProperty('--header-h',headerHeight+'px');
+  const available=h-headerHeight-(keyboard?28:138),reserve=keyboard?65:Math.min(160,Math.max(75,h*.24));
+  const sheet=Math.round(Math.min(390,Math.max(75,Math.min(h*.43,available-reserve))));
+  root.style.setProperty('--sheet-h',sheet+'px');root.style.setProperty('--tour-sheet-h',Math.round(Math.min(310,Math.max(75,Math.min(h*.39,available-reserve))))+'px');
+  const dock=$('taskDock');if(dock)dock.hidden=presentationState.mode!=='tasks';
+  const open=$('taskDockOpen');if(open)open.setAttribute('aria-expanded',String(document.body.classList.contains('task-panel-expanded')));
+  if(!compact&&$('materialDialog')?.open)closeMaterialDialog();
+  updatePresentationOverlay();
+}
+function queueViewportLayout(){if(viewportLayoutQueued)return;viewportLayoutQueued=true;requestAnimationFrame(()=>{viewportLayoutQueued=false;syncViewportLayout();});}
+function getViewportCameraHalf(base,aspect,eye,target){
+  if(!isCompactScene())return base;
+  if(S.seaView||(presentationState.mode==='present'&&presentationState.index!==0))return base;
+  const forward=V.norm(V.sub(eye,target)),right=V.norm(V.cross([0,1,0],forward)),up=V.cross(forward,right),points=[];
+  for(const x of [-7.15,7.15])for(const y of [-4.65,3.8])for(const z of [-7.15,7.15])points.push([x,y,z]);
+  points.push([-.8,6.7,-2.4]);
+  // The same root matrices as the animation keep both the island and flying stages in view.
+  if(S.mission>=18){for(const name of ['booster','upperStage','fairingLeft','fairingRight']){const g=groups.get(name);if(!g?.visible)continue;const m=g.model;for(const y of [0,5.3])points.push([m[12]+m[4]*y,m[13]+m[5]*y,m[14]+m[6]*y]);}}
+  let rx=0,uy=0;for(const point of points){const p=V.sub(point,target);rx=Math.max(rx,Math.abs(p[0]*right[0]+p[1]*right[1]+p[2]*right[2]));uy=Math.max(uy,Math.abs(p[0]*up[0]+p[1]*up[1]+p[2]*up[2]));}
+  return Math.max(uy/.85,rx/(Math.max(.1,aspect)*.86),7.7)/S.zoom;
+}
+function openMaterialDialog(){
+  const dialog=$('materialDialog');if(!dialog||dialog.open)return;
+  materialNodes=[];for(const node of document.querySelectorAll('.controls>.range-row,.controls>.view-controls')){materialNodes.push({node,parent:node.parentNode,next:node.nextSibling});$('materialContent').append(node);}
+  dialog.showModal();$('materialClose').focus();
+}
+function closeMaterialDialog(){
+  const dialog=$('materialDialog');if(dialog?.open)dialog.close();
+  for(const item of materialNodes.slice().reverse())item.parent.insertBefore(item.node,item.next?.parentNode===item.parent?item.next:null);
+  materialNodes=[];$('materialOpen')?.focus({preventScroll:true});
+}
+function focusTaskEntry(){setPresentationMode('tasks');setTaskPanelExpanded(true);requestAnimationFrame(()=>{$('taskTitle').focus({preventScroll:true});$('taskTitle').scrollIntoView({block:'nearest'});});}
+$('taskDockOpen')?.addEventListener('click',()=>{setPresentationMode('tasks');setTaskPanelExpanded(true);if(taskState.tasks.length)requestAnimationFrame(()=>{$('taskPanel').scrollTop=Math.max(0,$('taskFilters').offsetTop-54);});});
+$('taskQuickAdd')?.addEventListener('click',focusTaskEntry);$('taskPanelQuickAdd')?.addEventListener('click',focusTaskEntry);
+$('materialOpen')?.addEventListener('click',openMaterialDialog);$('materialClose')?.addEventListener('click',closeMaterialDialog);
+$('materialDialog')?.addEventListener('cancel',event=>{event.preventDefault();closeMaterialDialog();});
+$('materialDialog')?.addEventListener('click',event=>{if(event.target===$('materialDialog')){const r=event.target.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeMaterialDialog();}});
+addEventListener('resize',queueViewportLayout);addEventListener('orientationchange',queueViewportLayout);
+window.visualViewport?.addEventListener('resize',queueViewportLayout);window.visualViewport?.addEventListener('scroll',queueViewportLayout);
+document.addEventListener('focusin',queueViewportLayout);document.addEventListener('focusout',queueViewportLayout);
+syncViewportLayout();
 
 // All renderers share one miniature, one camera and the same mission/gesture state.
 let scenePrepared=false,compatLast=0,compatFrameNo=0,compatCameraY=-.8;
@@ -1405,8 +1549,9 @@ const T=S.mission-18,follow=T>0&&T<40?(T<18?12*ease(T/18):12*(1-ease((T-18)/22))
 compatCameraY=mix(compatCameraY,S.seaView?-2.4:-.8+follow,1-Math.exp(-dt*3));
 const target=getPresentationOffset([0,compatCameraY,0],dt),distance=32,eye=[target[0]+Math.sin(S.orbit)*Math.cos(S.elevation)*distance,Math.sin(S.elevation)*distance+target[1],target[2]+Math.cos(S.orbit)*Math.cos(S.elevation)*distance];
 const narrow=canvas.clientWidth<700,aspect=width/height;let half=(narrow?13.4:11.9)*(1+follow/12*.8)/S.zoom;if(narrow)half*=Math.max(1,.82/aspect);
+half=getViewportCameraHalf(half,aspect,eye,target);
 const vp=M.mul(M.ortho(-half*aspect,half*aspect,-half,half,.1,100),M.look(eye,target));
-if(presentationState.mode==='present'&&canvas.clientWidth<700)vp[13]+=.16;applyTaskCameraOffset(vp);
+applyTaskCameraOffset(vp);
 const forward=V.norm(V.sub(eye,target)),right=V.norm(V.cross([0,1,0],forward)),up=V.cross(forward,right);
 cameraState={vp,eye,right,up,target,scale:half};
 const lightVP=M.mul(M.ortho(-15,15,-15,15,.1,80),M.look([-16,27,16],[0,-1,0]));
@@ -1416,7 +1561,7 @@ return {dt,vp,eye,lightVP,tx:S.tx+shake,tz:S.tz+shake*.7,time:S.time,wind:S.wind
 function finishCompatFrame(frameNo,rendererName){
 document.body.classList.toggle('software-renderer',rendererName==='Canvas2D');
 updatePresentationOverlay();
-if(frameNo===1||frameNo%10===0){for(const [id,p] of [['labelA',[-.4,1.6,-2.4]],['labelB',[6,-3.5,4.8]]]){const pos=project(p),el=$(id);el.style.left=pos[0]+'px';el.style.top=pos[1]+'px';el.classList.toggle('visible',!S.drag&&S.mission<0&&!S.seaView);}}
+if(frameNo===1||frameNo%10===0){for(const [id,p] of [['labelA',[-.4,1.6,-2.4]],['labelB',[6,-3.5,4.8]]]){const pos=project(p),el=$(id);el.style.left=(pos[0]+canvas.offsetLeft)+'px';el.style.top=(pos[1]+canvas.offsetTop)+'px';el.classList.toggle('visible',!S.drag&&S.mission<0&&!S.seaView);}}
 if(!window.__launchJelly||window.__launchJelly.renderer!==rendererName)window.__launchJelly={state:S,groups,renderer:rendererName,vertexCount:Array.from(groups.values()).reduce((n,g)=>n+(g.count||0),0),setMission:t=>{S.running=true;S.paused=false;S.mission=t;},project,waterHeight:height,failures:rendererFailures};
 window.__launchJelly.presentation=presentationState;window.__launchJelly.frame=frameNo;window.__launchJelly.particleCount=particles.length;
 $('engineLabel').textContent=rendererName==='WebGL2'?'兼容渲染 · WEBGL 2':'兼容渲染 · SOFTWARE 3D';
@@ -1496,15 +1641,15 @@ function frame(now){if(stopped||gpuFault||activeRenderer!=='WebGPU'||rendererEpo
 // A fixed substep spring is stable on slow software devices as well as 144 Hz displays.
 updateJellyPhysics(dt);
 updateMission(dt);updatePresentation(dt);
-let dpr=Math.min(devicePixelRatio||1,1.5),w=Math.round(canvas.clientWidth*dpr),h=Math.round(canvas.clientHeight*dpr);if(w!==lastW||h!==lastH){lastW=w;lastH=h;canvas.width=w;canvas.height=h;depth?.destroy();msaa?.destroy();depth=device.createTexture({size:[w,h],sampleCount:4,format:'depth24plus',usage:GPUTextureUsage.RENDER_ATTACHMENT});msaa=device.createTexture({size:[w,h],sampleCount:4,format,usage:GPUTextureUsage.RENDER_ATTACHMENT});}
-let m=S.mission,T=m-18,follow=T>0&&T<40?(T<18?12*ease(T/18):12*(1-ease((T-18)/22))):0;let cy=S.seaView?-2.4:-.8+follow;prevCameraTarget=mix(prevCameraTarget,cy,.04);let target=getPresentationOffset([0,prevCameraTarget,0],dt),distance=32,eye=[target[0]+Math.sin(S.orbit)*Math.cos(S.elevation)*distance,Math.sin(S.elevation)*distance+target[1],target[2]+Math.cos(S.orbit)*Math.cos(S.elevation)*distance];let narrow=canvas.clientWidth<700,half=(narrow?13.4:11.9)*(1+follow/12*.8)/S.zoom,aspect=w/h;let aspectAdjust=narrow?1.35:1;half*=narrow?Math.max(1,(.82/aspect)):1;let vp=M.mul(M.ortho(-half*aspect,half*aspect,-half,half,.1,100),M.look(eye,target));if(presentationState.mode==='present'&&canvas.clientWidth<700)vp[13]+=.16;applyTaskCameraOffset(vp);let forward=V.norm(V.sub(eye,target)),right=V.norm(V.cross([0,1,0],forward)),up=V.cross(forward,right);cameraState={vp,eye,right,up,target,scale:half};
+let dpr=Math.min(devicePixelRatio||1,1.5),w=Math.max(1,Math.round(canvas.clientWidth*dpr)),h=Math.max(1,Math.round(canvas.clientHeight*dpr));if(w!==lastW||h!==lastH){lastW=w;lastH=h;canvas.width=w;canvas.height=h;depth?.destroy();msaa?.destroy();depth=device.createTexture({size:[w,h],sampleCount:4,format:'depth24plus',usage:GPUTextureUsage.RENDER_ATTACHMENT});msaa=device.createTexture({size:[w,h],sampleCount:4,format,usage:GPUTextureUsage.RENDER_ATTACHMENT});}
+let m=S.mission,T=m-18,follow=T>0&&T<40?(T<18?12*ease(T/18):12*(1-ease((T-18)/22))):0;let cy=S.seaView?-2.4:-.8+follow;prevCameraTarget=mix(prevCameraTarget,cy,.04);let target=getPresentationOffset([0,prevCameraTarget,0],dt),distance=32,eye=[target[0]+Math.sin(S.orbit)*Math.cos(S.elevation)*distance,Math.sin(S.elevation)*distance+target[1],target[2]+Math.cos(S.orbit)*Math.cos(S.elevation)*distance];let narrow=canvas.clientWidth<700,half=(narrow?13.4:11.9)*(1+follow/12*.8)/S.zoom,aspect=w/h;let aspectAdjust=narrow?1.35:1;half*=narrow?Math.max(1,(.82/aspect)):1;half=getViewportCameraHalf(half,aspect,eye,target);let vp=M.mul(M.ortho(-half*aspect,half*aspect,-half,half,.1,100),M.look(eye,target));applyTaskCameraOffset(vp);let forward=V.norm(V.sub(eye,target)),right=V.norm(V.cross([0,1,0],forward)),up=V.cross(forward,right);cameraState={vp,eye,right,up,target,scale:half};
 uniform.set(vp,0);uniform.set(lightVP,16);uniform.set([...eye,1],32);uniform.set([S.time,S.wind,S.damping,dt],36);let shake=T>-3&&T<4&&!S.paused?Math.sin(S.time*49)*.018*ease((T+3)/3):0;uniform.set([S.tx+shake,S.tz+shake*.7,jellyMotion.squash,jellyMotion.ring],40);for(let i=0;i<8;i++)uniform.set(S.ripples[i],44+i*4);uniform.set([w,h,S.stiffness,0],76);device.queue.writeBuffer(globalBuffer,0,uniform);
 for(let g of groups.values()){if(!g.visible||!g.uniform)continue;objectData.set(g.model,0);objectData.set([g.alpha??1,0,0,0],16);device.queue.writeBuffer(g.uniform,0,objectData)}
 for(let i=0;i<particles.length;i++){let p=particles[i],life=clamp(p.life/p.maxLife,0,1),color=p.type===1?[1,.69,.17]:p.type===2?[.68,.70,.61]:p.type===3?[.86,.94,.82]:[.93,.93,.81],a=(p.type===1?.8:p.type===2?.2:p.type===3?.3:.23)*Math.sin(life*Math.PI)*1.1;particleArray.set([...p.p,p.size,p.size*(p.type===1?2.4:1),...color,a,p.type],i*10)}if(particles.length)device.queue.writeBuffer(particleInstances,0,particleArray.subarray(0,particles.length*10));
 const encoder=device.createCommandEncoder();if(!S.paused){const cp=encoder.beginComputePass();cp.setPipeline(computePipeline);cp.setBindGroup(0,computeGroups[seaIndex]);cp.dispatchWorkgroups(16,16);cp.end();seaIndex=1-seaIndex;}
 const sp=encoder.beginRenderPass({colorAttachments:[],depthStencilAttachment:{view:shadowView,depthClearValue:1,depthLoadOp:'clear',depthStoreOp:'store'}});sp.setPipeline(shadowPipeline);sp.setBindGroup(0,shadowGlobalGroup);for(let g of groups.values()){if(!g.visible||!g.buffer||['floor','shell','water','seabed','strata','landCut'].includes(g.name)||g.name.startsWith('digit'))continue;sp.setBindGroup(1,g.bind);sp.setVertexBuffer(0,g.buffer);sp.draw(g.count)}sp.end();
 const pass=encoder.beginRenderPass({colorAttachments:[{view:msaa.createView(),resolveTarget:context.getCurrentTexture().createView(),clearValue:{r:.937,g:.933,b:.904,a:1},loadOp:'clear',storeOp:'store'}],depthStencilAttachment:{view:depth.createView(),depthClearValue:1,depthLoadOp:'clear',depthStoreOp:'store'}});pass.setPipeline(solidPipeline);pass.setBindGroup(0,globalGroups[seaIndex]);for(let g of groups.values()){if(!g.visible||!g.buffer||g.name==='shell'||g.name==='water')continue;pass.setBindGroup(1,g.bind);pass.setVertexBuffer(0,g.buffer);pass.draw(g.count)}pass.setPipeline(glassPipeline);for(let name of ['water','shell']){let g=groups.get(name);pass.setBindGroup(1,g.bind);pass.setVertexBuffer(0,g.buffer);pass.draw(g.count)}if(particles.length){pass.setPipeline(particlePipeline);pass.setBindGroup(0,particleGroup);pass.setVertexBuffer(0,particleQuad);pass.setVertexBuffer(1,particleInstances);pass.draw(6,particles.length)}pass.end();device.queue.submit([encoder.finish()]);
-if(frameNo++%15===0){for(let [id,p] of [['labelA',[-.4,1.6,-2.4]],['labelB',[6,-3.5,4.8]]]){let pos=project(p),el=$(id);el.style.left=pos[0]+'px';el.style.top=pos[1]+'px';el.classList.toggle('visible',!S.drag&&m<0&&!S.seaView)}window.__launchJelly.frame=frameNo;window.__launchJelly.particleCount=particles.length;}
+if(frameNo++%15===0){for(let [id,p] of [['labelA',[-.4,1.6,-2.4]],['labelB',[6,-3.5,4.8]]]){let pos=project(p),el=$(id);el.style.left=(pos[0]+canvas.offsetLeft)+'px';el.style.top=(pos[1]+canvas.offsetTop)+'px';el.classList.toggle('visible',!S.drag&&m<0&&!S.seaView)}window.__launchJelly.frame=frameNo;window.__launchJelly.particleCount=particles.length;}
 updatePresentationOverlay();window.__launchJelly.presentation=presentationState;
 if(frameNo===1){$('loading').hidden=true;$('loading').style.opacity=0;}
 rafId=requestAnimationFrame(frame);
