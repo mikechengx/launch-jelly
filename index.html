@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content"><meta name="color-scheme" content="light"><meta name="theme-color" content="#efeee8"><meta name="launch-jelly-version" content="2026.10.26.mobile2.2"><title>发射果冻 · 我的任务发射台</title>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content"><meta name="color-scheme" content="light"><meta name="theme-color" content="#efeee8"><meta name="launch-jelly-version" content="2.0.0"><title>Launch Jelly</title>
 <style>
 :root{--paper:#efeee8;--ink:#243832;--muted:#7a847a;--line:#d4d7cc;--accent:#e77945;--mint:#d6e5cb}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;font-size:13px;overflow:hidden}button,input{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:5px}header{position:absolute;z-index:5;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:27px 36px;border-bottom:1px solid #cbd0c466;background:#efeee8c9;pointer-events:none}header>*{pointer-events:auto}.brand{display:flex;align-items:center;gap:14px}.brandmark{width:28px;height:28px;border:1.5px solid var(--ink);transform:rotate(-12deg);border-radius:8px 7px 9px 5px;position:relative}.brandmark:before,.brandmark:after{content:"";position:absolute;border:1px solid var(--ink);width:12px;height:12px;left:6px;top:6px;border-radius:4px}.brandmark:after{transform:rotate(35deg)}.brand strong{font-size:12px;letter-spacing:2px;font-weight:600}.brand small{font-size:9px;display:block;letter-spacing:1.8px;margin-top:5px;color:var(--muted)}.header-right{display:flex;align-items:center;gap:27px}.edition{font-size:10px;letter-spacing:1.6px;color:var(--muted)}.sound{border:1px solid var(--line);padding:9px 13px;border-radius:25px;background:transparent;font-size:10px;letter-spacing:1px;display:flex;gap:8px;align-items:center}.sound i{width:5px;height:5px;display:block;border-radius:50%;background:#9aa296}.sound[aria-pressed=true] i{background:var(--accent)}main{height:100svh;position:relative}#scene{display:block;position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}#scene:active{cursor:grabbing}.intro{position:absolute;top:127px;left:52px;pointer-events:none}.kicker{font-size:10px;letter-spacing:2.7px;color:var(--muted);display:flex;align-items:center;gap:9px}.kicker:before{content:"";height:5px;width:5px;background:var(--accent);border-radius:50%}h1{font-size:clamp(40px,4.3vw,70px);letter-spacing:-3px;font-weight:400;margin:15px 0 12px;line-height:1.03}h1 em{font-family:Georgia,serif;font-weight:400;font-style:italic;color:#788f76}.intro p{font-size:12px;line-height:1.8;color:#7a847a;margin:15px 0}.intro .cn{font-size:11px;letter-spacing:3px;color:#566659}.spec{position:absolute;left:52px;bottom:116px;pointer-events:none}.spec .n{font-family:Georgia,serif;font-size:38px;color:#9da58e;line-height:1}.spec small{display:block;color:var(--muted);font-size:9px;letter-spacing:2px;margin-top:12px}.controls{position:absolute;top:135px;right:37px;width:224px;z-index:3;background:#f5f4eddb;backdrop-filter:blur(18px);border:1px solid #fff9;border-radius:13px;padding:21px 21px 19px;box-shadow:0 10px 35px #60705b08}.eyebrow{font-size:9px;letter-spacing:1.8px;color:var(--muted)}.controls h2{font-size:14px;font-weight:500;margin:8px 0 24px}.range-row{margin:20px 0}.range-label{display:flex;justify-content:space-between;font-size:11px;margin-bottom:11px}.range-label output{font-family:monospace;font-size:11px;color:#7b8a70}input[type=range]{appearance:none;width:100%;height:3px;border-radius:4px;background:linear-gradient(to right,#789777 0%,#789777 var(--v,50%),#d9ddcf var(--v,50%),#d9ddcf 100%);display:block;cursor:ew-resize}input[type=range]::-webkit-slider-thumb{appearance:none;width:12px;height:12px;background:#f6f5ee;border:3px solid #7e9779;border-radius:50%;box-shadow:0 1px 5px #53634e20}input[type=range]::-moz-range-thumb{width:8px;height:8px;background:#f6f5ee;border:3px solid #7e9779;border-radius:50%}.controls hr{border:0;border-top:1px solid #d5dacb;margin:24px 0 15px}.small-note{font-size:10px;line-height:1.9;color:var(--muted);display:flex;gap:9px}.small-note b{font-size:14px;font-weight:400;color:#83977b}.view-controls{display:flex;gap:6px;margin-top:16px}.view-controls button{flex:1;border:1px solid #d4d9ca;background:transparent;border-radius:5px;padding:8px 3px;font-size:10px}.view-controls button.active{background:#e0e7d8;border-color:#a6b99b}.timeline{position:absolute;bottom:29px;left:50%;transform:translateX(-50%);width:min(760px,calc(100% - 90px));background:#f6f5efed;border:1px solid #fff;border-radius:13px;padding:17px 20px 16px;box-shadow:0 12px 40px #3c513015;display:grid;grid-template-columns:145px 1fr 93px;gap:22px;align-items:center;z-index:5;backdrop-filter:blur(20px)}.launch{border:0;border-radius:7px;background:var(--ink);color:#f4f3e8;padding:15px 12px;display:flex;align-items:center;justify-content:space-between;text-align:left}.launch b{font-size:12px;font-weight:500;letter-spacing:1px}.launch span{font-size:16px;color:#becdb5}.launch:disabled{opacity:.55;cursor:default}.progress-label{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px;font-size:10px}.progress-label strong{font-weight:500}.progress-label span{color:var(--muted);font-family:monospace;font-size:10px}.track{height:2px;background:#d9ddcf;position:relative}.track .fill{height:100%;width:0;background:var(--accent);transition:width .2s linear}.ticks{display:flex;justify-content:space-between;margin-top:9px;color:#8b9383;font-size:8px;letter-spacing:.5px}.timer{text-align:right;font-family:monospace;font-size:19px;letter-spacing:-1px;color:#a5693c}.timer small{display:block;font-family:Arial,sans-serif;color:#929980;font-size:8px;letter-spacing:1.5px;margin-top:6px}.footer{position:absolute;bottom:32px;left:36px;display:flex;flex-direction:column;gap:6px;font-size:8px;letter-spacing:1.5px;color:#849079;pointer-events:none}.status-dot{width:5px;height:5px;border-radius:50%;background:#83a178;display:inline-block;margin-right:6px}.shortcut{position:absolute;bottom:42px;right:37px;font-size:9px;color:#929b88;letter-spacing:.5px}.shortcut kbd{font-size:9px;padding:3px 5px;border:1px solid #d1d6c7;border-radius:3px;margin-right:6px;font-family:inherit}.annotation{position:absolute;pointer-events:none;opacity:0;transition:opacity .7s;color:#668b7e;font-size:9px;letter-spacing:1px;border-left:1px solid #8baa91;padding:5px 9px;white-space:nowrap}.annotation.visible{opacity:.8}#hint{position:absolute;left:50%;bottom:157px;transform:translateX(-50%);font-size:10px;color:#5d776c;letter-spacing:1px;pointer-events:none;transition:opacity 1s;white-space:nowrap}.loading{position:absolute;z-index:20;inset:0;display:grid;place-items:center;background:var(--paper);transition:opacity .6s}.loading[hidden]{display:none}.loading-inner{text-align:center;max-width:420px;padding:25px}.loading .ring{border:1px solid #d0d9c8;border-top-color:#66825d;width:34px;height:34px;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 23px}.loading h2{font-weight:400;font-family:Georgia,serif;font-size:28px}.loading p{color:var(--muted);font-size:12px;line-height:1.8}.loading button{background:#243832;color:white;border:0;padding:12px 18px;border-radius:6px;margin-top:14px}.loading a{color:#5c7951}.toast{position:absolute;top:94px;left:50%;transform:translateX(-50%) translateY(-8px);border:1px solid #d9decf;background:#f7f7efed;border-radius:30px;padding:10px 18px;font-size:11px;z-index:8;opacity:0;transition:.4s;pointer-events:none}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}@keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:1100px){.intro{left:28px;top:117px}h1{font-size:49px}.controls{right:24px;width:194px;padding:17px}.edition{display:none}.spec{left:30px}.footer,.shortcut{display:none}.timeline{bottom:24px;width:680px;max-width:calc(100% - 48px)}}
@@ -77,11 +77,51 @@ body.compact-ui{--timeline-h:66px;--dock-h:74px;--bottom-gap:max(10px,env(safe-a
 
 .compact-ui .task-edit-dialog,.compact-ui .material-dialog{position:fixed;inset:auto;left:50%;top:calc(var(--viewport-top,0px) + var(--app-height,100dvh)/2);transform:translate(-50%,-50%);margin:0;max-height:calc(var(--app-height,100dvh) - 24px)}
 
+
+/* English public product identity, with explicit per-app language preference. */
+.brand strong{letter-spacing:.7px;font-size:15px}.mobile-brand{letter-spacing:0}
+.language-switch{display:flex;gap:2px;align-items:center;flex:0 0 auto;margin-left:12px;padding:3px;border:1px solid #cbd4c0;border-radius:22px;background:#f7f8f1}
+.language-switch button{border:0;border-radius:18px;background:transparent;padding:7px 9px;font-size:10px;letter-spacing:0;min-height:30px;white-space:nowrap}
+.language-switch button.active{background:#dce7d1;color:#2e4a33}.language-switch button:focus-visible{outline-offset:2px}
+.compact-ui .sound span:after{content:var(--sound-word,"声音")}
+html[lang=en] .brand small{letter-spacing:1px;font-size:8px}
+html[lang=en] .tour-list button{font-size:9px;letter-spacing:0}
+html[lang=en] .tour-panel{width:300px}html[lang=en] .tour-nav{gap:3px}
+html[lang=en] .task-panel .task-archive{font-size:10px}
+html[lang=en] .intro .cn{letter-spacing:1.5px}
+html[lang=en] .world-hotspot{letter-spacing:0}
+.compact-ui header{flex-wrap:wrap;padding-top:max(10px,env(safe-area-inset-top));padding-bottom:8px;row-gap:7px}
+.compact-ui header>.brand{flex:1 0 100%;display:flex;gap:7px;min-width:0}
+.compact-ui .brand .mobile-brand{font-size:12px}
+.compact-ui .language-switch{margin-left:auto;padding:2px}
+.compact-ui .language-switch button{min-height:28px;padding:5px 9px;font-size:10px}
+.compact-ui header>.header-right{width:100%;justify-content:space-between;gap:7px}
+.compact-ui .mode-switch{flex:1;justify-content:space-between}
+.compact-ui .mode-switch button{flex:1;font-size:10px;padding:8px 7px;min-height:33px}
+.compact-ui .sound{min-height:33px;padding:8px 10px;flex:0 0 auto}
+.compact-ui .sound span:after{font-size:9px}
+.compact-ui .tour-panel,html[lang=en] .compact-ui .tour-panel{width:auto}
+html[lang=en] .compact-ui .controls{width:160px}
+html[lang=en] .compact-ui .material-open-button{flex-basis:51px}
+html[lang=en] .compact-ui .world-status{max-width:calc(100% - 190px)}
+html[lang=en] .compact-ui .task-drawer-toggle{min-width:70px;font-size:9px}
+html[lang=en] .compact-ui .launch b{font-size:9px}
+.compact-ui.compact-landscape header{flex-wrap:nowrap;padding-top:max(7px,env(safe-area-inset-top));gap:12px}
+.compact-ui.compact-landscape header>.brand{flex:0 1 auto;gap:7px;width:auto}
+.compact-ui.compact-landscape .language-switch{margin-left:9px}
+.compact-ui.compact-landscape header>.header-right{flex:1;width:auto;justify-content:flex-end;gap:9px}
+.compact-ui.compact-landscape .mode-switch{flex:0 1 auto}
+.compact-ui.compact-landscape .mode-switch button{flex:none;padding:8px 11px}
+.compact-ui.compact-landscape .brand strong{font-size:12px}
+html[lang=en] .compact-ui.compact-landscape .world-status{max-width:calc(100% - var(--sidebar-w) - 222px)}
+@media(max-width:800px) and (min-width:701px){.compact-ui.compact-landscape .brandmark{display:none}.compact-ui.compact-landscape .language-switch{margin-left:4px}.compact-ui.compact-landscape header{gap:6px}.compact-ui.compact-landscape .mode-switch button{padding:8px}}
+@media(max-width:350px){.compact-ui .brandmark{display:block}.compact-ui .brand .mobile-brand{font-size:11px}.compact-ui .mode-switch button{font-size:9px;padding:8px 5px}}
+
 </style></head><body class="task-mode">
-<header><div class="brand"><div class="brandmark" aria-hidden="true"></div><span class="mobile-brand">发射果冻</span><div class="brand-copy"><strong>MATTER STUDIES</strong><small>微 观 世 界 · 材 质 研 究 所</small></div></div><div class="header-right"><span class="edition">A LITTLE PROGRESS. A BIG LAUNCH.</span><nav class="mode-switch" aria-label="体验模式"><button id="modeTasks" class="active" aria-pressed="true">我的任务</button><button id="modeExplore" aria-pressed="false">自由探索</button><button id="modePresent" aria-pressed="false">方案导览</button></nav><button class="sound" id="sound" aria-pressed="false" aria-label="开启或关闭声音"><i></i><span>声音 OFF</span></button></div></header>
+<header><div class="brand"><div class="brandmark" aria-hidden="true"></div><span class="mobile-brand">Launch Jelly</span><div class="brand-copy"><strong>Launch Jelly</strong><small>微 观 世 界 · 材 质 研 究 所</small></div><nav class="language-switch" aria-label="Language / 语言"><button type="button" data-lang="zh" lang="zh-CN" aria-label="切换到中文" aria-pressed="true">中文</button><button type="button" data-lang="en" lang="en" aria-label="Switch to English" aria-pressed="false">EN</button></nav></div><div class="header-right"><span class="edition">A LITTLE PROGRESS. A BIG LAUNCH.</span><nav class="mode-switch" aria-label="体验模式"><button id="modeTasks" class="active" aria-pressed="true">我的任务</button><button id="modeExplore" aria-pressed="false">自由探索</button><button id="modePresent" aria-pressed="false">方案导览</button></nav><button class="sound" id="sound" aria-pressed="false" aria-label="开启或关闭声音"><i></i><span>声音 OFF</span></button></div></header>
 <main><canvas id="scene" aria-label="可拖拽的果冻海岛发射场立体模型。拖拽水面搅动，拖拽侧面倾斜，右键拖拽旋转，滚轮缩放。" role="img"></canvas>
 <section class="intro"><div class="kicker">A LITTLE WORLD, SOFTLY HELD.</div><h1>Launch<br><em>Jelly.</em></h1><div class="cn">发 射 果 冻</div><p>一座岛屿，一次升空。<br>把火箭发射场，轻轻装进果冻里。</p></section>
-<section id="taskDock" class="task-dock" aria-label="任务进度与快捷入口" hidden><button id="taskDockOpen" class="task-dock-open" type="button" aria-expanded="false" aria-controls="taskPanel"><span id="taskDockRing" class="task-dock-ring" style="--progress:0%" role="progressbar" aria-label="任务完成进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span><strong id="taskDockPercent">0</strong><small>%</small></span></span><span class="task-dock-copy"><strong id="taskDockName">我的发射计划</strong><small id="taskDockCount">完成 0 / 0 项</small></span><span class="task-dock-arrow" aria-hidden="true">查看 ↑</span></button><button id="taskQuickAdd" class="task-quick-add" type="button" aria-label="添加新任务">＋</button></section>
+<section id="taskDock" class="task-dock" aria-label="任务进度与快捷入口" hidden><button id="taskDockOpen" class="task-dock-open" type="button" aria-expanded="false" aria-controls="taskPanel"><span id="taskDockRing" class="task-dock-ring" style="--progress:0%" role="progressbar" aria-label="任务完成进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span><strong id="taskDockPercent">0</strong><small>%</small></span></span><span class="task-dock-copy"><strong id="taskDockName" data-user-content>我的发射计划</strong><small id="taskDockCount">完成 0 / 0 项</small></span><span class="task-dock-arrow" aria-hidden="true">查看 ↑</span></button><button id="taskQuickAdd" class="task-quick-add" type="button" aria-label="添加新任务">＋</button></section>
 <section id="taskPanel" class="task-panel" aria-label="我的任务发射台">
   <div class="task-eyebrow"><span><i></i><span class="desktop-legend">YOUR PERSONAL LAUNCHPAD</span><span class="compact-legend">我的任务</span></span><span id="storageStatus">本机保存</span><button id="taskPanelQuickAdd" class="task-panel-quick-add" type="button" aria-label="在当前清单中添加任务">＋</button><button id="taskPanelToggle" class="task-drawer-toggle" type="button" aria-expanded="false" aria-controls="taskPanel">展开 ↗</button></div>
   <label class="mission-name-label" for="missionName">清单名称 · 点击可修改</label>
@@ -120,6 +160,84 @@ body.compact-ui{--timeline-h:66px;--dock-h:74px;--bottom-gap:max(10px,env(safe-a
 <div class="footer"><span><i class="status-dot"></i><span id="engineLabel">WEBGPU · PROCEDURAL</span></span><span>NO ASSETS. JUST A LITTLE PHYSICS.</span></div><div class="shortcut"><kbd>Space</kbd>庆祝 / 暂停</div><div id="toast" class="toast" role="status"></div>
 <div id="loading" class="loading"><div class="loading-inner"><div class="ring"></div><h2>A world is taking shape.</h2><p id="loadMessage">正在凝固海水、种下棕榈树、检查九台发动机……</p></div></div></main>
 <script>
+/* Launch Jelly locale runtime. UI strings only; task data and field values are never traversed. */
+(() => {
+  'use strict';
+  const translations = {"发射果冻 · 我的任务发射台":"Launch Jelly","发射果冻":"Launch Jelly","微 观 世 界 · 材 质 研 究 所":"MINIATURE WORLDS · MATERIAL STUDIES","体验模式":"Experience mode","我的任务":"Tasks","自由探索":"Explore","方案导览":"Guided tour","开启或关闭声音":"Turn sound on or off","声音 OFF":"Sound OFF","可拖拽的果冻海岛发射场立体模型。拖拽水面搅动，拖拽侧面倾斜，右键拖拽旋转，滚轮缩放。":"Interactive jelly island spaceport. Drag the water to stir it, pull the sides to tilt, right-drag to orbit, and scroll to zoom.","发 射 果 冻":"A LITTLE WORLD, SOFTLY HELD.","一座岛屿，一次升空。":"One island. One launch.","把火箭发射场，轻轻装进果冻里。":"A tiny spaceport, held in a world of jelly.","任务进度与快捷入口":"Task progress and quick actions","任务完成进度":"Task completion progress","我的发射计划":"My launch plan","完成 0 / 0 项":"Completed 0 / 0 tasks","查看 ↑":"View ↑","添加新任务":"Add a new task","我的任务发射台":"My personal launchpad","本机保存":"Saved here","在当前清单中添加任务":"Add a task to this list","展开 ↗":"Expand ↗","清单名称 · 点击可修改":"List name · click to rename","清单名称":"List name","做完眼前的小事，把今天送上轨道。":"Finish the little things. Send your day into orbit.","0 / 0 项已完成":"0 / 0 tasks complete","从一件小事开始。添加你的第一项任务。":"Start small. Add your first task.","所有小事，都值得一次升空。":"Every little achievement deserves a launch.","新任务名称":"New task name","下一件要完成的事…":"The next thing to do…","添加任务":"Add task","标签与截止日期":"Tag and due date","选填":"Optional","标签":"Tag","例如：工作":"e.g. Work","截止日期":"Due date","筛选任务":"Filter tasks","全部":"All","待完成":"To do","已完成":"Done","任务清单":"Task list","下一次发射，由你完成。":"The next launch starts with you.","写下任务，勾选完成。":"Write it down. Check it off.","全部完成时，整座小岛为你庆祝。":"Finish them all, and the whole island celebrates.","＋ 工作清单":"＋ Work list","＋ 学习清单":"＋ Study list","全部完成后，自动庆祝发射":"Automatically celebrate when all tasks are done","归档，开启下一轮":"Archive and start a new round","撤销删除":"Undo delete","备份与记录":"Backups and history","导出备份":"Export backup","导入恢复":"Import backup","完成的旅程，将留在这里。":"Your completed journeys will appear here.","仅保存在此浏览器 · 记录保留最近 12 轮，请定期导出。":"Stored in this browser only · Keeps the latest 12 rounds. Export regularly.","给这件小事一个名字。":"Give this little task a name.","任务名称":"Task name","工作 / 生活 / 学习":"Work / Life / Study","删除任务":"Delete task","取消":"Cancel","保存":"Save","让世界柔软一点。":"Make the world a little softer.","完成，回到小岛":"Done · back to the island","材质参数":"Material controls","果冻硬度":"Jelly firmness","波浪阻尼":"Wave damping","海面风速":"Sea breeze","揉捏果冻，观察挤压与回弹":"Squish the jelly and watch it spring back","揉一下果冻":"Squish jelly","调整材质和观察视角":"Adjust materials and camera views","材质":"Material","捏住侧面，松手看回弹":"Pull a side and release to watch it bounce","划过海面，留下涟漪":"Stroke the sea to leave ripples","观察视角":"Camera views","全景":"Overview","海底":"Seabed","恢复默认视角":"Restore the default view","↺ 复位":"↺ Reset","海风 6.0 m/s · 海浪与船只持续运动":"Breeze 6.0 m/s · Waves and boats keep moving","01 / 总体布局":"01 / Master plan","一座岛，三条相连的动线":"One island, three connected journeys","方案区域":"Tour areas","总体布局":"Master plan","总览":"Overview","装配与运输":"Assembly and transport","转运":"Transit","发射与地面保障":"Launch and ground support","发射":"Launch","港口与海上回收":"Harbor and offshore recovery","回收":"Recovery","海底与材料切面":"Seabed and material section","生态":"Ecology","布局逻辑":"Design thinking","上一个区域":"Previous area","← 上一站":"← Previous","返回总览":"Back to overview","下一个区域":"Next area","下一站 →":"Next →","场景区域热点":"Scene points of interest","01 · 机库转运":"01 · Hangar and transit","02 · 发射核心":"02 · Launch core","03 · 海上回收":"03 · Offshore recovery","04 · 水下世界":"04 · Underwater world","01 / 发射平台":"01 / Launch platform","02 / 浅海生态剖面":"02 / Shallow-water ecology","拖动果冻与水面 · 右键拖动环绕观察 · 滚轮缩放":"Drag the jelly or sea · Right-drag to orbit · Scroll to zoom","发射任务控制":"Launch mission controls","先添加任务":"Add tasks first","完成所有任务，开启庆祝发射。":"Complete every task to unlock your celebration.","推出":"Rollout","倒计时":"Countdown","点火":"Ignition","升空":"Liftoff","庆祝 / 暂停":"Celebrate / pause","正在凝固海水、种下棕榈树、检查九台发动机……":"Setting the sea, planting palms, checking nine engines…","声音 ":"Sound ","<b>继续庆祝</b><span>▶</span>":"<b>Resume</b><span>▶</span>","<b>暂停庆祝</b><span>Ⅱ</span>":"<b>Pause</b><span>Ⅱ</span>","清单全部完成 · 这次升空属于你":"All tasks complete · This launch is yours","恢复工作室视角":"Studio view restored","海底观察 · 搅动海面可看见波纹传播":"Seabed view · Stir the surface to watch the ripples travel","机库门升起 · 检查轨道":"Hangar doors open · Checking the rails","运输竖立机 · 沿轨道推出":"Transport erector · Rolling out","火箭竖立 · 液氧预冷":"Rocket upright · Liquid oxygen chilldown","发射倒计时 · 水幕系统就绪":"Launch countdown · Water deluge ready","九台发动机点火 · 推力建立":"Nine engines ignite · Building thrust","已离开发射台 · 全推力上升":"Clear of the pad · Full-thrust ascent","上升段 · 通过最大动压":"Ascent · Passing maximum dynamic pressure","主发动机关机 · 两级分离":"Main engines cut off · Stage separation","整流罩分离 · 助推器返航":"Fairing separation · Booster returning","海上着陆 · 整流罩回收":"Offshore landing · Fairing recovery","任务已暂停":"Mission paused","任务完成 · 回收成功":"Mission complete · Recovery successful","<b>重播庆祝</b><span>↗</span>":"<b>Replay</b><span>↗</span>","回收成功 · 今天的努力，值得被记住":"Recovery complete · Your work today deserves to be remembered","陆上的装配、发射与保障，连接海上的着陆与回收。透明切面把海面、海底与岛屿地层放在同一个视野里。":"Assembly and ground support on land connect to landing and recovery at sea. A transparent section brings the surface, seabed, and island layers into one view.","从总图进入各个区域，观察设施如何围绕同一次任务协作。":"Explore each area from the master plan and see how every facility supports the same mission.","从机库走向发射台":"From hangar to launchpad","02 / 装配与运输":"02 / Assembly and transport","长机库收纳水平放置的火箭，轨道连接门外停机坪与发射台。沿着这条动线，推出、运输和竖立成为一段连续的过程。":"The long hangar holds the rocket horizontally. Rails connect its apron to the launchpad, making rollout, transport, and erection one continuous journey.","把装配区与发射区串联起来，让准备工作的先后关系清楚可见。":"Connect assembly to launch so the order of preparation is clear in the layout.","面向大海的发射核心":"A launch core facing the sea","03 / 发射与地面保障":"03 / Launch and ground support","发射台坐落在混凝土堤坝上，火焰沟开口朝向海面。水塔、储罐与避雷柱围绕核心布置，观看区位于岛屿另一侧。":"The pad sits on a concrete seawall with its flame trench facing the sea. Water towers, tanks, and lightning masts surround the core; spectators watch from the other side of the island.","用空间关系讲解发射、供给和观看这几类功能；完成你的任务清单后，可观看庆祝发射。":"Read launch, supply, and viewing functions through their spatial relationships. Finish your task list to watch a celebratory launch.","海面也是任务的一部分":"The sea is part of the mission","04 / 港口与海上回收":"04 / Harbor and offshore recovery","码头把仓储、起重与船舶连接起来，近海排列着无人着陆船、拖船和整流罩回收船。它们让火箭离开发射台后的故事继续发生在同一个世界里。":"The dock links storage, lifting, and boats. A drone landing ship, tug, and fairing-recovery vessel wait offshore, continuing the rocket's story in the same small world.","把陆地运输与海上回收一起看，理解这座发射场的任务闭环。":"View land transport and offshore recovery together to understand the spaceport's full mission cycle.","地表之下，还有一层世界":"Another world below the surface","05 / 海底与材料切面":"05 / Seabed and material section","浅海下可以看见沙纹、海草、珊瑚和遗落的发动机钟罩。方块侧面露出沙层、贝壳石灰岩与糖状地层，让设施拥有可以探看的环境背景。":"Beneath the shallows lie sand ripples, seagrass, coral, and an abandoned engine bell. The cut sides reveal sand, shell limestone, and sugar-like strata.","让方案同时呈现地表活动与水下细节；拖动海面或改变风速，观察环境的响应。":"Show surface activity alongside underwater detail. Stir the sea or change the wind to watch the environment respond.","收起 ↓":"Collapse ↓","展开 ↑":"Expand ↑","回收完成":"Recovery complete","海浪与船只持续运动":"Waves and boats keep moving","任务进行中":"Mission in progress","海风 ":"Breeze ","自动保存在此浏览器":"Automatically saved in this browser","文字字段类型不正确":"Invalid text field type","文字字段为空或超过长度限制":"A text field is empty or too long","每轮最多保存 120 项任务":"Each round can hold up to 120 tasks","任务格式不正确":"Invalid task format","任务内容或日期不正确":"Invalid task content or date","不是受支持的任务备份（需要 version: 1）":"Unsupported task backup (version: 1 required)","备份设置或归档格式不正确":"Invalid backup settings or archive format","归档格式不正确":"Invalid archive format","归档统计不正确":"Invalid archive statistics","庆祝记录格式不正确":"Invalid celebration history","本次修改仅保存在内存 · 请导出备份":"Changes are in memory only · Please export a backup","浏览器无法保存任务，请用“导出备份”保留本次修改。":"This browser cannot save tasks. Use Export backup to keep your changes.","本地存档无法读取 · 原始数据会在修改前另存":"Local save unreadable · Original data will be copied before editing","本地任务存档无法读取，原始数据已保留。你可以导入有效备份。":"The local task save could not be read. The original is preserved; you can import a valid backup.","浏览器未允许保存 · 请导出备份":"Browser storage unavailable · Please export a backup","当前浏览器不允许本地保存，仍可使用任务清单并导出备份。":"This browser blocks local storage. You can still use tasks and export a backup.","还有 ":"There are "," 项任务，完成后再点火。":" tasks left. Finish them before ignition.","先添加一项自己的任务，完成后就能发射。":"Add a task of your own, finish it, and you're ready to launch.","待全部完成":"Finish all tasks","准备点火":"Ignition ready","重播庆祝":"Replay","发射庆祝":"Celebrate","用一场火箭发射庆祝全部完成":"Celebrate every task with a rocket launch","还剩 ":"Remaining: "," 项任务":" tasks","在任务清单中加入你的第一项任务":"Add your first task to the list","月":"/","日":"","本地存档":"Local save","暂未保存":"Not saved","存档需恢复":"Restore needed","已本机保存":"Saved locally","。归档仅保留最近 12 轮，请导出备份。":". Keeps the latest 12 rounds; please export a backup.","。你也可以导入有效备份。":". You can also import a valid backup.","仅保存在此浏览器，归档保留最近 12 轮。导出备份可带走任务。":"Stored only in this browser. Keeps the latest 12 rounds. Export a backup to take your tasks with you.","完成 ":"Completed "," 项":" tasks","已完成 ":"Completed "," 项，共 ":" of "," 项逾期":" overdue","加入自己的任务，让每一次完成都离发射更近。":"Add your own tasks. Every checkmark brings the next launch closer.","再完成 ":"Complete "," 项任务，就能发射这枚火箭。":" more tasks to launch this rocket.","庆祝已暂停，随时可以继续。":"Celebration paused. Resume whenever you're ready.","你已完成这一轮，火箭正在为你升空。":"You've finished this round. The rocket is flying for you.","全部完成！准备点火…":"All done! Getting ready for ignition…","这一轮已完成，火箭也已归来。归档后，开始下一程。":"Round complete and rocket recovered. Archive it to begin your next journey.","全部完成！可以发射庆祝，或归档开始下一轮。":"All done! Launch a celebration or archive this round.","庆祝结束后即可归档":"Archive after the celebration finishes","将这一轮保存到旅程记录，并开始空白新清单":"Save this round to your history and begin an empty list","完成全部任务后即可归档":"Complete all tasks before archiving","每一项完成，都算数。现在，抬头看你的火箭。":"Every checkmark counts. Look up at your rocket.","全部 ":"All "," 项已完成 · 这一程，做到了。":" tasks complete · You did it."," 项已完成 · 为你准备一场发射。":" tasks complete · A launch is being prepared for you."," 项已完成 · 准备庆祝你的努力。":" tasks complete · Ready to celebrate your work.","工作":"Work","学习":"Study","生活":"Life","重要":"Priority","归档后，在这里回看完成的旅程。保留最近 12 轮。":"Archive a round to revisit it here. Keeps the latest 12 rounds.","日 · ":" · "," 项完成":" tasks complete","完成：":"Complete: ","逾期 · ":"Overdue · ","编辑：":"Edit: ","还没有已完成的任务。":"No completed tasks yet.","这里的任务都已完成。":"All tasks here are complete.","每完成一项，果冻都会为你弹一下。":"The jelly gives a little bounce for every completed task.","切换“全部”，回看你的完成清单。":"Switch to All to see your completed list.","写下任务，勾选完成。全部完成时，整座小岛为你庆祝。":"Write down your tasks and check them off. Finish them all and the whole island celebrates.","已删除「":"Deleted “","」· 撤销":"” · Undo","已删除任务，可在 12 秒内撤销。":"Task deleted. You can undo it within 12 seconds.","请填写 1–140 字的任务名称。":"Enter a task name with 1–140 characters.","标签最多 18 字。":"Tags can contain up to 18 characters.","请选择有效的日期。":"Please choose a valid date.","每轮最多 120 项任务，请先完成并归档这一轮。":"A round holds up to 120 tasks. Finish and archive this round first.","任务已更新。":"Task updated.","已撤销导入，原清单和归档已恢复。":"Import undone. Your previous list and history are restored.","清单已满，无法撤销。":"The list is full; this task cannot be restored.","任务已恢复。":"Task restored.","归档只保留最近 12 轮。本次将移除最早的「":"Only the latest 12 rounds are kept. This will remove the oldest round, “","」。建议先导出备份。继续归档吗？":"”. Export a backup first if needed. Continue archiving?","这一轮已归档。新的旅程，从一件小事开始。":"Round archived. Your next journey begins with one little task.","今天的学习计划":"Today's study plan","明确今天要掌握的知识点":"Choose what you want to learn today","专注学习 25 分钟":"Focus on studying for 25 minutes","完成一组练习或一次实践":"Complete a set of exercises or a practical project","用自己的话复述重点":"Explain the key ideas in your own words","回顾错题，记录下次的起点":"Review mistakes and note where to start next time","今天的工作计划":"Today's work plan","写下今天最重要的产出":"Write down today's most important outcome","完成一段不被打断的专注工作":"Complete one uninterrupted block of focused work","推进最重要的一项交付":"Move your most important deliverable forward","处理需要回复或协作的事情":"Reply to messages and handle collaboration","整理成果，安排下一步":"Review your progress and plan the next step","剩余空间不足以加入模板，每轮最多 120 项。":"Not enough room for this template. A round holds up to 120 tasks.","已加入 5 项":"Added 5 ","任务，点击名称即可改成自己的安排。":" tasks. Click their names to make the plan your own.","发射果冻-任务备份-":"launch-jelly-backup-","备份已生成，请在浏览器下载或分享菜单中保存文件。":"Backup created. Save the file from your browser's download or share menu.","浏览器未能生成备份，请保留此页面并重试。":"This browser could not create a backup. Keep this page open and try again.","备份文件不能超过 1 MB":"Backup files must be smaller than 1 MB","文件不是有效的 JSON 备份":"The file is not a valid JSON backup","导入会替换当前清单和归档。导入后 30 秒内、继续编辑前可以撤销。建议先导出当前备份。继续导入吗？":"Importing replaces your current list and history. You can undo within 30 seconds, before editing again. Export a backup first if needed. Continue importing?","已恢复备份 · 撤销导入":"Backup restored · Undo import","备份已恢复，可在 30 秒内、继续编辑前撤销导入。":"Backup restored. You can undo within 30 seconds, before making further edits.","备份已恢复。全完成的清单可手动发射庆祝。":"Backup restored. Completed lists can be celebrated with a manual launch.","未导入：":"Import failed: ","备份格式不正确":"Invalid backup format","。现有任务已保留。":". Your current tasks are unchanged.","兼容渲染 · WEBGL 2":"Compatibility · WEBGL 2","兼容渲染 · SOFTWARE 3D":"Compatibility · SOFTWARE 3D","图形设备响应超时":"The graphics device timed out","浏览器未能创建绘图画布。请在独立浏览器窗口重新打开此文件。":"The browser could not create a drawing canvas. Reopen this file in a standalone browser window."," [行 ":" [line ","让这个世界重新凝固。":"Let this little world set again.","重新打开场景":"Reopen scene","WebGL 2 上下文不可用":"WebGL 2 context unavailable","WebGL 着色器编译失败：":"WebGL shader compilation failed: ","WebGL 着色器链接失败：":"WebGL shader linking failed: ","无法建立浏览器图形画布。":"Could not create a browser drawing canvas.","Language / 语言":"Language","切换到中文":"Switch to Chinese"};
+  const key = 'launch-jelly.lang';
+  let saved = null;
+  try { saved = localStorage.getItem(key); } catch (_) {}
+  const requested = new URLSearchParams(location.search).get('lang');
+  let language = ['zh', 'en'].includes(requested) ? requested : ['zh', 'en'].includes(saved) ? saved : 'zh';
+  const texts = [], attributes = [];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (node.parentElement?.closest('script,style,textarea,option,[data-user-content]')) continue;
+    if (Object.hasOwn(translations, node.textContent.trim())) texts.push([node, node.textContent]);
+  }
+  for (const node of document.querySelectorAll('[aria-label],[placeholder],[title]')) {
+    if (node.closest('[data-user-content]')) continue;
+    const values = {};
+    for (const attr of ['aria-label', 'placeholder', 'title']) {
+      const value = node.getAttribute(attr);
+      if (value !== null && Object.hasOwn(translations, value)) values[attr] = value;
+    }
+    if (Object.keys(values).length) {
+      // Preserve source metadata when the renderer replaces its canvas with a clone.
+      node.dataset.ljI18nAttrs = JSON.stringify(values);
+      attributes.push(node);
+    }
+  }
+  function t(text) {
+    if (language !== 'en' || typeof text !== 'string') return text;
+    return Object.hasOwn(translations, text) ? translations[text] : text;
+  }
+  function paint() {
+    document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
+    document.title = 'Launch Jelly';
+    for (const [node, original] of texts) {
+      if (!node.isConnected) continue;
+      const trimmed = original.trim(), translated = t(trimmed);
+      node.textContent = original.replace(trimmed, translated);
+    }
+    for (const node of document.querySelectorAll('[data-lj-i18n-attrs]')) {
+      const source = JSON.parse(node.dataset.ljI18nAttrs);
+      for (const [name, text] of Object.entries(source)) node.setAttribute(name, t(text));
+    }
+    for (const button of document.querySelectorAll('.language-switch [data-lang]')) {
+      const selected = button.dataset.lang === language;
+      button.setAttribute('aria-pressed', String(selected));
+      button.classList.toggle('active', selected);
+    }
+    document.documentElement.style.setProperty('--sound-word', language === 'en' ? '"Sound"' : '"声音"');
+  }
+  const api = {
+    get language() { return language; },
+    t,
+    setLanguage(next) {
+      if (!['zh', 'en'].includes(next)) return;
+      language = next;
+      try { localStorage.setItem(key, language); } catch (_) {}
+      // The query parameter chooses the initial language; keep shared links in sync after switching.
+      try { const url = new URL(location.href); url.searchParams.set('lang', next); history.replaceState(null, '', url); } catch (_) {}
+      paint();
+      api.onChange?.();
+      window.dispatchEvent(new CustomEvent('launch-jelly:language', { detail: { language } }));
+    },
+    refresh: paint,
+    onChange: null,
+    translatedKeys: Object.keys(translations).length,
+  };
+  window.JellyLocale = api;
+  for (const button of document.querySelectorAll('.language-switch [data-lang]')) {
+    button.addEventListener('click', () => api.setLanguage(button.dataset.lang));
+  }
+  paint();
+})();
+function JLT(text) { return window.JellyLocale.t(text); }
+
+</script><script>
 'use strict';
 
 // Launch Jelly / a fully procedural miniature. No imports, requests, textures or assets.
@@ -831,14 +949,14 @@ let toastTimer;function toast(msg){$('toast').textContent=msg;$('toast').classLi
 for(let key of ['stiffness','damping','wind']){$(key).addEventListener('input',()=>{let v=Number($(key).value);S[key]=key==='wind'?v:v/100;$(key+'Val').textContent=key==='wind'?v.toFixed(1)+' m/s':v+'%';$(key).style.setProperty('--v',(key==='wind'?v*5:key==='stiffness'?(v-10)/.9:v)+'%')})}
 let audio=null;function initAudio(){if(audio)return;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;const ctx=new AC(),gain=ctx.createGain(),buf=ctx.createBuffer(1,ctx.sampleRate*3,ctx.sampleRate),d=buf.getChannelData(0);let b=0;for(let i=0;i<d.length;i++){let w=Math.random()*2-1;b=(b+.03*w)/1.03;d[i]=b*3.5;}const src=ctx.createBufferSource();src.buffer=buf;src.loop=true;const low=ctx.createBiquadFilter();low.type='lowpass';low.frequency.value=550;const engine=ctx.createGain();engine.gain.value=0;src.connect(low).connect(engine).connect(gain).connect(ctx.destination);src.start();gain.gain.value=S.sound?.4:0;audio={ctx,gain,engine,low,buf};}
 function beep(freq=760,duration=.1,volume=.07){if(!S.sound)return;initAudio();if(!audio)return;const {ctx,gain}=audio,o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=freq;o.type='sine';g.gain.setValueAtTime(volume,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+duration);o.connect(g).connect(gain);o.start();o.stop(ctx.currentTime+duration)}
-$('sound').onclick=()=>{S.sound=!S.sound;initAudio();audio?.ctx.resume();if(audio)audio.gain.gain.setTargetAtTime(S.sound?.5:0,audio.ctx.currentTime,.1);$('sound').setAttribute('aria-pressed',S.sound);$('sound').querySelector('span').textContent='声音 '+(S.sound?'ON':'OFF');if(S.sound)beep(900,.08,.05)};
+$('sound').onclick=()=>{S.sound=!S.sound;initAudio();audio?.ctx.resume();if(audio)audio.gain.gain.setTargetAtTime(S.sound?.5:0,audio.ctx.currentTime,.1);$('sound').setAttribute('aria-pressed',S.sound);$('sound').querySelector('span').textContent=JLT('声音 ')+(S.sound?'ON':'OFF');if(S.sound)beep(900,.08,.05)};
 function cheer(){if(!S.sound||!audio)return;const {ctx,gain,buf}=audio,s=ctx.createBufferSource(),f=ctx.createBiquadFilter(),v=ctx.createGain();s.buffer=buf;f.type='bandpass';f.frequency.value=1500;f.Q.value=.7;v.gain.setValueAtTime(.001,ctx.currentTime);v.gain.linearRampToValueAtTime(.16,ctx.currentTime+.3);v.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+2.6);s.connect(f).connect(v).connect(gain);s.start();s.stop(ctx.currentTime+2.7);for(let k=0;k<4;k++)setTimeout(()=>beep(780+k*120,.7,.012),k*70);}
-function start(){if(S.running){S.paused=!S.paused;$('launch').innerHTML=S.paused?'<b>继续庆祝</b><span>▶</span>':'<b>暂停庆祝</b><span>Ⅱ</span>';if(audio)audio.engine.gain.setTargetAtTime(0,audio.ctx.currentTime,.1);if(typeof renderTaskMetrics==='function')renderTaskMetrics();return;}if(typeof canLaunchTasks==='function'&&!canLaunchTasks(true))return;if(typeof presentationState!=='undefined'&&presentationState.mode==='present')selectTourStop(0);S.running=true;S.paused=false;S.ended=false;S.cheered=false;S.mission=0;particles.length=0;lastSecond=-100;$('launch').disabled=false;$('launch').innerHTML='<b>暂停庆祝</b><span>Ⅱ</span>';if(typeof setTaskPanelExpanded==='function')setTaskPanelExpanded(false);if(typeof taskMissionStarted==='function')taskMissionStarted();toast('清单全部完成 · 这次升空属于你');if(S.sound){initAudio();audio?.ctx.resume()}}
-function resetTaskFlight(){S.running=false;S.paused=false;S.ended=false;S.cheered=false;S.mission=-1;particles.length=0;lastSecond=-100;particleBudget=0;$('phase').textContent='完成所有任务，开启庆祝发射。';$('progress').style.width='0%';$('timer').textContent='T−0:10';$('timerStatus').textContent='WAITING FOR YOU';if(audio)audio.engine.gain.setTargetAtTime(0,audio.ctx.currentTime,.1);if(typeof syncTaskLaunchButton==='function')syncTaskLaunchButton();}
+function start(){if(S.running){S.paused=!S.paused;$('launch').innerHTML=S.paused?JLT('<b>继续庆祝</b><span>▶</span>'):JLT('<b>暂停庆祝</b><span>Ⅱ</span>');if(audio)audio.engine.gain.setTargetAtTime(0,audio.ctx.currentTime,.1);if(typeof renderTaskMetrics==='function')renderTaskMetrics();return;}if(typeof canLaunchTasks==='function'&&!canLaunchTasks(true))return;if(typeof presentationState!=='undefined'&&presentationState.mode==='present')selectTourStop(0);S.running=true;S.paused=false;S.ended=false;S.cheered=false;S.mission=0;particles.length=0;lastSecond=-100;$('launch').disabled=false;$('launch').innerHTML=JLT('<b>暂停庆祝</b><span>Ⅱ</span>');if(typeof setTaskPanelExpanded==='function')setTaskPanelExpanded(false);if(typeof taskMissionStarted==='function')taskMissionStarted();toast(JLT('清单全部完成 · 这次升空属于你'));if(S.sound){initAudio();audio?.ctx.resume()}}
+function resetTaskFlight(){S.running=false;S.paused=false;S.ended=false;S.cheered=false;S.mission=-1;particles.length=0;lastSecond=-100;particleBudget=0;$('phase').textContent=JLT('完成所有任务，开启庆祝发射。');$('progress').style.width='0%';$('timer').textContent='T−0:10';$('timerStatus').textContent='WAITING FOR YOU';if(audio)audio.engine.gain.setTargetAtTime(0,audio.ctx.currentTime,.1);if(typeof syncTaskLaunchButton==='function')syncTaskLaunchButton();}
 $('squish').onclick=()=>{squishJelly(1);beep(230,.12,.025);};
 $('launch').onclick=start;document.addEventListener('keydown',e=>{if(e.repeat||e.ctrlKey||e.metaKey||e.altKey||e.target?.closest?.('input,button,textarea,select,[contenteditable],dialog'))return;if(e.code==='Space'){e.preventDefault();start()}if(e.code==='KeyR')resetView()});
-function resetView(){if(typeof presentationState!=='undefined'&&presentationState.mode==='present'){selectTourStop(0);return;}S.orbit=.69;S.elevation=.61;S.zoom=1;S.seaView=false;S.targetX=0;S.targetZ=0;$('viewAll').classList.add('active');$('viewSea').classList.remove('active');toast('恢复工作室视角')}
-$('resetView').onclick=resetView;$('viewAll').onclick=resetView;$('viewSea').onclick=()=>{S.seaView=true;S.elevation=.18;S.orbit=.66;S.zoom=1.16;$('viewSea').classList.add('active');$('viewAll').classList.remove('active');toast('海底观察 · 搅动海面可看见波纹传播')};
+function resetView(){if(typeof presentationState!=='undefined'&&presentationState.mode==='present'){selectTourStop(0);return;}S.orbit=.69;S.elevation=.61;S.zoom=1;S.seaView=false;S.targetX=0;S.targetZ=0;$('viewAll').classList.add('active');$('viewSea').classList.remove('active');toast(JLT('恢复工作室视角'))}
+$('resetView').onclick=resetView;$('viewAll').onclick=resetView;$('viewSea').onclick=()=>{S.seaView=true;S.elevation=.18;S.orbit=.66;S.zoom=1.16;$('viewSea').classList.add('active');$('viewAll').classList.remove('active');toast(JLT('海底观察 · 搅动海面可看见波纹传播'))};
 let cameraState={vp:M.identity(),eye:[18,14,21],right:[1,0,0],up:[0,1,0],target:[0,0,0],scale:13};
 function project(p){let m=cameraState.vp;let v=[...p,1],a=[];for(let r=0;r<4;r++)a[r]=m[r]*v[0]+m[4+r]*v[1]+m[8+r]*v[2]+m[12+r];return [(a[0]/a[3]*.5+.5)*canvas.clientWidth,(-a[1]/a[3]*.5+.5)*canvas.clientHeight,a[2]/a[3]]}
 function inverse(a){let out=new Float32Array(16),m=Array.from({length:4},(_,r)=>Array.from({length:8},(_,c)=>c<4?a[c*4+r]:(c-4===r?1:0)));for(let i=0;i<4;i++){let k=i;for(let r=i+1;r<4;r++)if(Math.abs(m[r][i])>Math.abs(m[k][i]))k=r;[m[i],m[k]]=[m[k],m[i]];let q=m[i][i];if(Math.abs(q)<1e-12)return M.identity();for(let c=0;c<8;c++)m[i][c]/=q;for(let r=0;r<4;r++)if(r!==i){q=m[r][i];for(let c=0;c<8;c++)m[r][c]-=m[i][c]*q}}for(let r=0;r<4;r++)for(let c=0;c<4;c++)out[c*4+r]=m[r][c+4];return out}
@@ -867,7 +985,7 @@ function buildClock(){for(let d=0;d<3;d++)for(let j=0;j<7;j++)group('digit'+d+'_
 const particles=[];function spawn(p,v,size,life,type=0){if(particles.length>1800)return;particles.push({p:p.slice(),v:v.slice(),size,life,maxLife:life,type,spin:rand()*6.28})}
 let lastSecond=-100,particleBudget=0;
 function updateMission(dt){if(S.running&&!S.paused)S.mission+=dt;let m=S.mission;let T=m-18;
-if(m>=0){let label=m<3?'机库门升起 · 检查轨道':m<5?'运输竖立机 · 沿轨道推出':m<8?'火箭竖立 · 液氧预冷':T< -3?'发射倒计时 · 水幕系统就绪':T<0?'九台发动机点火 · 推力建立':T<6?'已离开发射台 · 全推力上升':T<16?'上升段 · 通过最大动压':T<23?'主发动机关机 · 两级分离':T<35?'整流罩分离 · 助推器返航':'海上着陆 · 整流罩回收';if(S.paused)label='任务已暂停';if(S.ended)label='任务完成 · 回收成功';$('phase').textContent=label;let tc=clamp(T,-10,45),ab=Math.abs(Math.floor(tc));$('timer').textContent=(tc<0?'T−':'T+')+'0:'+String(ab).padStart(2,'0');$('timerStatus').textContent=S.paused?'PAUSED':S.ended?'MISSION COMPLETE':T<0?'COUNTDOWN':'FLIGHT IN PROGRESS';$('progress').style.width=clamp(m/63*100,0,100)+'%';if(!S.paused&&T<0&&m>=8&&Math.floor(T)!==lastSecond){lastSecond=Math.floor(T);beep(T<-3?650:1000,.1,T<-3?.05:.1)}if(m>=63&&!S.ended){S.running=false;S.ended=true;$('launch').innerHTML='<b>重播庆祝</b><span>↗</span>';if(typeof taskMissionEnded==='function')taskMissionEnded();toast('回收成功 · 今天的努力，值得被记住')}}
+if(m>=0){let label=m<3?JLT('机库门升起 · 检查轨道'):m<5?JLT('运输竖立机 · 沿轨道推出'):m<8?JLT('火箭竖立 · 液氧预冷'):T< -3?JLT('发射倒计时 · 水幕系统就绪'):T<0?JLT('九台发动机点火 · 推力建立'):T<6?JLT('已离开发射台 · 全推力上升'):T<16?JLT('上升段 · 通过最大动压'):T<23?JLT('主发动机关机 · 两级分离'):T<35?JLT('整流罩分离 · 助推器返航'):JLT('海上着陆 · 整流罩回收');if(S.paused)label=JLT('任务已暂停');if(S.ended)label=JLT('任务完成 · 回收成功');$('phase').textContent=label;let tc=clamp(T,-10,45),ab=Math.abs(Math.floor(tc));$('timer').textContent=(tc<0?'T−':'T+')+'0:'+String(ab).padStart(2,'0');$('timerStatus').textContent=S.paused?'PAUSED':S.ended?'MISSION COMPLETE':T<0?'COUNTDOWN':'FLIGHT IN PROGRESS';$('progress').style.width=clamp(m/63*100,0,100)+'%';if(!S.paused&&T<0&&m>=8&&Math.floor(T)!==lastSecond){lastSecond=Math.floor(T);beep(T<-3?650:1000,.1,T<-3?.05:.1)}if(m>=63&&!S.ended){S.running=false;S.ended=true;$('launch').innerHTML=JLT('<b>重播庆祝</b><span>↗</span>');if(typeof taskMissionEnded==='function')taskMissionEnded();toast(JLT('回收成功 · 今天的努力，值得被记住'))}}
 groups.get('clockPlus').visible=T>=0;
 let seconds=S.mission<8?10:Math.abs(Math.floor(clamp(T,-10,45))),digits=[0,Math.floor(seconds/10),seconds%10];for(let d=0;d<3;d++)for(let j=0;j<7;j++)groups.get('digit'+d+'_'+j).visible=!!digitSegments[digits[d]][j];
 let base=[-.8,1.44,-2.4],rot=0;
@@ -1065,10 +1183,10 @@ function syncPresentationUI(){
   }
   if($('tourPanel'))$('tourPanel').hidden=!presenting;
   if($('taskPanel'))$('taskPanel').hidden=presentationState.mode!=='tasks';
-  if($('tourKicker'))$('tourKicker').textContent=stop.kicker;
-  if($('tourTitle'))$('tourTitle').textContent=stop.title;
-  if($('tourDescription'))$('tourDescription').textContent=stop.description;
-  if($('tourWhy'))$('tourWhy').textContent=stop.why;
+  if($('tourKicker'))$('tourKicker').textContent=JLT(stop.kicker);
+  if($('tourTitle'))$('tourTitle').textContent=JLT(stop.title);
+  if($('tourDescription'))$('tourDescription').textContent=JLT(stop.description);
+  if($('tourWhy'))$('tourWhy').textContent=JLT(stop.why);
   if($('tourIndex'))$('tourIndex').textContent=String(presentationState.index+1).padStart(2,'0')+' / 05';
   if($('tourPrev'))$('tourPrev').disabled=presentationState.index===0;
   if($('tourNext'))$('tourNext').disabled=presentationState.index===tourStops.length-1;
@@ -1090,7 +1208,7 @@ function setTaskPanelExpanded(expanded){
   const changed=document.body.classList.contains('task-panel-expanded')!==!!expanded;
   if(!expanded&&isCompactScene()&&$('taskPanel')?.contains(document.activeElement)){document.activeElement.blur();$('taskDockOpen')?.focus({preventScroll:true});}
   document.body.classList.toggle('task-panel-expanded',!!expanded);
-  const button=$('taskPanelToggle');if(button){button.textContent=expanded?'收起 ↓':'展开 ↑';button.setAttribute('aria-expanded',String(!!expanded));}
+  const button=$('taskPanelToggle');if(button){button.textContent=expanded?JLT('收起 ↓'):JLT('展开 ↑');button.setAttribute('aria-expanded',String(!!expanded));}
   if($('taskDockOpen'))$('taskDockOpen').setAttribute('aria-expanded',String(!!expanded));
   if(changed&&expanded&&$('taskPanel'))$('taskPanel').scrollTop=0;
   if(window.__jellyViewportReady)syncViewportLayout();
@@ -1170,8 +1288,8 @@ function updatePresentationOverlay(){
   }
   const status=$('worldStatus');
   if(status){
-    const phase=S.paused?'任务已暂停':S.ended?'回收完成':S.mission<0?'海浪与船只持续运动':$('phase')?.textContent||'任务进行中';
-    const text='海风 '+S.wind.toFixed(1)+' m/s · '+phase;
+    const phase=S.paused?JLT('任务已暂停'):S.ended?JLT('回收完成'):S.mission<0?JLT('海浪与船只持续运动'):$('phase')?.textContent||JLT('任务进行中');
+    const text=JLT('海风 ')+S.wind.toFixed(1)+' m/s · '+phase;
     if(status.textContent!==text)status.textContent=text;
   }
 }
@@ -1201,7 +1319,7 @@ syncPresentationUI();
 
 // Personal mission board. All user content stays in this browser or an explicit JSON backup.
 const TASK_STORAGE_KEY='launch-jelly.tasks.v1',TASK_VERSION=1,TASK_LIMIT=120;
-const taskState={version:TASK_VERSION,name:'我的发射计划',tasks:[],autoLaunch:true,archives:[],celebratedTaskSet:null};
+const taskState={version:TASK_VERSION,name:JLT('我的发射计划'),tasks:[],autoLaunch:true,archives:[],celebratedTaskSet:null};
 let taskFilter='all',taskPendingLaunch=null,taskUndoRecord=null,taskUndoTimer=null,taskEditingId=null;
 let taskStorageAvailable=true,taskStorageMessage='自动保存在此浏览器',taskNoticeTimer=null;
 let taskUnreadableStorage=null,taskEditReturnFocus=null;
@@ -1209,30 +1327,30 @@ let taskUnreadableStorage=null,taskEditReturnFocus=null;
 function taskNewId(){return typeof crypto!=='undefined'&&crypto.randomUUID?crypto.randomUUID():'task-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,10);}
 function taskToday(){const now=new Date();return now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');}
 function taskDateValid(value){if(value==='')return true;if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value))return false;const [y,m,d]=value.split('-').map(Number),date=new Date(0);date.setUTCFullYear(y,m-1,d);date.setUTCHours(0,0,0,0);return y>=2020&&y<=2099&&date.getUTCFullYear()===y&&date.getUTCMonth()===m-1&&date.getUTCDate()===d;}
-function taskPlainText(value,max,allowEmpty=false){if(typeof value!=='string')throw new Error('文字字段类型不正确');const clean=value.trim();if((!allowEmpty&&!clean)||clean.length>max||/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(clean))throw new Error('文字字段为空或超过长度限制');return clean;}
+function taskPlainText(value,max,allowEmpty=false){if(typeof value!=='string')throw new Error(JLT('文字字段类型不正确'));const clean=value.trim();if((!allowEmpty&&!clean)||clean.length>max||/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(clean))throw new Error(JLT('文字字段为空或超过长度限制'));return clean;}
 function taskCleanInput(value){return String(value).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g,'').replace(/\s+/g,' ').trim();}
 function taskShowPanel(){if(typeof setPresentationMode==='function')setPresentationMode('tasks');if(typeof setTaskPanelExpanded==='function')setTaskPanelExpanded(true);}
 function taskValidateList(list){
-  if(!Array.isArray(list)||list.length>TASK_LIMIT)throw new Error('每轮最多保存 120 项任务');
+  if(!Array.isArray(list)||list.length>TASK_LIMIT)throw new Error(JLT('每轮最多保存 120 项任务'));
   const ids=new Set();
   return list.map(item=>{
-    if(!item||typeof item!=='object'||Array.isArray(item))throw new Error('任务格式不正确');
+    if(!item||typeof item!=='object'||Array.isArray(item))throw new Error(JLT('任务格式不正确'));
     const id=taskPlainText(item.id,80),title=taskPlainText(item.title,140),tag=taskPlainText(item.tag,18,true);
-    if(ids.has(id)||typeof item.done!=='boolean'||!taskDateValid(item.due)||typeof item.createdAt!=='number'||!Number.isFinite(item.createdAt)||item.createdAt<0)throw new Error('任务内容或日期不正确');
+    if(ids.has(id)||typeof item.done!=='boolean'||!taskDateValid(item.due)||typeof item.createdAt!=='number'||!Number.isFinite(item.createdAt)||item.createdAt<0)throw new Error(JLT('任务内容或日期不正确'));
     ids.add(id);return {id,title,tag,due:item.due,done:item.done,createdAt:item.createdAt};
   });
 }
 function taskValidateBackup(value){
-  if(!value||typeof value!=='object'||Array.isArray(value)||value.version!==TASK_VERSION)throw new Error('不是受支持的任务备份（需要 version: 1）');
+  if(!value||typeof value!=='object'||Array.isArray(value)||value.version!==TASK_VERSION)throw new Error(JLT('不是受支持的任务备份（需要 version: 1）'));
   const name=taskPlainText(value.name,80),tasks=taskValidateList(value.tasks);
-  if(typeof value.autoLaunch!=='boolean'||!Array.isArray(value.archives)||value.archives.length>12)throw new Error('备份设置或归档格式不正确');
+  if(typeof value.autoLaunch!=='boolean'||!Array.isArray(value.archives)||value.archives.length>12)throw new Error(JLT('备份设置或归档格式不正确'));
   const archives=value.archives.map(item=>{
-    if(!item||typeof item!=='object'||Array.isArray(item))throw new Error('归档格式不正确');
+    if(!item||typeof item!=='object'||Array.isArray(item))throw new Error(JLT('归档格式不正确'));
     const savedTasks=taskValidateList(item.tasks),id=taskPlainText(item.id,80),savedName=taskPlainText(item.name,80);
-    if(typeof item.completedAt!=='number'||!Number.isFinite(item.completedAt)||item.completedAt<0||!Number.isInteger(item.total)||item.total!==savedTasks.length||savedTasks.length===0||savedTasks.some(task=>!task.done))throw new Error('归档统计不正确');
+    if(typeof item.completedAt!=='number'||!Number.isFinite(item.completedAt)||item.completedAt<0||!Number.isInteger(item.total)||item.total!==savedTasks.length||savedTasks.length===0||savedTasks.some(task=>!task.done))throw new Error(JLT('归档统计不正确'));
     return {id,name:savedName,completedAt:item.completedAt,total:savedTasks.length,tasks:savedTasks};
   });
-  if(value.celebratedTaskSet!==null&&value.celebratedTaskSet!==undefined&&(typeof value.celebratedTaskSet!=='string'||value.celebratedTaskSet.length>24000))throw new Error('庆祝记录格式不正确');
+  if(value.celebratedTaskSet!==null&&value.celebratedTaskSet!==undefined&&(typeof value.celebratedTaskSet!=='string'||value.celebratedTaskSet.length>24000))throw new Error(JLT('庆祝记录格式不正确'));
   return {version:TASK_VERSION,name,tasks,autoLaunch:value.autoLaunch,archives,celebratedTaskSet:value.celebratedTaskSet||null};
 }
 function taskNotice(message){clearTimeout(taskNoticeTimer);taskNoticeTimer=setTimeout(()=>toast(message),250);}
@@ -1243,13 +1361,13 @@ function taskPersist(){
     if(taskUnreadableStorage!==null){localStorage.setItem(TASK_STORAGE_KEY+'.recovery',taskUnreadableStorage);taskUnreadableStorage=null;}
     localStorage.setItem(TASK_STORAGE_KEY,JSON.stringify(taskState));taskStorageMessage='自动保存在此浏览器';
   }
-  catch(error){taskStorageAvailable=false;taskStorageMessage='本次修改仅保存在内存 · 请导出备份';taskNotice('浏览器无法保存任务，请用“导出备份”保留本次修改。');}
+  catch(error){taskStorageAvailable=false;taskStorageMessage='本次修改仅保存在内存 · 请导出备份';taskNotice(JLT('浏览器无法保存任务，请用“导出备份”保留本次修改。'));}
   taskRenderStorage();
 }
 try{
   const saved=localStorage.getItem(TASK_STORAGE_KEY);
-  if(saved){try{Object.assign(taskState,taskValidateBackup(JSON.parse(saved)));}catch(error){taskUnreadableStorage=saved;taskStorageMessage='本地存档无法读取 · 原始数据会在修改前另存';taskNotice('本地任务存档无法读取，原始数据已保留。你可以导入有效备份。');}}
-}catch(error){taskStorageAvailable=false;taskStorageMessage='浏览器未允许保存 · 请导出备份';taskNotice('当前浏览器不允许本地保存，仍可使用任务清单并导出备份。');}
+  if(saved){try{Object.assign(taskState,taskValidateBackup(JSON.parse(saved)));}catch(error){taskUnreadableStorage=saved;taskStorageMessage='本地存档无法读取 · 原始数据会在修改前另存';taskNotice(JLT('本地任务存档无法读取，原始数据已保留。你可以导入有效备份。'));}}
+}catch(error){taskStorageAvailable=false;taskStorageMessage='浏览器未允许保存 · 请导出备份';taskNotice(JLT('当前浏览器不允许本地保存，仍可使用任务清单并导出备份。'));}
 
 function taskStats(){const total=taskState.tasks.length,done=taskState.tasks.filter(task=>task.done).length,today=taskToday();return {total,done,left:total-done,percent:total?Math.round(done/total*100):0,ready:total>0&&done===total,overdue:taskState.tasks.filter(task=>!task.done&&task.due&&task.due<today).length};}
 function taskSetSignature(){return JSON.stringify(taskState.tasks.map(task=>task.id).sort());}
@@ -1259,7 +1377,7 @@ function taskIsEditing(){return !!$('taskEditDialog')?.open||!!document.activeEl
 function taskResetFlight(){if((S.running||S.ended||S.mission>=0)&&typeof resetTaskFlight==='function')resetTaskFlight();}
 function canLaunchTasks(notify=false){
   const stats=taskStats();if(stats.ready)return true;
-  if(notify){taskShowPanel();toast(stats.total?'还有 '+stats.left+' 项任务，完成后再点火。':'先添加一项自己的任务，完成后就能发射。');}
+  if(notify){taskShowPanel();toast(stats.total?JLT('还有 ')+stats.left+JLT(' 项任务，完成后再点火。'):JLT('先添加一项自己的任务，完成后就能发射。'));}
   return false;
 }
 function syncTaskLaunchButton(){
@@ -1268,9 +1386,9 @@ function syncTaskLaunchButton(){
   const stats=taskStats(),celebrated=taskState.celebratedTaskSet===taskSetSignature();
   button.disabled=!stats.ready;
   const strong=document.createElement('b'),icon=document.createElement('span');icon.setAttribute('aria-hidden','true');
-  strong.textContent=!stats.total?'先添加任务':!stats.ready?'待全部完成':taskPendingLaunch!==null?'准备点火':celebrated?'重播庆祝':'发射庆祝';
+  strong.textContent=!stats.total?JLT('先添加任务'):!stats.ready?JLT('待全部完成'):taskPendingLaunch!==null?JLT('准备点火'):celebrated?JLT('重播庆祝'):JLT('发射庆祝');
   icon.textContent=stats.ready?'↗':stats.percent+'%';button.replaceChildren(strong,icon);
-  button.title=stats.ready?'用一场火箭发射庆祝全部完成':stats.total?'还剩 '+stats.left+' 项任务':'在任务清单中加入你的第一项任务';
+  button.title=stats.ready?JLT('用一场火箭发射庆祝全部完成'):stats.total?JLT('还剩 ')+stats.left+JLT(' 项任务'):JLT('在任务清单中加入你的第一项任务');
 }
 function taskMissionStarted(){
   taskCancelLaunch();
@@ -1293,46 +1411,46 @@ function taskMutated({reason='edit',beforeReady=false,resetFlight=false}={}){
   if(resetFlight){taskState.celebratedTaskSet=null;taskResetFlight();}
   taskPersist();taskMaybeLaunch(beforeReady,reason);renderTasks();
 }
-function taskFormatDate(value){if(!value)return '';const [year,month,day]=value.split('-');return Number(month)+'月'+Number(day)+'日'+(Number(year)!==new Date().getFullYear()?' · '+year:'');}
+function taskFormatDate(value){if(!value)return '';const [year,month,day]=value.split('-').map(Number);return new Intl.DateTimeFormat(window.JellyLocale.language==='en'?'en-US':'zh-CN',{month:'short',day:'numeric',...(year!==new Date().getFullYear()?{year:'numeric'}:{})}).format(new Date(year,month-1,day));}
 function taskRenderStorage(){
   const warning=taskStorageMessage.startsWith('本地存档'),status=$('storageStatus');
-  if(status){status.textContent=!taskStorageAvailable?'暂未保存':warning?'存档需恢复':'已本机保存';status.title=taskStorageMessage;}
-  const note=document.querySelector('.task-local-note');if(note){note.textContent=!taskStorageAvailable?taskStorageMessage+'。归档仅保留最近 12 轮，请导出备份。':warning?taskStorageMessage+'。你也可以导入有效备份。':'仅保存在此浏览器，归档保留最近 12 轮。导出备份可带走任务。';note.classList.toggle('storage-warning',!taskStorageAvailable||warning);}
+  if(status){status.textContent=!taskStorageAvailable?JLT('暂未保存'):warning?JLT('存档需恢复'):JLT('已本机保存');status.title=JLT(taskStorageMessage);}
+  const note=document.querySelector('.task-local-note');if(note){note.textContent=!taskStorageAvailable?JLT(taskStorageMessage)+JLT('。归档仅保留最近 12 轮，请导出备份。'):warning?JLT(taskStorageMessage)+JLT('。你也可以导入有效备份。'):JLT('仅保存在此浏览器，归档保留最近 12 轮。导出备份可带走任务。');note.classList.toggle('storage-warning',!taskStorageAvailable||warning);}
 }
 function renderTaskMetrics(){
   const stats=taskStats(),percent=$('taskPercent');if(percent)percent.textContent=String(stats.percent);
   if($('taskDockName'))$('taskDockName').textContent=taskState.name;
-  if($('taskDockCount'))$('taskDockCount').textContent='完成 '+stats.done+' / '+stats.total+' 项';
+  if($('taskDockCount'))$('taskDockCount').textContent=JLT('完成 ')+stats.done+' / '+stats.total+JLT(' 项');
   if($('taskDockPercent'))$('taskDockPercent').textContent=String(stats.percent);
-  const dockRing=$('taskDockRing');if(dockRing){dockRing.style.setProperty('--progress',stats.percent+'%');dockRing.setAttribute('aria-valuenow',String(stats.percent));dockRing.setAttribute('aria-valuetext','已完成 '+stats.done+' 项，共 '+stats.total+' 项');}
-  const ring=$('taskProgressRing');if(ring){ring.style.setProperty('--progress',stats.percent+'%');ring.setAttribute('aria-valuenow',String(stats.percent));ring.setAttribute('aria-valuetext','已完成 '+stats.done+' 项，共 '+stats.total+' 项');}
-  if($('taskCountLabel'))$('taskCountLabel').textContent='已完成 '+stats.done+' / '+stats.total+' 项'+(stats.overdue?' · '+stats.overdue+' 项逾期':'');
-  let summary=!stats.total?'加入自己的任务，让每一次完成都离发射更近。':!stats.ready?'再完成 '+stats.left+' 项任务，就能发射这枚火箭。':S.running?(S.paused?'庆祝已暂停，随时可以继续。':'你已完成这一轮，火箭正在为你升空。'):taskPendingLaunch!==null?'全部完成！准备点火…':S.ended?'这一轮已完成，火箭也已归来。归档后，开始下一程。':'全部完成！可以发射庆祝，或归档开始下一轮。';
+  const dockRing=$('taskDockRing');if(dockRing){dockRing.style.setProperty('--progress',stats.percent+'%');dockRing.setAttribute('aria-valuenow',String(stats.percent));dockRing.setAttribute('aria-valuetext',JLT('已完成 ')+stats.done+JLT(' 项，共 ')+stats.total+JLT(' 项'));}
+  const ring=$('taskProgressRing');if(ring){ring.style.setProperty('--progress',stats.percent+'%');ring.setAttribute('aria-valuenow',String(stats.percent));ring.setAttribute('aria-valuetext',JLT('已完成 ')+stats.done+JLT(' 项，共 ')+stats.total+JLT(' 项'));}
+  if($('taskCountLabel'))$('taskCountLabel').textContent=JLT('已完成 ')+stats.done+' / '+stats.total+JLT(' 项')+(stats.overdue?' · '+stats.overdue+JLT(' 项逾期'):'');
+  let summary=!stats.total?JLT('加入自己的任务，让每一次完成都离发射更近。'):!stats.ready?JLT('再完成 ')+stats.left+JLT(' 项任务，就能发射这枚火箭。'):S.running?(S.paused?JLT('庆祝已暂停，随时可以继续。'):JLT('你已完成这一轮，火箭正在为你升空。')):taskPendingLaunch!==null?JLT('全部完成！准备点火…'):S.ended?JLT('这一轮已完成，火箭也已归来。归档后，开始下一程。'):JLT('全部完成！可以发射庆祝，或归档开始下一轮。');
   const summaryNode=$('taskSummary');if(summaryNode&&summaryNode.textContent!==summary)summaryNode.textContent=summary;
   taskRenderStorage();
   if($('autoLaunch'))$('autoLaunch').checked=taskState.autoLaunch;
-  const archive=$('taskArchive');if(archive){archive.disabled=!stats.ready||S.running||taskPendingLaunch!==null;archive.title=S.running?'庆祝结束后即可归档':stats.ready?'将这一轮保存到旅程记录，并开始空白新清单':'完成全部任务后即可归档';}
+  const archive=$('taskArchive');if(archive){archive.disabled=!stats.ready||S.running||taskPendingLaunch!==null;archive.title=S.running?JLT('庆祝结束后即可归档'):stats.ready?JLT('将这一轮保存到旅程记录，并开始空白新清单'):JLT('完成全部任务后即可归档');}
   const success=$('taskSuccess');if(success)success.hidden=!stats.ready;
-  if($('taskSuccessText'))$('taskSuccessText').textContent=S.running?'每一项完成，都算数。现在，抬头看你的火箭。':S.ended?'全部 '+stats.total+' 项已完成 · 这一程，做到了。':taskPendingLaunch!==null?'全部 '+stats.total+' 项已完成 · 为你准备一场发射。':'全部 '+stats.total+' 项已完成 · 准备庆祝你的努力。';
+  if($('taskSuccessText'))$('taskSuccessText').textContent=S.running?JLT('每一项完成，都算数。现在，抬头看你的火箭。'):S.ended?JLT('全部 ')+stats.total+JLT(' 项已完成 · 这一程，做到了。'):taskPendingLaunch!==null?JLT('全部 ')+stats.total+JLT(' 项已完成 · 为你准备一场发射。'):JLT('全部 ')+stats.total+JLT(' 项已完成 · 准备庆祝你的努力。');
   for(const button of $('taskFilters')?.querySelectorAll('button[data-task-filter]')||[]){const active=button.dataset.taskFilter===taskFilter;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));}
   syncTaskLaunchButton();
 }
 function renderTaskTags(){
   const datalist=$('taskTagOptions');if(!datalist)return;datalist.replaceChildren();
-  const tags=new Set(['工作','学习','生活','重要',...taskState.tasks.map(task=>task.tag).filter(Boolean)]);
+  const tags=new Set([JLT('工作'),JLT('学习'),JLT('生活'),JLT('重要'),...taskState.tasks.map(task=>task.tag).filter(Boolean)]);
   for(const value of tags){const option=document.createElement('option');option.value=value;datalist.append(option);}
 }
 function renderTaskHistory(){
   const history=$('taskHistory');if(!history)return;history.replaceChildren();
-  if(!taskState.archives.length){const note=document.createElement('p');note.className='task-history-empty';note.textContent='归档后，在这里回看完成的旅程。保留最近 12 轮。';history.append(note);return;}
+  if(!taskState.archives.length){const note=document.createElement('p');note.className='task-history-empty';note.textContent=JLT('归档后，在这里回看完成的旅程。保留最近 12 轮。');history.append(note);return;}
   for(const record of taskState.archives){
     const entry=document.createElement('details');entry.className='task-history-record';
     const row=document.createElement('summary');row.className='task-history-row';
-    const title=document.createElement('strong');title.textContent=record.name;
-    const detail=document.createElement('span'),date=new Date(record.completedAt);detail.textContent=(date.getMonth()+1)+'月'+date.getDate()+'日 · '+record.total+' 项完成';
+    const title=document.createElement('strong');title.dataset.userContent="";title.textContent=record.name;
+    const detail=document.createElement('span'),date=new Date(record.completedAt);detail.textContent=new Intl.DateTimeFormat(window.JellyLocale.language==='en'?'en-US':'zh-CN',{month:'short',day:'numeric'}).format(date)+' · '+record.total+JLT(' 项完成');
     row.append(title,detail);entry.append(row);
     const tasks=document.createElement('ul');tasks.className='task-history-tasks';
-    for(const task of record.tasks){const item=document.createElement('li'),label=document.createElement('span');label.textContent='✓ '+task.title;item.append(label);if(task.tag||task.due){const meta=document.createElement('small');meta.textContent=[task.tag,taskFormatDate(task.due)].filter(Boolean).join(' · ');item.append(meta);}tasks.append(item);}
+    for(const task of record.tasks){const item=document.createElement('li'),label=document.createElement('span');label.dataset.userContent='';label.textContent='✓ '+task.title;item.append(label);if(task.tag||task.due){const meta=document.createElement('small');meta.dataset.userContent='';meta.textContent=[task.tag,taskFormatDate(task.due)].filter(Boolean).join(' · ');item.append(meta);}tasks.append(item);}
     entry.append(tasks);history.append(entry);
   }
 }
@@ -1342,7 +1460,7 @@ function renderTasks(){
     const shown=taskState.tasks.filter(task=>taskFilter==='all'||(taskFilter==='done'?task.done:!task.done));
     for(const task of shown){
       const row=document.createElement('li');row.className='task-row'+(task.done?' is-done':'')+(!task.done&&task.due&&task.due<today?' is-overdue':'');row.dataset.taskId=task.id;
-      const check=document.createElement('input');check.type='checkbox';check.className='task-check';check.checked=task.done;check.setAttribute('aria-label','完成：'+task.title);
+      const check=document.createElement('input');check.type='checkbox';check.className='task-check';check.checked=task.done;check.setAttribute('aria-label',JLT('完成：')+task.title);
       check.addEventListener('change',()=>{
         const beforeReady=taskStats().ready;task.done=check.checked;
         if(typeof squishJelly==='function')squishJelly(task.done?.5:.25);
@@ -1350,9 +1468,9 @@ function renderTasks(){
         const replacement=Array.from($('taskList')?.children||[]).find(item=>item.dataset.taskId===task.id)?.querySelector('.task-check');replacement?.focus({preventScroll:true});
       });
       const copy=document.createElement('div');copy.className='task-copy';
-      const title=document.createElement('button');title.type='button';title.className='task-title';title.dataset.action='edit';title.textContent=task.title;title.addEventListener('click',()=>taskOpenEdit(task.id));copy.append(title);
-      if(task.tag||task.due){const meta=document.createElement('div');meta.className='task-meta';if(task.tag){const tag=document.createElement('span');tag.className='tag-pill';tag.textContent=task.tag;meta.append(tag);}if(task.due){const due=document.createElement('span');due.className='due-pill';due.textContent=(!task.done&&task.due<today?'逾期 · ':'')+taskFormatDate(task.due);meta.append(due);}copy.append(meta);}
-      const edit=document.createElement('button');edit.type='button';edit.className='task-edit';edit.dataset.action='edit';edit.setAttribute('aria-label','编辑：'+task.title);edit.textContent='···';edit.addEventListener('click',()=>taskOpenEdit(task.id));
+      const title=document.createElement('button');title.type='button';title.className='task-title';title.dataset.action='edit';title.dataset.userContent="";title.textContent=task.title;title.addEventListener('click',()=>taskOpenEdit(task.id));copy.append(title);
+      if(task.tag||task.due){const meta=document.createElement('div');meta.className='task-meta';if(task.tag){const tag=document.createElement('span');tag.className='tag-pill';tag.dataset.userContent="";tag.textContent=task.tag;meta.append(tag);}if(task.due){const due=document.createElement('span');due.className='due-pill';due.textContent=(!task.done&&task.due<today?JLT('逾期 · '):'')+taskFormatDate(task.due);meta.append(due);}copy.append(meta);}
+      const edit=document.createElement('button');edit.type='button';edit.className='task-edit';edit.dataset.action='edit';edit.setAttribute('aria-label',JLT('编辑：')+task.title);edit.textContent='···';edit.addEventListener('click',()=>taskOpenEdit(task.id));
       row.append(check,copy,edit);list.append(row);
     }
     const empty=$('taskEmpty');if(empty){
@@ -1360,8 +1478,8 @@ function renderTasks(){
       let heading=empty.querySelector('strong'),description=empty.querySelector('p');
       if(!heading){heading=document.createElement('strong');empty.prepend(heading);}
       if(!description){description=document.createElement('p');heading.after(description);}
-      heading.textContent=stats.total?(taskFilter==='done'?'还没有已完成的任务。':'这里的任务都已完成。'):'下一次发射，由你完成。';
-      description.textContent=stats.total?(taskFilter==='done'?'每完成一项，果冻都会为你弹一下。':'切换“全部”，回看你的完成清单。'):'写下任务，勾选完成。全部完成时，整座小岛为你庆祝。';
+      heading.textContent=stats.total?(taskFilter==='done'?JLT('还没有已完成的任务。'):JLT('这里的任务都已完成。')):JLT('下一次发射，由你完成。');
+      description.textContent=stats.total?(taskFilter==='done'?JLT('每完成一项，果冻都会为你弹一下。'):JLT('切换“全部”，回看你的完成清单。')):JLT('写下任务，勾选完成。全部完成时，整座小岛为你庆祝。');
       const templates=empty.querySelector('.task-templates');if(templates)templates.hidden=stats.total>0;
       const orbit=empty.querySelector('.empty-orbit');if(orbit)orbit.hidden=stats.total>0;
     }
@@ -1377,8 +1495,8 @@ function taskSetUndo(record,label,duration=12000){
 function taskRemove(id){
   const index=taskState.tasks.findIndex(task=>task.id===id);if(index<0)return;
   const [removed]=taskState.tasks.splice(index,1);
-  taskSetUndo({kind:'delete',task:removed,index},'已删除「'+(removed.title.length>15?removed.title.slice(0,15)+'…':removed.title)+'」· 撤销');
-  taskMutated({reason:'delete',resetFlight:!taskState.tasks.length});toast('已删除任务，可在 12 秒内撤销。');
+  taskSetUndo({kind:'delete',task:removed,index},JLT('已删除「')+(removed.title.length>15?removed.title.slice(0,15)+'…':removed.title)+JLT('」· 撤销'));
+  taskMutated({reason:'delete',resetFlight:!taskState.tasks.length});toast(JLT('已删除任务，可在 12 秒内撤销。'));
 }
 function taskRestoreEditFocus(){const target=taskEditReturnFocus;taskEditReturnFocus=null;if(target?.isConnected)target.focus({preventScroll:true});}
 function taskCloseEdit(){const dialog=$('taskEditDialog');if(dialog?.open&&typeof dialog.close==='function')dialog.close();else dialog?.removeAttribute('open');taskEditingId=null;taskRestoreEditFocus();}
@@ -1394,26 +1512,26 @@ function taskOpenEdit(id){
 function taskReadForm(titleId,tagId,dueId){
   const title=$(titleId),tag=$(tagId),due=$(dueId);title.setCustomValidity('');tag.setCustomValidity('');due.setCustomValidity('');
   const cleanTitle=taskCleanInput(title.value),cleanTag=taskCleanInput(tag.value);
-  if(!cleanTitle||cleanTitle.length>140){title.setCustomValidity('请填写 1–140 字的任务名称。');title.reportValidity();return null;}
-  if(cleanTag.length>18){tag.setCustomValidity('标签最多 18 字。');tag.reportValidity();return null;}
-  if(!taskDateValid(due.value)){due.setCustomValidity('请选择有效的日期。');due.reportValidity();return null;}
+  if(!cleanTitle||cleanTitle.length>140){title.setCustomValidity(JLT('请填写 1–140 字的任务名称。'));title.reportValidity();return null;}
+  if(cleanTag.length>18){tag.setCustomValidity(JLT('标签最多 18 字。'));tag.reportValidity();return null;}
+  if(!taskDateValid(due.value)){due.setCustomValidity(JLT('请选择有效的日期。'));due.reportValidity();return null;}
   return {title:cleanTitle,tag:cleanTag,due:due.value};
 }
 $('taskAddForm')?.addEventListener('submit',event=>{
-  event.preventDefault();if(taskState.tasks.length>=TASK_LIMIT){toast('每轮最多 120 项任务，请先完成并归档这一轮。');return;}
+  event.preventDefault();if(taskState.tasks.length>=TASK_LIMIT){toast(JLT('每轮最多 120 项任务，请先完成并归档这一轮。'));return;}
   const value=taskReadForm('taskTitle','taskTag','taskDue');if(!value)return;
   taskState.tasks.push({id:taskNewId(),...value,done:false,createdAt:Date.now()});
   taskShowPanel();if(taskFilter==='done')taskFilter='active';
   taskMutated({reason:'add',resetFlight:true});$('taskTitle').value='';$('taskTitle').focus({preventScroll:true});
 });
 $('missionName')?.addEventListener('input',event=>{
-  taskCancelLaunch();if(taskUndoRecord?.kind==='import')taskClearUndo();taskState.name=taskCleanInput(event.target.value).slice(0,80)||'我的发射计划';taskPersist();renderTaskMetrics();
+  taskCancelLaunch();if(taskUndoRecord?.kind==='import')taskClearUndo();taskState.name=taskCleanInput(event.target.value).slice(0,80)||JLT('我的发射计划');taskPersist();renderTaskMetrics();
 });
 $('missionName')?.addEventListener('blur',()=>{if($('missionName'))$('missionName').value=taskState.name;});
 $('taskEditForm')?.addEventListener('submit',event=>{
   event.preventDefault();const task=taskState.tasks.find(item=>item.id===taskEditingId);if(!task){taskCloseEdit();return;}
   const value=taskReadForm('taskEditTitle','taskEditTag','taskEditDue');if(!value)return;
-  const editedId=task.id;Object.assign(task,value);taskCloseEdit();taskMutated({reason:'edit'});toast('任务已更新。');
+  const editedId=task.id;Object.assign(task,value);taskCloseEdit();taskMutated({reason:'edit'});toast(JLT('任务已更新。'));
   Array.from($('taskList')?.children||[]).find(row=>row.dataset.taskId===editedId)?.querySelector('.task-edit')?.focus({preventScroll:true});
 });
 for(const id of ['taskTitle','taskTag','taskDue','taskEditTitle','taskEditTag','taskEditDue'])$(id)?.addEventListener('input',event=>event.target.setCustomValidity(''));
@@ -1426,49 +1544,49 @@ $('taskUndo')?.addEventListener('click',()=>{
   if(taskUndoRecord.kind==='import'){
     const previous=taskUndoRecord.state;taskCancelLaunch();taskClearUndo();taskCloseEdit();taskResetFlight();Object.assign(taskState,previous);taskFilter='all';
     if($('missionName'))$('missionName').value=taskState.name;
-    taskPersist();renderTasks();taskShowPanel();toast('已撤销导入，原清单和归档已恢复。');return;
+    taskPersist();renderTasks();taskShowPanel();toast(JLT('已撤销导入，原清单和归档已恢复。'));return;
   }
-  if(taskState.tasks.length>=TASK_LIMIT){toast('清单已满，无法撤销。');return;}
-  const {task,index}=taskUndoRecord;taskState.tasks.splice(Math.min(index,taskState.tasks.length),0,task);if(taskFilter==='done'&&!task.done||taskFilter==='active'&&task.done)taskFilter='all';taskClearUndo();taskMutated({reason:'undo',resetFlight:true});taskShowPanel();toast('任务已恢复。');
+  if(taskState.tasks.length>=TASK_LIMIT){toast(JLT('清单已满，无法撤销。'));return;}
+  const {task,index}=taskUndoRecord;taskState.tasks.splice(Math.min(index,taskState.tasks.length),0,task);if(taskFilter==='done'&&!task.done||taskFilter==='active'&&task.done)taskFilter='all';taskClearUndo();taskMutated({reason:'undo',resetFlight:true});taskShowPanel();toast(JLT('任务已恢复。'));
 });
 $('taskFilters')?.addEventListener('click',event=>{const button=event.target.closest('button[data-task-filter]');if(!button||!['all','active','done'].includes(button.dataset.taskFilter))return;taskFilter=button.dataset.taskFilter;renderTasks();});
 $('autoLaunch')?.addEventListener('change',event=>{taskCancelLaunch();if(taskUndoRecord?.kind==='import')taskClearUndo();taskState.autoLaunch=event.target.checked;taskPersist();renderTaskMetrics();});
 $('taskArchive')?.addEventListener('click',()=>{
   const stats=taskStats();if(!stats.ready||S.running||taskPendingLaunch!==null)return;
-  if(taskState.archives.length>=12&&!window.confirm('归档只保留最近 12 轮。本次将移除最早的「'+taskState.archives[taskState.archives.length-1].name+'」。建议先导出备份。继续归档吗？'))return;
+  if(taskState.archives.length>=12&&!window.confirm(JLT('归档只保留最近 12 轮。本次将移除最早的「')+taskState.archives[taskState.archives.length-1].name+JLT('」。建议先导出备份。继续归档吗？')))return;
   taskState.archives.unshift({id:taskNewId(),name:taskState.name,completedAt:Date.now(),total:stats.total,tasks:taskState.tasks.map(task=>({...task}))});
-  taskState.archives=taskState.archives.slice(0,12);taskState.tasks=[];taskState.celebratedTaskSet=null;taskClearUndo();taskFilter='all';taskMutated({reason:'archive',resetFlight:true});taskShowPanel();toast('这一轮已归档。新的旅程，从一件小事开始。');$('taskTitle')?.focus({preventScroll:true});
+  taskState.archives=taskState.archives.slice(0,12);taskState.tasks=[];taskState.celebratedTaskSet=null;taskClearUndo();taskFilter='all';taskMutated({reason:'archive',resetFlight:true});taskShowPanel();toast(JLT('这一轮已归档。新的旅程，从一件小事开始。'));$('taskTitle')?.focus({preventScroll:true});
 });
 function taskAddTemplate(kind){
-  const templates=kind==='study'?{name:'今天的学习计划',tag:'学习',titles:['明确今天要掌握的知识点','专注学习 25 分钟','完成一组练习或一次实践','用自己的话复述重点','回顾错题，记录下次的起点']}:{name:'今天的工作计划',tag:'工作',titles:['写下今天最重要的产出','完成一段不被打断的专注工作','推进最重要的一项交付','处理需要回复或协作的事情','整理成果，安排下一步']};
-  if(taskState.tasks.length+templates.titles.length>TASK_LIMIT){toast('剩余空间不足以加入模板，每轮最多 120 项。');return;}
-  const wasEmpty=taskState.tasks.length===0;if(wasEmpty&&taskState.name==='我的发射计划'){taskState.name=templates.name;if($('missionName'))$('missionName').value=taskState.name;}
+  const templates=kind==='study'?{name:JLT('今天的学习计划'),tag:JLT('学习'),titles:[JLT('明确今天要掌握的知识点'),JLT('专注学习 25 分钟'),JLT('完成一组练习或一次实践'),JLT('用自己的话复述重点'),JLT('回顾错题，记录下次的起点')]}:{name:JLT('今天的工作计划'),tag:JLT('工作'),titles:[JLT('写下今天最重要的产出'),JLT('完成一段不被打断的专注工作'),JLT('推进最重要的一项交付'),JLT('处理需要回复或协作的事情'),JLT('整理成果，安排下一步')]};
+  if(taskState.tasks.length+templates.titles.length>TASK_LIMIT){toast(JLT('剩余空间不足以加入模板，每轮最多 120 项。'));return;}
+  const wasEmpty=taskState.tasks.length===0;if(wasEmpty&&taskState.name===JLT('我的发射计划')){taskState.name=templates.name;if($('missionName'))$('missionName').value=taskState.name;}
   for(const title of templates.titles)taskState.tasks.push({id:taskNewId(),title,tag:templates.tag,due:taskToday(),done:false,createdAt:Date.now()});
-  if(taskFilter==='done')taskFilter='active';taskShowPanel();taskMutated({reason:'template',resetFlight:true});toast('已加入 5 项'+(kind==='study'?'学习':'工作')+'任务，点击名称即可改成自己的安排。');
+  if(taskFilter==='done')taskFilter='active';taskShowPanel();taskMutated({reason:'template',resetFlight:true});toast(JLT('已加入 5 项')+(kind==='study'?JLT('学习'):JLT('工作'))+JLT('任务，点击名称即可改成自己的安排。'));
 }
 $('taskTemplateWork')?.addEventListener('click',()=>taskAddTemplate('work'));
 $('taskTemplateStudy')?.addEventListener('click',()=>taskAddTemplate('study'));
 $('taskExport')?.addEventListener('click',()=>{
   try{
     const data=JSON.stringify({...taskState,exportedAt:new Date().toISOString()},null,2),url=URL.createObjectURL(new Blob([data],{type:'application/json;charset=utf-8'})),link=document.createElement('a');
-    link.href=url;link.download='发射果冻-任务备份-'+taskToday()+'.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('备份已生成，请在浏览器下载或分享菜单中保存文件。');
-  }catch(error){toast('浏览器未能生成备份，请保留此页面并重试。');}
+    link.href=url;link.download='launch-jelly-backup-'+taskToday()+'.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast(JLT('备份已生成，请在浏览器下载或分享菜单中保存文件。'));
+  }catch(error){toast(JLT('浏览器未能生成备份，请保留此页面并重试。'));}
 });
 $('taskImport')?.addEventListener('click',()=>{taskCancelLaunch();renderTaskMetrics();$('taskImportFile')?.click();});
 $('taskImportFile')?.addEventListener('change',async event=>{
   const input=event.target,file=input.files?.[0];if(!file)return;
   taskCancelLaunch();renderTaskMetrics();
   try{
-    if(file.size>1024*1024)throw new Error('备份文件不能超过 1 MB');
-    let data;try{data=JSON.parse(await file.text());}catch(error){throw new Error('文件不是有效的 JSON 备份');}
+    if(file.size>1024*1024)throw new Error(JLT('备份文件不能超过 1 MB'));
+    let data;try{data=JSON.parse(await file.text());}catch(error){throw new Error(JLT('文件不是有效的 JSON 备份'));}
     const restored=taskValidateBackup(data);
     const hasPrevious=taskState.tasks.length>0||taskState.archives.length>0;
-    if(hasPrevious&&!window.confirm('导入会替换当前清单和归档。导入后 30 秒内、继续编辑前可以撤销。建议先导出当前备份。继续导入吗？'))return;
+    if(hasPrevious&&!window.confirm(JLT('导入会替换当前清单和归档。导入后 30 秒内、继续编辑前可以撤销。建议先导出当前备份。继续导入吗？')))return;
     const previous=hasPrevious?taskValidateBackup(taskState):null;
     taskCancelLaunch();taskClearUndo();taskCloseEdit();taskResetFlight();Object.assign(taskState,restored);taskFilter='all';
-    if(previous)taskSetUndo({kind:'import',state:previous},'已恢复备份 · 撤销导入',30000);
-    if($('missionName'))$('missionName').value=taskState.name;taskPersist();renderTasks();taskShowPanel();toast(previous?'备份已恢复，可在 30 秒内、继续编辑前撤销导入。':'备份已恢复。全完成的清单可手动发射庆祝。');
-  }catch(error){toast('未导入：'+(error?.message||'备份格式不正确')+'。现有任务已保留。');}
+    if(previous)taskSetUndo({kind:'import',state:previous},JLT('已恢复备份 · 撤销导入'),30000);
+    if($('missionName'))$('missionName').value=taskState.name;taskPersist();renderTasks();taskShowPanel();toast(previous?JLT('备份已恢复，可在 30 秒内、继续编辑前撤销导入。'):JLT('备份已恢复。全完成的清单可手动发射庆祝。'));
+  }catch(error){toast(JLT('未导入：')+(error?.message||JLT('备份格式不正确'))+JLT('。现有任务已保留。'));}
   finally{input.value='';}
 });
 if($('missionName'))$('missionName').value=taskState.name;
@@ -1576,12 +1694,12 @@ updatePresentationOverlay();
 if(frameNo===1||frameNo%10===0){for(const [id,p] of [['labelA',[-.4,1.6,-2.4]],['labelB',[6,-3.5,4.8]]]){const pos=project(p),el=$(id);el.style.left=(pos[0]+canvas.offsetLeft)+'px';el.style.top=(pos[1]+canvas.offsetTop)+'px';el.classList.toggle('visible',!S.drag&&S.mission<0&&!S.seaView);}}
 if(!window.__launchJelly||window.__launchJelly.renderer!==rendererName)window.__launchJelly={state:S,groups,renderer:rendererName,vertexCount:Array.from(groups.values()).reduce((n,g)=>n+(g.count||0),0),setMission:t=>{S.running=true;S.paused=false;S.mission=t;},project,waterHeight:height,failures:rendererFailures};
 window.__launchJelly.presentation=presentationState;window.__launchJelly.frame=frameNo;window.__launchJelly.particleCount=particles.length;
-$('engineLabel').textContent=rendererName==='WebGL2'?'兼容渲染 · WEBGL 2':'兼容渲染 · SOFTWARE 3D';
+$('engineLabel').textContent=rendererName==='WebGL2'?JLT('兼容渲染 · WEBGL 2'):JLT('兼容渲染 · SOFTWARE 3D');
 // Hide only after a frame was drawn, so neither a missing adapter nor a late error blocks input.
 $('loading').hidden=true;$('loading').style.opacity=0;
 }
 function noteRendererFailure(backend,error){rendererFailures.push({backend,message:error?.message||String(error)});}
-async function withRendererDeadline(promise,ms){let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('图形设备响应超时')),ms)})]);}finally{clearTimeout(timer)}}
+async function withRendererDeadline(promise,ms){let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error(JLT('图形设备响应超时'))),ms)})]);}finally{clearTimeout(timer)}}
 async function switchToCompat(preferred='webgl'){
 if(switchPending)return switchPending;
 switchPending=(async()=>{
@@ -1589,7 +1707,7 @@ activeController?.stop?.();activeController=null;activeRenderer='';rendererEpoch
 if(preferred!=='canvas'){
 try{replaceSceneCanvas();activeRenderer='WebGL2';activeController=await initWebGL();return;}catch(e){noteRendererFailure('WebGL2',e);}
 }
-try{replaceSceneCanvas();activeRenderer='Canvas2D';compatLast=0;compatFrameNo=0;activeController=await initCanvas2D();}catch(e){noteRendererFailure('Canvas2D',e);activeRenderer='';showError('浏览器未能创建绘图画布。请在独立浏览器窗口重新打开此文件。');}
+try{replaceSceneCanvas();activeRenderer='Canvas2D';compatLast=0;compatFrameNo=0;activeController=await initCanvas2D();}catch(e){noteRendererFailure('Canvas2D',e);activeRenderer='';showError(JLT('浏览器未能创建绘图画布。请在独立浏览器窗口重新打开此文件。'));}
 })();try{await switchPending;}finally{switchPending=null;}
 }
 
@@ -1619,7 +1737,7 @@ device.lost.then(info=>{if(!stopped&&activeRenderer==='WebGPU'&&rendererEpoch===
 device.addEventListener('uncapturederror',e=>{if(!stopped&&activeRenderer==='WebGPU'&&rendererEpoch===epoch){noteRendererFailure('WebGPU validation',e.error);switchToCompat();}});
 const context=canvas.getContext('webgpu'),format=navigator.gpu.getPreferredCanvasFormat();context.configure({device,format,alphaMode:'opaque'});
 const mainShader=device.createShaderModule({label:'jelly-light-and-water',code:shaderCode}),compShader=device.createShaderModule({label:'shallow-water-solver',code:computeCode}),pShader=device.createShaderModule({label:'steam-fire-sprites',code:particleShader});
-for(let m of [mainShader,compShader,pShader]){let info=await m.getCompilationInfo();let errors=info.messages.filter(x=>x.type==='error');if(errors.length)throw Error(errors.map(x=>x.message+' [行 '+x.lineNum+']').join('\n'))}
+for(let m of [mainShader,compShader,pShader]){let info=await m.getCompilationInfo();let errors=info.messages.filter(x=>x.type==='error');if(errors.length)throw Error(errors.map(x=>x.message+JLT(' [行 ')+x.lineNum+']').join('\n'))}
 if(rendererEpoch!==epoch)throw Error('Renderer startup superseded');
 prepareCompatScene();
 const globalBuffer=device.createBuffer({size:320,usage:GPUBufferUsage.UNIFORM|GPUBufferUsage.COPY_DST});
@@ -1668,7 +1786,7 @@ rafId=requestAnimationFrame(frame);
 }rafId=requestAnimationFrame(frame);
 return {stop(){stopped=true;cancelAnimationFrame(rafId);try{device.destroy();}catch(e){}},device};
 }
-function showError(message){$('loading').hidden=false;$('loading').style.opacity=1;$('loading').querySelector('.ring').style.display='none';$('loading').querySelector('h2').textContent='让这个世界重新凝固。';$('loadMessage').textContent=message;let b=$('loading').querySelector('button');if(!b){b=document.createElement('button');b.textContent='重新打开场景';b.onclick=()=>location.reload();$('loading').querySelector('.loading-inner').appendChild(b)}}
+function showError(message){$('loading').hidden=false;$('loading').style.opacity=1;$('loading').querySelector('.ring').style.display='none';$('loading').querySelector('h2').textContent=JLT('让这个世界重新凝固。');$('loadMessage').textContent=message;let b=$('loading').querySelector('button');if(!b){b=document.createElement('button');b.textContent=JLT('重新打开场景');b.onclick=()=>location.reload();$('loading').querySelector('.loading-inner').appendChild(b)}}
 
 
 // Offline WebGL 2 compatibility renderer. Uses the same procedural scene and mission.
@@ -1765,9 +1883,9 @@ void main(){float r=length(vUV),edge=1.0-smoothstep(.32,1.0,r);float wisps=.83+.
 `;
 async function initWebGL(){
 const gl=canvas.getContext('webgl2',{alpha:false,antialias:true,powerPreference:'default',failIfMajorPerformanceCaveat:false});
-if(!gl)throw Error('WebGL 2 上下文不可用');
+if(!gl)throw Error(JLT('WebGL 2 上下文不可用'));
 const ownedCanvas=canvas,resources={programs:[],buffers:[],vaos:[],textures:[],framebuffers:[]};let active=true,raf=0;
-function program(vertexSource,fragmentSource){const shaders=[gl.VERTEX_SHADER,gl.FRAGMENT_SHADER].map((type,i)=>{const sh=gl.createShader(type);gl.shaderSource(sh,i?fragmentSource:vertexSource);gl.compileShader(sh);if(!gl.getShaderParameter(sh,gl.COMPILE_STATUS)){const message=gl.getShaderInfoLog(sh);gl.deleteShader(sh);throw Error('WebGL 着色器编译失败：'+message)}return sh});const p=gl.createProgram();shaders.forEach(s=>gl.attachShader(p,s));gl.linkProgram(p);shaders.forEach(s=>gl.deleteShader(s));if(!gl.getProgramParameter(p,gl.LINK_STATUS)){const message=gl.getProgramInfoLog(p);gl.deleteProgram(p);throw Error('WebGL 着色器链接失败：'+message)}resources.programs.push(p);return {p,loc:Object.fromEntries(['uVP','uLightVP','uModel','uEye','uParams','uJelly','uAlpha','uHeight','uShadow','uHasShadow'].map(n=>[n,gl.getUniformLocation(p,n)]))}}
+function program(vertexSource,fragmentSource){const shaders=[gl.VERTEX_SHADER,gl.FRAGMENT_SHADER].map((type,i)=>{const sh=gl.createShader(type);gl.shaderSource(sh,i?fragmentSource:vertexSource);gl.compileShader(sh);if(!gl.getShaderParameter(sh,gl.COMPILE_STATUS)){const message=gl.getShaderInfoLog(sh);gl.deleteShader(sh);throw Error(JLT('WebGL 着色器编译失败：')+message)}return sh});const p=gl.createProgram();shaders.forEach(s=>gl.attachShader(p,s));gl.linkProgram(p);shaders.forEach(s=>gl.deleteShader(s));if(!gl.getProgramParameter(p,gl.LINK_STATUS)){const message=gl.getProgramInfoLog(p);gl.deleteProgram(p);throw Error(JLT('WebGL 着色器链接失败：')+message)}resources.programs.push(p);return {p,loc:Object.fromEntries(['uVP','uLightVP','uModel','uEye','uParams','uJelly','uAlpha','uHeight','uShadow','uHasShadow'].map(n=>[n,gl.getUniformLocation(p,n)]))}}
 const main=program(compatGLVertex,compatGLFragment),shadow=program(compatGLShadowVertex,compatGLShadowFragment),particle=program(compatGLParticleVertex,compatGLParticleFragment);
 prepareCompatScene();
 let vertexCount=0;const meshes=[];
@@ -1799,7 +1917,7 @@ raf=requestAnimationFrame(render);return {stop,context:gl,vertexCount,waterSimul
 // with the GPU renderers; only rasterisation is performed on the CPU here.
 async function initCanvas2D(){
   const ctx=canvas.getContext('2d',{alpha:false});
-  if(!ctx)throw Error('无法建立浏览器图形画布。');
+  if(!ctx)throw Error(JLT('无法建立浏览器图形画布。'));
   prepareCompatScene();
   const fixed=[],moving=[],light=V.norm([-.55,1,.45]);
   const movingName=/^(booster|upperStage|fairing|parafoil|hangarDoor|erector|transporter|radar|gull|digit|clockPlus|islandFlag|landCut$)/;
@@ -2038,6 +2156,25 @@ async function initCanvas2D(){
   raf=requestAnimationFrame(frame);
   return {context:ctx,stop(){stopped=true;cancelAnimationFrame(raf);layers.length=0;}};
 }
+
+
+// Repaint labels only. No persistence call, input.value assignment, or user-data translation.
+window.JellyLocale.onChange=()=>{
+  renderTasks();syncPresentationUI();updatePresentationOverlay();
+  const expanded=document.body.classList.contains('task-panel-expanded');
+  if($('taskPanelToggle'))$('taskPanelToggle').textContent=JLT(expanded?'收起 ↓':'展开 ↑');
+  if(S.running)$('launch').innerHTML=JLT(S.paused?'<b>继续庆祝</b><span>▶</span>':'<b>暂停庆祝</b><span>Ⅱ</span>');
+  if(S.mission>=0)updateMission(0);
+  $('sound').querySelector('span').textContent=JLT('声音 ')+(S.sound?'ON':'OFF');
+  if(taskUndoRecord){
+    const title=taskUndoRecord.task?.title||'';
+    $('taskUndo').textContent=taskUndoRecord.kind==='import'?JLT('已恢复备份 · 撤销导入'):JLT('已删除「')+(title.length>15?title.slice(0,15)+'…':title)+JLT('」· 撤销');
+  }
+  for(const input of document.querySelectorAll('input'))input.setCustomValidity('');
+  $('toast').classList.remove('show');
+  queueViewportLayout();
+};
+window.JellyLocale.refresh();
 
 // Prefer native WebGPU; a missing/blocked adapter must not turn the artwork into an error screen.
 (async function boot(){

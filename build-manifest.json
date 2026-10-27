@@ -1,0 +1,15 @@
+{
+  "name": "Launch Jelly",
+  "version": "2.0.0",
+  "repository": "https://github.com/mikechengx/launch-jelly",
+  "website": "https://mikechengx.github.io/launch-jelly/",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "htmlBytes": 255750,
+  "htmlSha256": "45028878d167dd69e6e34a3a955d09a0b85f028ad21cc9c81660dd71277ac0cc",
+  "storageMigration": "Same mikechengx.github.io origin and unchanged application storage keys.",
+  "originalRepository": "https://github.com/mikechengx/launch-jelly",
+  "originalCommit": "a1d887e53d6d6eec3e6ad991df5ca045e8478d53"
+}

@@ -1,0 +1,38 @@
+/* English public product identity, with explicit per-app language preference. */
+.brand strong{letter-spacing:.7px;font-size:15px}.mobile-brand{letter-spacing:0}
+.language-switch{display:flex;gap:2px;align-items:center;flex:0 0 auto;margin-left:12px;padding:3px;border:1px solid #cbd4c0;border-radius:22px;background:#f7f8f1}
+.language-switch button{border:0;border-radius:18px;background:transparent;padding:7px 9px;font-size:10px;letter-spacing:0;min-height:30px;white-space:nowrap}
+.language-switch button.active{background:#dce7d1;color:#2e4a33}.language-switch button:focus-visible{outline-offset:2px}
+.compact-ui .sound span:after{content:var(--sound-word,"声音")}
+html[lang=en] .brand small{letter-spacing:1px;font-size:8px}
+html[lang=en] .tour-list button{font-size:9px;letter-spacing:0}
+html[lang=en] .tour-panel{width:300px}html[lang=en] .tour-nav{gap:3px}
+html[lang=en] .task-panel .task-archive{font-size:10px}
+html[lang=en] .intro .cn{letter-spacing:1.5px}
+html[lang=en] .world-hotspot{letter-spacing:0}
+.compact-ui header{flex-wrap:wrap;padding-top:max(10px,env(safe-area-inset-top));padding-bottom:8px;row-gap:7px}
+.compact-ui header>.brand{flex:1 0 100%;display:flex;gap:7px;min-width:0}
+.compact-ui .brand .mobile-brand{font-size:12px}
+.compact-ui .language-switch{margin-left:auto;padding:2px}
+.compact-ui .language-switch button{min-height:28px;padding:5px 9px;font-size:10px}
+.compact-ui header>.header-right{width:100%;justify-content:space-between;gap:7px}
+.compact-ui .mode-switch{flex:1;justify-content:space-between}
+.compact-ui .mode-switch button{flex:1;font-size:10px;padding:8px 7px;min-height:33px}
+.compact-ui .sound{min-height:33px;padding:8px 10px;flex:0 0 auto}
+.compact-ui .sound span:after{font-size:9px}
+.compact-ui .tour-panel,html[lang=en] .compact-ui .tour-panel{width:auto}
+html[lang=en] .compact-ui .controls{width:160px}
+html[lang=en] .compact-ui .material-open-button{flex-basis:51px}
+html[lang=en] .compact-ui .world-status{max-width:calc(100% - 190px)}
+html[lang=en] .compact-ui .task-drawer-toggle{min-width:70px;font-size:9px}
+html[lang=en] .compact-ui .launch b{font-size:9px}
+.compact-ui.compact-landscape header{flex-wrap:nowrap;padding-top:max(7px,env(safe-area-inset-top));gap:12px}
+.compact-ui.compact-landscape header>.brand{flex:0 1 auto;gap:7px;width:auto}
+.compact-ui.compact-landscape .language-switch{margin-left:9px}
+.compact-ui.compact-landscape header>.header-right{flex:1;width:auto;justify-content:flex-end;gap:9px}
+.compact-ui.compact-landscape .mode-switch{flex:0 1 auto}
+.compact-ui.compact-landscape .mode-switch button{flex:none;padding:8px 11px}
+.compact-ui.compact-landscape .brand strong{font-size:12px}
+html[lang=en] .compact-ui.compact-landscape .world-status{max-width:calc(100% - var(--sidebar-w) - 222px)}
+@media(max-width:800px) and (min-width:701px){.compact-ui.compact-landscape .brandmark{display:none}.compact-ui.compact-landscape .language-switch{margin-left:4px}.compact-ui.compact-landscape header{gap:6px}.compact-ui.compact-landscape .mode-switch button{padding:8px}}
+@media(max-width:350px){.compact-ui .brandmark{display:block}.compact-ui .brand .mobile-brand{font-size:11px}.compact-ui .mode-switch button{font-size:9px;padding:8px 5px}}

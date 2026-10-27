@@ -1,60 +1,34 @@
-# 发射果冻 · 任务发射台
+# Launch Jelly
 
-一个装在果冻海岛里的个人任务清单。做完眼前的小事，让火箭为这一轮努力升空。
+A personal task board inside a springy island diorama. Finish your tasks and celebrate with a rocket launch.
 
-## 使用
+**[Open Launch Jelly](https://mikechengx.github.io/launch-jelly/)** · [English](https://mikechengx.github.io/launch-jelly/?lang=en) · [中文](https://mikechengx.github.io/launch-jelly/?lang=zh)
 
-直接用浏览器打开 `index.html`。也可以在仓库 Settings → Pages 里，将 `main` 分支的 `/(root)` 设为发布来源。
+## Use
 
-Pages 启用后的站点地址：https://mikechengx.github.io/launch-jelly/
+Open `index.html` directly, or visit the site. No installation, account, external assets or runtime network requests are required. WebGPU is preferred, with WebGL2 and Canvas2D compatibility modes.
 
-## 功能
+- Create tasks, edit labels and dates, track progress, and filter completed work.
+- Launch after every task in a nonempty list is complete; optional automatic celebration.
+- Local saving, JSON backup/import, undo and recent completed rounds.
+- Springy jelly, interactive water, material controls, exploration and a guided presentation.
+- Chinese/English interface; language preference is saved separately from task data.
+- Phone portrait and landscape layouts.
 
-- 自定义清单名称、任务、标签和截止日期，实时显示完成百分比。
-- 筛选待完成/已完成任务，删除后可以撤销。
-- 非空清单全部完成才可发射；勾选最后一项完成后，可以自动庆祝。
-- 新增任务或取消完成会复位火箭；刷新或导入已完成的清单不会自动重播。
-- 本机自动保存、JSON 导入导出、最近 12 轮归档及任务回看。
-- 果冻揉捏回弹、水面搅动、风速/材质控制、三维探索和方案导览。
-- 单文件内联 HTML / CSS / JavaScript / WGSL；无外部资源，无安装或构建步骤。
-- 优先 WebGPU，不可用时自动切换到 WebGL2 或 Canvas2D。
+Your tasks stay in your browser. They are not uploaded or synchronized. Export a backup before clearing browser data or changing browser/device.
 
-## 任务数据
+## Source
 
-每位访问者从自己的空白清单开始。数据只保存在当前浏览器、当前域名中，不会自动同步给其他人。
+Run `python3 source/build.py` to rebuild `index.html` from the preserved app, explicit translation dictionary, locale runtime and styles. This uses Python standard libraries only.
 
-从下载版或旧域名迁移时，请先导出 JSON 备份，再在新网站导入。清理浏览器存储前也请先导出。
+## Separate projects
 
-## Cyanland · 海岸观察室
+This repository now contains Launch Jelly only. [Cyanland](https://github.com/mikechengx/cyanland) and [Sunroom](https://github.com/mikechengx/sunroom) have their own repositories and websites. The old HTML paths redirect to the new sites, retaining query parameters and fragments. Older combined-repository commits and releases remain available in history.
 
-[打开 Cyanland](https://mikechengx.github.io/launch-jelly/cyanland.html?v=4) · [单文件源码](cyanland.html)
+## 中文
 
-九座独立生成的果冻海岸：青岛、大连、厦门、北海、三亚，以及澳洲黄金海岸、韩国济州挟才、日本泉佐野临空城和上越谷浜。保留完整立方体剖面，提供「沉浸海岸 / 展台沙盘」两种呈现，支持旋转、双指缩放、长按平移和滑动海水拨浪。
+**Launch Jelly · 发射果冻**：在果冻海岛上安排任务，完成这一轮清单，让火箭为你庆祝。支持任务标签、截止日期、完成百分比、JSON 备份、归档，以及果冻和海水互动。
 
-- 黄金海岸：长直金沙滩、近岸细浪、临海塔楼、救生塔与冲浪板。
-- 济州挟才：翡翠浅海、白沙黑玄武岩、离岸飞扬岛、石墙与橘树。
-- 泉佐野临空城：白色大理石圆砾石滩、临空塔楼、摩天轮、机场岛和连接桥的缩微意象；白石并非热带细沙。
-- 上越谷浜：深蓝日本海、山脊、沿岸铁路与小列车、灰瓦村落和微型渔港。
-- 按城市当地时间显示日期、农历、日出、日落：国内 UTC+8、日韩 UTC+9、黄金海岸 UTC+10；澳洲季节按南半球变化。
-- 清晨金色海面、紫红落日、月光星空与稀疏城市窗灯随时段变化；可调整日期、小时、天气、海浪、透明度和弹性。
-- 支持地区筛选、城市搜索（含泉佐野/临空城等别名）、海岸档案与官方参考链接，PNG 导出包含天空和沙盘。
-- 城市直达链接：`?v=4&city=goldcoast`、`city=jeju`、`city=rinku`、`city=joetsu`。
-- 原生 WebGPU / 内联 WGSL，WebGPU 不可用时自动使用 WebGL2；单 HTML，无外部素材或网络资源依赖。
-- 太阳方向依 NOAA 近似与城市经纬度计算，农历依浏览器 Intl 中国历法计算。
-- 地形、地标与月光为艺术化缩微意象；潮汐是周期模拟，天气为手动情境，不是实测数据或航行预报。
-- 手机抽屉与画面独立分区，横屏使用侧栏；城市、天气、材质偏好保存在当前浏览器。
-- 帧率显示实际测得值，并按负载调整画面分辨率；60 FPS 是性能目标，取决于设备与浏览器。
-- 可通过 `CyanApp.registerCity(def, builder)` 扩展城市；定义可包含 `timeZone`（IANA）与 `utcOffset`（小时）。构建器返回 `{ data, height, landmarks, stats }`，几何为 12-float 顶点布局（位置、法线、颜色、材质、附加参数）。
+右上角可切换中文与 English；界面切换不会翻译或改写你填写的任务。数据保存在当前浏览器，不会自动跨设备同步。
 
-## Sunroom · 日光小屋
-
-[打开日光小屋](https://mikechengx.github.io/launch-jelly/sunroom.html?v=0.3.1) · [源码与构建说明](apps/sunroom/README.md) · [HTML、源码和素材包下载](https://github.com/mikechengx/launch-jelly/releases/tag/sunroom-v0.3.1)
-
-- 可调房间尺寸与墙角、门窗、家具尺寸、墙面和配色；40 种参数家具与居家工具，含 9 种挂墙收纳。
-- 地面分地砖与木地板，可改每块尺寸、颜色、通铺/错缝/人字拼、哑光/柔光/亮光、缝宽与缝色。
-- 「点此改色」卡与上方常用色均可直接操作；修复输入数值后首次点击规格按钮失效的问题。
-- 支持本机保存、JSON 项目导入导出、方案对比、空间检查、示意预算和五种视角 PNG 导出。
-- 手机竖屏上下布局，横屏左右布局；右侧工具独立滚动，可切换或收起。
-- 单 HTML，内嵌 JS、材质和 HDR；优先 WebGPU，自动兼容 WebGL2 / 二维平面。
-
-本地与线上方案分别保存在各自浏览器域名中，可通过 JSON 项目文件迁移。
+Cyanland 与 Sunroom 已独立发布。本仓库内保留旧链接跳转及历史版本。
