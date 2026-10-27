@@ -45,3 +45,16 @@ Pages 启用后的站点地址：https://mikechengx.github.io/launch-jelly/
 - 手机抽屉与画面独立分区，横屏使用侧栏；城市、天气、材质偏好保存在当前浏览器。
 - 帧率显示实际测得值，并按负载调整画面分辨率；60 FPS 是性能目标，取决于设备与浏览器。
 - 可通过 `CyanApp.registerCity(def, builder)` 扩展城市；定义可包含 `timeZone`（IANA）与 `utcOffset`（小时）。构建器返回 `{ data, height, landmarks, stats }`，几何为 12-float 顶点布局（位置、法线、颜色、材质、附加参数）。
+
+## Sunroom · 日光小屋
+
+[打开日光小屋](https://mikechengx.github.io/launch-jelly/sunroom.html?v=0.3.1) · [源码与构建说明](apps/sunroom/README.md) · [HTML、源码和素材包下载](https://github.com/mikechengx/launch-jelly/releases/tag/sunroom-v0.3.1)
+
+- 可调房间尺寸与墙角、门窗、家具尺寸、墙面和配色；40 种参数家具与居家工具，含 9 种挂墙收纳。
+- 地面分地砖与木地板，可改每块尺寸、颜色、通铺/错缝/人字拼、哑光/柔光/亮光、缝宽与缝色。
+- 「点此改色」卡与上方常用色均可直接操作；修复输入数值后首次点击规格按钮失效的问题。
+- 支持本机保存、JSON 项目导入导出、方案对比、空间检查、示意预算和五种视角 PNG 导出。
+- 手机竖屏上下布局，横屏左右布局；右侧工具独立滚动，可切换或收起。
+- 单 HTML，内嵌 JS、材质和 HDR；优先 WebGPU，自动兼容 WebGL2 / 二维平面。
+
+本地与线上方案分别保存在各自浏览器域名中，可通过 JSON 项目文件迁移。

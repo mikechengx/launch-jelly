@@ -1,0 +1,31 @@
+<div id="sunroomApp" class="sunroom-app" data-mobile-panel="library" data-panel-open="true">
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Sunroom 日光小屋"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M7 31V17L20 7l13 10v14H7Z"/><path d="M15 31V20h10v11M20 1v3M35 7l-3 3M5 7l3 3"/></svg><span>sunroom<span class="brand-cn">日光小屋 · v0.3.1</span></span></a>
+    <div class="project-heading"><input id="projectName" aria-label="项目名称" value="我的日光小屋" maxlength="50"><span id="saveStatus" class="save-status"><i></i>本机自动保存</span></div>
+    <div class="top-actions"><div class="history-buttons"><button type="button" class="icon-button" data-action="undo" title="撤销 · Ctrl / ⌘ Z" aria-label="撤销">↶</button><button type="button" class="icon-button" data-action="redo" title="重做 · Ctrl / ⌘ Shift Z" aria-label="重做">↷</button></div><button type="button" class="button quiet project-menu-button" data-action="project-menu">项目 <span>⌄</span></button><button type="button" class="button dark export-button" data-action="export-menu"><span class="desktop-label">导出方案</span><span class="mobile-label">导出</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 13V3m-4 4 4-4 4 4M4 12v5h12v-5"/></svg></button></div>
+  </header>
+  <main class="workspace">
+    <aside id="libraryPanel" class="library-panel">
+      <div class="sidebar-intro"><span class="eyebrow">MAKE ROOM FOR LIFE</span><h1>让家，刚刚好。</h1><p>从一面墙，到你的生活。</p></div>
+      <nav class="editor-tabs" aria-label="布置步骤"><button type="button" data-tab="room" class="active"><span>01</span>房屋硬件</button><button type="button" data-tab="furniture"><span>02</span>家具布置</button><button type="button" data-tab="style"><span>03</span>室内装修</button><button type="button" data-tab="ideas"><span>04</span>实用方案</button><button type="button" data-tab="variants"><span>05</span>方案对比</button></nav>
+      <div id="libraryContent" class="library-content"></div>
+      <div class="sidebar-footer"><button type="button" data-action="about">关于日光小屋 ↗</button><button type="button" data-action="shortcuts" aria-label="操作帮助">?</button></div>
+    </aside>
+    <section class="scene-column" aria-label="房间编辑画布">
+      <div class="scene-heading"><div><span class="eyebrow">YOUR SPACE, YOUR WAY</span><span id="roomSummary" class="room-summary">一间房，无限种可能</span></div><span id="rendererStatus" class="renderer-status"><i></i>正在准备画面</span></div>
+      <div class="canvas-wrap">
+        <div id="viewport" tabindex="0" aria-label="三维房间。拖动环绕，滚轮缩放；切换平面视图精确布置。"></div>
+        <div class="viewport-toolbar"><div class="view-switch" aria-label="画面视角"><button type="button" data-view="3d" class="active">立体</button><button type="button" data-view="plan">俯视</button><button type="button" data-view="front">正面</button><button type="button" data-view="right">侧面</button><button type="button" data-view="eye">人眼</button></div><button type="button" class="canvas-icon" data-action="resetCamera" title="重置视角" aria-label="重置视角">↺</button></div>
+        <div class="viewport-bottom"><span id="canvasHint" class="canvas-hint">拖动环绕 · 滚轮缩放</span><div class="canvas-tools"><button type="button" data-action="toggleDimensions" id="dimensionButton" class="active" aria-pressed="true" title="尺寸标注">↔ <span>尺寸</span></button><button type="button" data-action="toggleOpenings" id="openingButton" aria-pressed="false" title="显示门扇、柜门所需范围">◔ <span>开合区</span></button></div></div>
+      </div>
+      <div class="light-control"><div class="light-label"><span class="sun-glyph">☀</span><span><strong>日光时刻</strong><small id="lightCaption">光影示意 · 非照度测算</small></span></div><div class="time-slider"><span>00</span><input type="range" id="hourRange" min="0" max="23.75" step="0.25" value="14" aria-label="模拟时间"><span>24</span></div><output id="hourOutput">14:00</output><button type="button" class="text-button" data-action="environment">设置 ↗</button></div>
+      <section class="metrics-row" aria-label="空间指标"><div><span>室内净面积</span><strong id="metricArea">—<small>m²</small></strong></div><div><span>剩余地面</span><strong id="metricFree">—<small>m²</small></strong></div><div><span>通道参考</span><strong id="metricPassage">—<small>cm</small></strong></div><div><span>收纳估算</span><strong id="metricStorage">—<small>L</small></strong></div><button type="button" data-action="budget" class="budget-metric"><span>家具预算 · 估算</span><strong id="metricBudget">¥ —</strong></button></section>
+    </section>
+    <div class="mobile-panel-switch" aria-label="手机编辑面板"><button type="button" data-mobile-panel="library" class="active">布置工具</button><button type="button" data-mobile-panel="details">选中属性</button><button type="button" data-mobile-panel="check">空间检查 <span id="mobileWarningCount"></span></button><button type="button" data-action="collapse-panel" class="collapse-button" aria-label="收起面板">⌄</button></div>
+    <aside id="inspectorPanel" class="inspector-panel"><div id="inspectorContent"></div></aside>
+  </main>
+  <div id="popoverHost" class="popover-host" hidden></div>
+  <dialog id="sunroomDialog" class="sunroom-dialog"><div class="dialog-heading"><h2 id="dialogTitle"></h2><button type="button" class="icon-button" data-action="close-dialog" aria-label="关闭">×</button></div><div id="dialogContent" class="dialog-content"></div></dialog>
+  <input type="file" id="projectFile" accept="application/json,.json" hidden>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</div>

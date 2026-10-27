@@ -1,0 +1,31 @@
+SUNROOM MATERIAL AND LIGHTING ASSETS — THIRD-PARTY LICENSES
+Checked: 2026-10-27
+
+Provider: Poly Haven — https://polyhaven.com/
+Asset license: CC0 1.0 Universal, SPDX CC0-1.0
+Official provider statement: https://polyhaven.com/license
+CC0 deed: https://creativecommons.org/publicdomain/zero/1.0/
+CC0 legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+License evidence summary: Poly Haven identifies its downloadable textures, HDRIs and
+3D models as CC0 assets. Its official license page permits commercial use, modification,
+sharing and inclusion in distributed products. Attribution is appreciated rather than
+required for the downloaded asset files. These CC0 assets remain separate from any
+license applied to Sunroom's application code.
+
+Scope: 28 material sets (68 genuine 1K JPEG texture maps) and 4 Radiance HDR lighting
+probes. Individual source pages, author credits, API download URLs, source MD5 values,
+local SHA256 hashes, dimensions and byte counts are recorded in manifest.json.
+No provider logos, website screenshots, preview renders or user-submitted renders are
+included. All image files are actual PBR maps intended for use on 3D surfaces.
+
+Acquisition used the official public API with identifying User-Agent
+SunroomAssetPreparation/1.0. API terms checked:
+https://github.com/Poly-Haven/Public-API/blob/master/ToS.md
+The downloaded/self-hosted asset pack does not require the application to use the live
+API. If a future feature uses the live API to present provider content, add the visible
+provider credit required by those API service terms.
+
+A copy of all acquisition metadata is stored separately under ../asset-metadata/;
+it is not needed at runtime. Download scripts are ../download_assets.py and
+../download_environments.py. The application must not imply provider endorsement.

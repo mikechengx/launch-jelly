@@ -1,0 +1,187 @@
+/* Phone landscape keeps the room visible while the tool column scrolls on its own. */
+@media (orientation: landscape) and (max-height: 600px) and (max-width: 1100px) {
+  html, body { height: 100%; overflow: hidden; }
+  .sunroom-app { height: 100dvh; min-height: 0; overflow: hidden; }
+  .topbar {
+    height: calc(48px + env(safe-area-inset-top, 0px));
+    min-height: calc(48px + env(safe-area-inset-top, 0px));
+    padding: env(safe-area-inset-top, 0px) max(10px, env(safe-area-inset-right, 0px)) 0 max(10px, env(safe-area-inset-left, 0px));
+    gap: 14px;
+  }
+  .brand { min-width: 0; gap: 6px; }
+  .brand > svg { width: 25px; height: 25px; }
+  .brand > span { font-size: 25px; }
+  .brand-cn { display: none; }
+  .project-heading { display: flex; min-width: 0; gap: 10px; }
+  .project-heading input { width: min(160px, 22vw); font-size: 11px; padding: 6px 0; }
+  .save-status { display: inline; font-size: 8px; }
+  .top-actions { gap: 6px; }
+  .history-buttons { padding-right: 4px; border: 0; }
+  .history-buttons .icon-button { width: 28px; height: 30px; font-size: 23px; }
+  .project-menu-button { display: inline-flex; min-height: 32px; padding: 7px 9px; font-size: 10px; }
+  .button.export-button { min-height: 32px; padding: 7px 10px; gap: 6px; font-size: 11px; }
+  .desktop-label { display: none; }
+  .mobile-label { display: inline; }
+  .export-button svg { width: 15px; height: 15px; }
+
+  .workspace {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(276px, 34vw, 316px);
+    grid-template-rows: 40px minmax(0, 1fr);
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0 env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  }
+  .scene-column {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    order: initial;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .scene-heading { height: 24px; flex: none; padding: 4px 11px; gap: 6px; }
+  .scene-heading > div { min-width: 0; gap: 0; }
+  .scene-heading .eyebrow { display: none; }
+  .room-summary { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 9px; }
+  .renderer-status { font-size: 8px; flex: none; }
+  .canvas-wrap { flex: 1; min-height: 0; }
+  .viewport-toolbar { top: 5px; left: 9px; right: 9px; }
+  .view-switch { padding: 2px; gap: 1px; max-width: calc(100% - 38px); }
+  .view-switch button { min-height: 30px; padding: 6px 9px; font-size: 10px; }
+  .canvas-icon { width: 30px; height: 30px; font-size: 21px; flex: none; }
+  .viewport-bottom { bottom: 7px; left: 10px; right: 10px; gap: 5px; }
+  .canvas-hint { max-width: 140px; font-size: 8px; letter-spacing: 0; line-height: 1.6; }
+  .canvas-tools { gap: 4px; }
+  .canvas-tools button { min-height: 29px; padding: 6px 7px; font-size: 10px; }
+  .light-control { min-height: 42px; flex: none; padding: 5px 10px; gap: 9px; }
+  .light-label { gap: 6px; }
+  .sun-glyph { font-size: 21px; }
+  .light-label strong { font-size: 10px; }
+  .light-label small, .time-slider span { display: none; }
+  .time-slider { min-width: 30px; gap: 0; }
+  .time-slider input { min-height: 26px; margin: 0; }
+  .light-control output { font-size: 15px; }
+  .light-control .text-button { padding: 6px 0 6px 3px; font-size: 10px; }
+  .metrics-row { min-height: 45px; flex: none; padding: 6px 4px; gap: 0; }
+  .metrics-row > div, .metrics-row > button { min-width: 0; padding: 0 6px; }
+  .metrics-row span { font-size: 8px; overflow: hidden; text-overflow: ellipsis; }
+  .metrics-row strong { margin-top: 3px; font-size: 16px; line-height: 1.2; }
+  .metrics-row strong small { font-size: 8px; margin-left: 2px; }
+  .metrics-row .budget-metric strong { font-size: 13px; padding-top: 2px; }
+
+  .mobile-panel-switch {
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    order: initial;
+    position: relative;
+    top: auto;
+    height: 40px;
+    min-width: 0;
+    gap: 2px;
+    padding: 4px 6px;
+    border: 0;
+    border-left: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--white);
+    z-index: 4;
+  }
+  .mobile-panel-switch > button { min-height: 30px; padding: 6px 7px; font-size: 10px; }
+  .mobile-panel-switch .collapse-button { min-width: 28px; margin-left: auto; padding: 2px 5px; font-size: 19px; }
+  .library-panel, .inspector-panel {
+    grid-column: 2;
+    grid-row: 2;
+    order: initial;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    border: 0;
+    border-left: 1px solid var(--line);
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .library-panel { display: flex; flex-direction: column; overflow: hidden; }
+  .sidebar-intro { display: none; }
+  .editor-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; flex: none; padding: 6px 8px; overflow: visible; }
+  .editor-tabs button { min-width: 0; min-height: 29px; padding: 7px 4px; font-size: 10px; text-align: center; }
+  .editor-tabs button span { display: none; }
+  .library-content { flex: 1; min-height: 0; padding: 13px 14px 18px; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; }
+  .sidebar-footer { flex: none; margin: 0; min-height: 30px; padding: 4px 11px; font-size: 9px; }
+  .inspector-panel { padding: 13px 14px 18px; overflow-x: hidden; overflow-y: auto; }
+  .sunroom-app[data-mobile-panel="library"] .inspector-panel { display: none; }
+  .sunroom-app[data-mobile-panel="details"] .library-panel,
+  .sunroom-app[data-mobile-panel="check"] .library-panel { display: none; }
+  .catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .catalog-card { min-height: 113px; padding: 8px; }
+  .furniture-art { height: 48px; }
+  .furniture-art svg { width: 83px; height: 48px; }
+  .library-content > .field-grid, .opening-card .field-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .field-grid { gap: 10px 8px; }
+  .shape-options { gap: 7px; }
+  .shape-option { padding: 9px 4px; gap: 6px; font-size: 10px; }
+  .shape-icon { width: 25px; height: 20px; }
+  .finish-navigation { gap: 1px; padding: 2px; }
+  .finish-navigation button { min-width: 0; padding: 9px 3px; font-size: 10px; }
+  .finish-grid, .item-finishes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .finish-card > i { height: 49px; }
+  .finish-card strong { font-size: 10px; }
+  .finish-card small { font-size: 8px; }
+  .color-palette { gap: 7px; }
+  .color-chip { height: 28px; border-radius: 6px; }
+  .custom-color { padding: 8px; }
+  .custom-color label { font-size: 10px; }
+  .wall-finish-options { gap: 6px; }
+  .wall-texture { height: 42px; }
+  .wall-finish-options strong { font-size: 10px; }
+  .wall-finish-options small { font-size: 8px; }
+  .floor-type-options { gap: 8px; }
+  .floor-type-options button { padding: 10px; }
+  .floor-type-options strong { font-size: 12px; }
+  .floor-type-options small { font-size: 9px; }
+  .floor-selection-summary { gap: 9px; padding: 8px; }
+  .floor-selection-summary strong { font-size: 10px; }
+  .floor-selection-summary small { font-size: 9px; }
+  .floor-preview { width: 47px; height: 46px; }
+  .floor-size-presets button { min-height: 31px; padding: 7px 9px; font-size: 10px; }
+  .floor-grout-row .color-chip { height: 28px; }
+  .material-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .inspector-panel .object-preview { width: 78px; height: 67px; margin: 0 0 10px 8px; }
+  .inspector-panel .object-preview svg { width: 76px; height: 58px; }
+  .inspector-panel .selection-dimensions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .sunroom-app[data-panel-open="false"] .workspace { grid-template-columns: minmax(0, 1fr); }
+  .sunroom-app[data-panel-open="false"] .library-panel,
+  .sunroom-app[data-panel-open="false"] .inspector-panel { display: none; }
+  .sunroom-app[data-panel-open="false"] .scene-column { grid-column: 1; height: 100%; min-height: 0; max-height: none; }
+  .sunroom-app[data-panel-open="false"] .canvas-wrap { min-height: 0; }
+  .sunroom-app[data-panel-open="false"] .mobile-panel-switch { position: absolute; grid-area: auto; top: 29px; right: max(9px, env(safe-area-inset-right, 0px)); width: 34px; height: 34px; padding: 1px; border: 1px solid var(--line); border-radius: 8px; }
+  .sunroom-app[data-panel-open="false"] .mobile-panel-switch > button[data-mobile-panel] { display: none; }
+  .sunroom-app[data-panel-open="false"] .mobile-panel-switch .collapse-button { width: 30px; height: 30px; min-height: 30px; margin: 0; }
+  .sunroom-app[data-panel-open="false"] .viewport-toolbar { right: 51px; }
+
+  .popover-host { top: 44px; right: max(10px, env(safe-area-inset-right, 0px)); max-height: calc(100dvh - 53px); overflow-y: auto; }
+  .sunroom-dialog { max-height: calc(100dvh - 18px); }
+  .dialog-heading { padding: 11px 17px; }
+  .dialog-heading h2 { font-size: 15px; }
+  .dialog-content { padding: 15px 17px; max-height: calc(100dvh - 76px); }
+  .toast { bottom: max(10px, env(safe-area-inset-bottom, 0px)); font-size: 11px; }
+}
+
+@media (orientation: landscape) and (max-height: 600px) and (max-width: 760px) {
+  .topbar { gap: 10px; }
+  .project-heading input { width: min(145px, 23vw); }
+  .save-status { display: none; }
+  .project-menu-button { padding: 7px; }
+  .scene-heading { padding-right: 8px; }
+  .renderer-status { max-width: 114px; overflow: hidden; text-overflow: ellipsis; }
+  .view-switch button { padding: 6px 7px; }
+  .canvas-hint { max-width: 110px; }
+  .canvas-tools button { padding: 6px; }
+}

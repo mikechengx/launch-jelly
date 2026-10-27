@@ -1,0 +1,17 @@
+{
+  "name": "sunroom-studio",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "polygon-clipping": "^0.15.7",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10"
+  }
+}
