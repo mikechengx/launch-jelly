@@ -27,13 +27,17 @@ Pages 启用后的站点地址：https://mikechengx.github.io/launch-jelly/
 
 ## Cyanland · 海岸观察室
 
-[打开 Cyanland](https://mikechengx.github.io/launch-jelly/cyanland.html) · [单文件源码](cyanland.html)
+[打开 Cyanland](https://mikechengx.github.io/launch-jelly/cyanland.html?v=3) · [单文件源码](cyanland.html)
 
 青岛礁岸、大连丘陵海崖、厦门双岛海湾、北海白沙浅滩、三亚热带珊瑚湾：五座独立生成的海岸切片，支持旋转、双指缩放和长按平移。调整日期、小时、天气与时间速度，观察日照、昼夜、海水颜色与潮位变化；也可揉动果冻海岛、查看生态注释、导出当前画面。
 
+- 保留果冻立方体剖面，提供「沉浸海岸 / 展台沙盘」两种呈现；清晨金色海面、紫红落日与月光星空按日期和时间变化。
+- 一键切换日出、金色清晨、落日、月夜；手机放大显示时钟、潮汐、日出和日落信息。
+- 水面可直接滑动拨浪，岸边旋转、双指缩放、长按平移；五城各有鱼群和海岸细节，PNG 导出包含天空和海岸。
 - 原生 WebGPU / 内联 WGSL，WebGPU 不可用时自动使用 WebGL2；单 HTML，无网络资源依赖。
 - 太阳方向依 NOAA 近似与城市经纬度计算，农历依浏览器 Intl 中国历法计算。
 - 地形为概念场景；潮汐是周期模拟，天气为手动情境，不是实测数据或航行预报。
 - 手机抽屉与画面独立分区，横屏使用侧栏；城市、天气、材质偏好保存在当前浏览器。
 - 帧率显示实际测得值，并按负载调整画面分辨率；60 FPS 是性能目标，取决于设备与浏览器。
 - 可通过 `CyanApp.registerCity(def, builder)` 扩展城市。构建器返回 `{ data, height, landmarks, stats }`，几何为 12-float 顶点布局（位置、法线、颜色、材质、附加参数）。
+
