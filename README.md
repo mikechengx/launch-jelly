@@ -32,3 +32,10 @@ This repository now contains Launch Jelly only. [Cyanland](https://github.com/mi
 右上角可切换中文与 English；界面切换不会翻译或改写你填写的任务。数据保存在当前浏览器，不会自动跨设备同步。
 
 Cyanland 与 Sunroom 已独立发布。本仓库内保留旧链接跳转及历史版本。
+
+## License / 开源许可
+
+Original application code is released under the [MIT License](LICENSE).
+Third-party components, if included, retain their own copyright notices and licenses.
+
+原创应用代码采用 [MIT License](LICENSE)；第三方组件保留各自的版权声明与许可。
